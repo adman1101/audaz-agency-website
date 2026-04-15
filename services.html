@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AUDAZ Agency Services — Website design, marketing strategy, video production, digital advertising, content creation, and podcasting for small businesses. Bilingual EN/ES.">
+  <title>Services — AUDAZ Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .animate{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+    .animate.visible{opacity:1;transform:translateY(0)}
+    .svc-full-card{background:#fff;border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:20px}
+    .svc-full-top{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .svc-full-left{padding:2rem;border-right:0.5px solid var(--border)}
+    .svc-full-right{padding:2rem;background:var(--gray-100)}
+    .svc-full-title{font-size:22px;font-weight:700;color:var(--text-primary);margin:1rem 0 0.5rem}
+    .svc-tagline{font-size:13px;color:#854F0B;font-style:italic;font-weight:500;margin-bottom:0.75rem}
+    .svc-full-desc{font-size:14px;color:var(--text-secondary);line-height:1.7}
+    .includes-label{font-size:11px;font-weight:500;letter-spacing:0.07em;color:var(--text-secondary);text-transform:uppercase;margin-bottom:0.75rem;display:block}
+    .include-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px}
+    .include-text{font-size:13px;color:var(--text-primary);line-height:1.4}
+    @media(max-width:640px){.svc-full-top{grid-template-columns:1fr}.svc-full-left{border-right:none;border-bottom:0.5px solid var(--border)}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link active" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+        <a href="contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="hero-dark">
+    <div class="container">
+      <span class="section-label" data-en="SERVICES" data-es="SERVICIOS">SERVICES</span>
+      <h1 data-en="Six ways we make your brand <span style='color:#EF9F27'>impossible to ignore.</span>" data-es="Seis formas en que hacemos tu marca <span style='color:#EF9F27'>imposible de ignorar.</span>">Six ways we make your brand <span style="color:#EF9F27">impossible to ignore.</span></h1>
+      <p style="max-width:580px;margin-top:1rem;" data-en="We don't offer cookie-cutter packages. Every service is built around your business goals, your voice, and your community — in English and in Spanish." data-es="No ofrecemos paquetes estándar. Cada servicio está construido alrededor de los objetivos de tu negocio, tu voz y tu comunidad.">We don't offer cookie-cutter packages. Every service is built around your business goals, your voice, and your community — in English and in Spanish.</p>
+    </div>
+  </div>
+
+  <div class="process-bar">
+    <div class="process-step"><span class="process-num">01</span><span class="process-label" data-en="Free consultation" data-es="Consulta gratuita">Free consultation</span></div>
+    <div class="process-step"><span class="process-num">02</span><span class="process-label" data-en="Custom strategy" data-es="Estrategia personalizada">Custom strategy</span></div>
+    <div class="process-step"><span class="process-num">03</span><span class="process-label" data-en="Bold execution" data-es="Ejecución audaz">Bold execution</span></div>
+    <div class="process-step"><span class="process-num">04</span><span class="process-label" data-en="Measure & grow" data-es="Medir y crecer">Measure & grow</span></div>
+  </div>
+
+  <section class="section animate">
+    <div class="container">
+      <span class="section-label" data-en="WHAT WE DO" data-es="LO QUE HACEMOS">WHAT WE DO</span>
+      <h2 data-en="Everything under one audaz roof" data-es="Todo bajo un mismo techo audaz">Everything under one audaz roof</h2>
+
+      <!-- Website Design -->
+      <div class="svc-full-card" style="margin-top:2rem">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="11" rx="2" stroke="#854F0B" stroke-width="1.5"/><path d="M7 17h6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <p class="svc-full-title" data-en="Website Design & Development" data-es="Diseño y Desarrollo Web">Website Design & Development</p>
+            <p class="svc-tagline" data-en="Your digital storefront — built to convert." data-es="Tu vitrina digital — construida para convertir.">Your digital storefront — built to convert.</p>
+            <p class="svc-full-desc" data-en="A stunning, fast, mobile-first website that works as hard as you do. We build sites that don't just look good — they turn visitors into customers. Bilingual by default." data-es="Un sitio web impresionante, rápido y optimizado para móviles que trabaja tan duro como tú. Construimos sitios que no solo se ven bien — convierten visitantes en clientes.">A stunning, fast, mobile-first website that works as hard as you do. We build sites that don't just look good — they turn visitors into customers. Bilingual by default.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Custom design & development" data-es="Diseño y desarrollo personalizado">Custom design & development</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Mobile-first & fast loading" data-es="Optimizado para móviles y carga rápida">Mobile-first & fast loading</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="SEO-ready architecture" data-es="Arquitectura lista para SEO">SEO-ready architecture</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Bilingual EN/ES content" data-es="Contenido bilingüe EN/ES">Bilingual EN/ES content</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Contact forms & booking integration" data-es="Formularios de contacto y reservas">Contact forms & booking integration</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategy -->
+      <div class="svc-full-card">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M3 6h14M3 14h8" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <p class="svc-full-title" data-en="Marketing Strategy" data-es="Estrategia de Marketing">Marketing Strategy</p>
+            <p class="svc-tagline" data-en="Find your tribe. Be remarkable." data-es="Encuentra tu tribu. Sé extraordinario.">Find your tribe. Be remarkable.</p>
+            <p class="svc-full-desc" data-en="Built on Seth Godin's principles — we don't chase everyone, we help you find the people who believe what you believe and build campaigns that resonate deeply." data-es="Basada en los principios de Seth Godin — no perseguimos a todos, te ayudamos a encontrar a las personas que creen lo que tú crees.">Built on Seth Godin's principles — we don't chase everyone, we help you find the people who believe what you believe and build campaigns that resonate deeply.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Brand positioning & voice" data-es="Posicionamiento y voz de marca">Brand positioning & voice</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Audience & competitor research" data-es="Investigación de audiencia y competidores">Audience & competitor research</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Content & channel strategy" data-es="Estrategia de contenido y canales">Content & channel strategy</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Bilingual market planning" data-es="Planificación de mercado bilingüe">Bilingual market planning</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Quarterly growth roadmap" data-es="Hoja de ruta de crecimiento trimestral">Quarterly growth roadmap</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="svc-full-card">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="2" stroke="#854F0B" stroke-width="1.5"/><path d="M8 7l5 3-5 3V7z" fill="#854F0B"/></svg></div>
+            <p class="svc-full-title" data-en="Video Production" data-es="Producción de Video">Video Production</p>
+            <p class="svc-tagline" data-en="Stop the scroll. Tell your story." data-es="Para el scroll. Cuenta tu historia.">Stop the scroll. Tell your story.</p>
+            <p class="svc-full-desc" data-en="From brand films to social reels — we create video content that captures attention and builds connection. Mentored by broadcast television veterans." data-es="Desde videos de marca hasta reels — creamos contenido de video que captura la atención y construye conexión.">From brand films to social reels — we create video content that captures attention and builds connection. Mentored by broadcast television veterans.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Brand story videos" data-es="Videos de historia de marca">Brand story videos</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Social media reels & shorts" data-es="Reels y shorts para redes sociales">Social media reels & shorts</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Bilingual video scripts" data-es="Guiones de video bilingües">Bilingual video scripts</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Editing & post-production" data-es="Edición y postproducción">Editing & post-production</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Ad-ready video assets" data-es="Assets de video listos para anuncios">Ad-ready video assets</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advertising -->
+      <div class="svc-full-card">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="#854F0B" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <p class="svc-full-title" data-en="Digital Advertising" data-es="Publicidad Digital">Digital Advertising</p>
+            <p class="svc-tagline" data-en="Put your brand in front of the right people." data-es="Pon tu marca frente a las personas correctas.">Put your brand in front of the right people.</p>
+            <p class="svc-full-desc" data-en="Google, Meta, and social advertising that targets your ideal customer with precision — no wasted budget, just results. Built on the same media principles used for AT&T and Google Fiber." data-es="Publicidad en Google, Meta y redes que apunta a tu cliente ideal con precisión — sin presupuesto desperdiciado, solo resultados.">Google, Meta, and social advertising that targets your ideal customer with precision — no wasted budget, just results. Built on the same media principles used for AT&T and Google Fiber.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Google Search & Display Ads" data-es="Anuncios de búsqueda y display de Google">Google Search & Display Ads</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Meta (Facebook & Instagram) Ads" data-es="Anuncios de Meta (Facebook e Instagram)">Meta (Facebook & Instagram) Ads</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Campaign setup & optimization" data-es="Configuración y optimización de campañas">Campaign setup & optimization</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Bilingual ad copy & creative" data-es="Copy e imágenes bilingües">Bilingual ad copy & creative</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Monthly performance reporting" data-es="Reportes mensuales de rendimiento">Monthly performance reporting</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="svc-full-card">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16l4-4 3 3 5-6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="svc-full-title" data-en="Content Creation" data-es="Creación de Contenido">Content Creation</p>
+            <p class="svc-tagline" data-en="Show up. Be consistent. Be bold." data-es="Aparece. Sé consistente. Sé audaz.">Show up. Be consistent. Be bold.</p>
+            <p class="svc-full-desc" data-en="Bilingual content that builds your brand week after week — social posts, blogs, email newsletters, and more. We make showing up easy." data-es="Contenido bilingüe que construye tu marca semana tras semana — posts en redes, blogs, newsletters y más.">Bilingual content that builds your brand week after week — social posts, blogs, email newsletters, and more. We make showing up easy.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Social media content calendars" data-es="Calendarios de contenido para redes">Social media content calendars</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Blog writing (EN & ES)" data-es="Redacción de blogs (EN y ES)">Blog writing (EN & ES)</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Email newsletter campaigns" data-es="Campañas de newsletter por email">Email newsletter campaigns</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Branded graphics & visuals" data-es="Gráficos y visuales de marca">Branded graphics & visuals</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="SEO content strategy" data-es="Estrategia de contenido SEO">SEO content strategy</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Podcasting -->
+      <div class="svc-full-card">
+        <div class="svc-full-top">
+          <div class="svc-full-left">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="9" r="3" stroke="#854F0B" stroke-width="1.5"/><path d="M6 17c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/><path d="M4 8c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <p class="svc-full-title" data-en="Podcasting" data-es="Podcasting">Podcasting</p>
+            <p class="svc-tagline" data-en="Your voice. Amplified." data-es="Tu voz. Amplificada.">Your voice. Amplified.</p>
+            <p class="svc-full-desc" data-en="Launch, produce, and grow your podcast from scratch. We handle the strategy, production, and distribution so you focus on the conversation." data-es="Lanza, produce y haz crecer tu podcast desde cero. Nos encargamos de la estrategia, producción y distribución.">Launch, produce, and grow your podcast from scratch. We handle the strategy, production, and distribution so you focus on the conversation.</p>
+          </div>
+          <div class="svc-full-right">
+            <span class="includes-label" data-en="WHAT'S INCLUDED" data-es="QUÉ INCLUYE">WHAT'S INCLUDED</span>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Podcast concept & branding" data-es="Concepto y marca del podcast">Podcast concept & branding</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Episode planning & scripting" data-es="Planificación y guiones de episodios">Episode planning & scripting</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Recording & editing" data-es="Grabación y edición">Recording & editing</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Distribution setup" data-es="Configuración de distribución">Distribution setup</span></div>
+            <div class="include-item"><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><span class="include-text" data-en="Bilingual episode support" data-es="Soporte de episodios bilingüe">Bilingual episode support</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="godin-section">
+    <div class="container">
+      <div class="godin-inner">
+        <p class="godin-quote" data-en='"The goal is not to do business with everybody who needs what you have. The goal is to do business with people who believe what you believe."' data-es='"El objetivo no es hacer negocios con todos. El objetivo es hacer negocios con personas que creen lo que tú crees."'>"The goal is not to do business with everybody who needs what you have. The goal is to do business with people who believe what you believe."</p>
+        <p class="godin-attr">— Seth Godin &nbsp;|&nbsp; <span data-en="Why AUDAZ only works with small businesses ready to grow bold" data-es="Por qué AUDAZ solo trabaja con pequeños negocios listos para crecer con audacia">Why AUDAZ only works with small businesses ready to grow bold</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-dark">
+    <div class="container">
+      <h2 data-en="Not sure which service you need?" data-es="¿No estás seguro qué servicio necesitas?">Not sure which service you need?</h2>
+      <p data-en="That's exactly what the free consultation is for. Let's talk — we'll figure it out together." data-es="Para eso es exactamente la consulta gratuita. Hablemos — lo resolveremos juntos.">That's exactly what the free consultation is for. Let's talk — we'll figure it out together.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-en="Book a free consultation" data-es="Reserva una consulta gratuita">Book a free consultation</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AUDAZ Agency — Book your free 60-minute consultation with Rene Galan. Fortune 500 expertise for your small business. Bilingual EN/ES.">
+  <title>Contact — AUDAZ Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .animate{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+    .animate.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+        <a href="contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="hero-dark">
+    <div class="container">
+      <span class="section-label" data-en="CONTACT & BOOKING" data-es="CONTACTO Y RESERVAS">CONTACT & BOOKING</span>
+      <h1 data-en="We've been making brands <span style='color:#EF9F27'>impossible to ignore</span> since before the internet existed." data-es="Hemos estado haciendo marcas <span style='color:#EF9F27'>imposibles de ignorar</span> desde antes de que existiera el internet.">We've been making brands <span style="color:#EF9F27">impossible to ignore</span> since before the internet existed.</h1>
+      <p style="max-width:580px;margin-top:1rem;" data-en="Your free consultation is 60 minutes with people who have been building audiences since Ronald Reagan was on the campaign trail. No pressure. No pitch. Just strategy." data-es="Tu consulta gratuita son 60 minutos con personas que han construido audiencias desde que Ronald Reagan estaba en campaña. Sin presión. Solo estrategia.">Your free consultation is 60 minutes with people who have been building audiences since Ronald Reagan was on the campaign trail. No pressure. No pitch. Just strategy.</p>
+      <div class="creds-row" style="margin-top:1.5rem">
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="40+ years in media & marketing" data-es="40+ años en medios y marketing">40+ years in media & marketing</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Trained by P&G executives" data-es="Entrenado por ejecutivos de P&G">Trained by P&G executives</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Reagan Campaign & Sábado Gigante" data-es="Campaña Reagan & Sábado Gigante">Reagan Campaign & Sábado Gigante</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Bilingual EN / ES" data-es="Bilingüe EN / ES">Bilingual EN / ES</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section animate">
+    <div class="container">
+      <div class="two-col">
+        <div class="form-col">
+          <span class="section-label" data-en="BOOK YOUR FREE CONSULTATION" data-es="RESERVA TU CONSULTA GRATUITA">BOOK YOUR FREE CONSULTATION</span>
+          <h2 style="font-size:24px;margin-bottom:0.5rem" data-en="Let's talk about your business" data-es="Hablemos de tu negocio">Let's talk about your business</h2>
+          <p style="margin-bottom:1.5rem;font-size:14px" data-en="Fill out the form and Rene will personally reach out within 24 hours to schedule your free 60-minute strategy session." data-es="Completa el formulario y Rene te contactará personalmente en 24 horas para programar tu sesión de estrategia gratuita de 60 minutos.">Fill out the form and Rene will personally reach out within 24 hours to schedule your free 60-minute strategy session.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="inp-name" data-en="Full name" data-es="Nombre completo">Full name</label>
+              <input class="form-input" type="text" id="inp-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-biz" data-en="Business name" data-es="Nombre del negocio">Business name</label>
+              <input class="form-input" type="text" id="inp-biz" name="business" placeholder="Your business">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-email" data-en="Email address" data-es="Correo electrónico">Email address</label>
+              <input class="form-input" type="email" id="inp-email" name="email" placeholder="you@yourbusiness.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-phone" data-en="Phone number" data-es="Número de teléfono">Phone number</label>
+              <input class="form-input" type="tel" id="inp-phone" name="phone" placeholder="+1 (___) ___-____">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-industry" data-en="Industry" data-es="Industria">Industry</label>
+              <select class="form-select" id="inp-industry" name="industry">
+                <option data-en="Select your industry" data-es="Selecciona tu industria">Select your industry</option>
+                <option data-en="Restaurant / Food & Beverage" data-es="Restaurante / Alimentos y Bebidas">Restaurant / Food & Beverage</option>
+                <option data-en="Retail / E-commerce" data-es="Retail / E-commerce">Retail / E-commerce</option>
+                <option data-en="Professional Services" data-es="Servicios Profesionales">Professional Services</option>
+                <option data-en="Health & Wellness" data-es="Salud y Bienestar">Health & Wellness</option>
+                <option data-en="Hospitality / Events" data-es="Hotelería / Eventos">Hospitality / Events</option>
+                <option data-en="Real Estate" data-es="Bienes Raíces">Real Estate</option>
+                <option data-en="Technology / FinTech" data-es="Tecnología / FinTech">Technology / FinTech</option>
+                <option data-en="Agriculture / Nursery" data-es="Agricultura / Vivero">Agriculture / Nursery</option>
+                <option data-en="Manufacturing / Design" data-es="Manufactura / Diseño">Manufacturing / Design</option>
+                <option data-en="Other" data-es="Otro">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-service" data-en="Service you're most interested in" data-es="Servicio de mayor interés">Service you're most interested in</label>
+              <select class="form-select" id="inp-service" name="service">
+                <option data-en="Select a service" data-es="Selecciona un servicio">Select a service</option>
+                <option data-en="Website Design & Development" data-es="Diseño y Desarrollo Web">Website Design & Development</option>
+                <option data-en="Marketing Strategy" data-es="Estrategia de Marketing">Marketing Strategy</option>
+                <option data-en="Digital Advertising" data-es="Publicidad Digital">Digital Advertising</option>
+                <option data-en="Content Creation" data-es="Creación de Contenido">Content Creation</option>
+                <option data-en="Video Production" data-es="Producción de Video">Video Production</option>
+                <option data-en="Podcasting" data-es="Podcasting">Podcasting</option>
+                <option data-en="Full Service — All of the above" data-es="Servicio Completo — Todo lo anterior">Full Service — All of the above</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="Preferred language / Idioma preferido" data-es="Idioma preferido / Preferred language">Preferred language / Idioma preferido</label>
+              <div class="lang-pref">
+                <button type="button" class="lang-opt selected" onclick="selectLang('en')">English</button>
+                <button type="button" class="lang-opt" onclick="selectLang('es')">Español</button>
+                <button type="button" class="lang-opt" onclick="selectLang('both')" data-en="Both / Ambos" data-es="Ambos / Both">Both / Ambos</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-msg" data-en="Tell us about your business & goals" data-es="Cuéntanos sobre tu negocio y metas">Tell us about your business & goals</label>
+              <textarea class="form-textarea" id="inp-msg" name="message" placeholder="What are you trying to achieve? What's your biggest challenge right now?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger" style="width:100%;justify-content:center" data-en="Book my free consultation" data-es="Reserva mi consulta gratuita">Book my free consultation</button>
+          </form>
+
+          <div class="success-msg" id="success-msg">
+            <p class="success-title" data-en="You're on your way to being unmissable!" data-es="¡Estás en camino a ser inolvidable!">You're on your way to being unmissable!</p>
+            <p class="success-sub" data-en="Rene will personally reach out within 24 hours. Get ready to grow bold." data-es="Rene te contactará personalmente en 24 horas. Prepárate para crecer con audacia.">Rene will personally reach out within 24 hours. Get ready to grow bold.</p>
+          </div>
+        </div>
+
+        <div class="info-col">
+          <span class="section-label" data-en="WHY AUDAZ" data-es="POR QUÉ AUDAZ">WHY AUDAZ</span>
+          <h2 style="font-size:24px;margin-bottom:0.5rem" data-en="Not your average agency" data-es="No somos una agencia promedio">Not your average agency</h2>
+          <p style="margin-bottom:1.5rem;font-size:14px" data-en="Here's what makes a free consultation with AUDAZ different from everyone else." data-es="Esto es lo que hace que una consulta gratuita con AUDAZ sea diferente a todas las demás.">Here's what makes a free consultation with AUDAZ different from everyone else.</p>
+
+          <div class="info-card">
+            <p class="info-card-title" data-en="You talk to the founder — every time" data-es="Hablas con el fundador — siempre">You talk to the founder — every time</p>
+            <div class="why-item"><svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0;margin-top:3px"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><p class="why-text" data-en="No junior account managers. No handoffs. Rene personally handles every new client relationship — that's the AUDAZ difference." data-es="Sin gerentes junior. Sin transferencias. Rene maneja personalmente cada nueva relación con clientes.">No junior account managers. No handoffs. Rene personally handles every new client relationship — that's the AUDAZ difference.</p></div>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title" data-en="40+ years of audience-building expertise" data-es="40+ años de experiencia construyendo audiencias">40+ years of audience-building expertise</p>
+            <div class="why-item"><svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0;margin-top:3px"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><p class="why-text" data-en="From Reagan's campaign to Sábado Gigante to your small business — we know how to move an audience across every medium and every era." data-es="Desde la campaña de Reagan hasta Sábado Gigante y tu pequeño negocio — sabemos cómo mover una audiencia en cada medio y cada era.">From Reagan's campaign to Sábado Gigante to your small business — we know how to move an audience across every medium and every era.</p></div>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title" data-en="Bilingual by culture, not by translation" data-es="Bilingüe por cultura, no por traducción">Bilingual by culture, not by translation</p>
+            <div class="why-item"><svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0;margin-top:3px"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><p class="why-text" data-en="We don't translate your brand — we build it natively in both languages because we live in both worlds." data-es="No traducimos tu marca — la construimos nativamente en ambos idiomas porque vivimos en ambos mundos.">We don't translate your brand — we build it natively in both languages because we live in both worlds.</p></div>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title" data-en="Seth Godin principles. Real world results." data-es="Principios de Seth Godin. Resultados del mundo real.">Seth Godin principles. Real world results.</p>
+            <div class="why-item"><svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0;margin-top:3px"><polygon points="8,1 4,8 7,8 6,13 10,6 7,6 8,1" fill="#EF9F27"/></svg><p class="why-text" data-en="We find your tribe, tell your story, and make you remarkable — because fitting in is failing." data-es="Encontramos tu tribu, contamos tu historia y te hacemos extraordinario — porque encajar es fracasar.">We find your tribe, tell your story, and make you remarkable — because fitting in is failing.</p></div>
+          </div>
+
+          <div class="info-card" style="background:transparent;border:0.5px solid var(--border)">
+            <p class="info-card-title" data-en="Reach us directly" data-es="Contáctanos directamente">Reach us directly</p>
+            <p class="info-card-text">
+              <strong>Email:</strong> <a href="mailto:rene@audaz.agency">rene@audaz.agency</a><br>
+              <strong>Web:</strong> <a href="https://audaz.agency">audaz.agency</a><br>
+              <strong data-en="Based in:" data-es="Ubicados en:">Based in:</strong> <span data-en="South Florida & Serving Nationwide" data-es="Sur de Florida y atendiendo a nivel nacional">South Florida & Serving Nationwide</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="origin-strip animate">
+    <div class="origin-inner">
+      <span class="section-label" data-en="OUR ORIGIN STORY" data-es="NUESTRA HISTORIA DE ORIGEN">OUR ORIGIN STORY</span>
+      <h2 data-en="From <span>Reagan's campaign</span> to your small business — 40 years of making the impossible, unmissable." data-es="De la <span>campaña de Reagan</span> a tu pequeño negocio — 40 años haciendo lo imposible, inolvidable.">From <span>Reagan's campaign</span> to your small business — 40 years of making the impossible, unmissable.</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <p class="tl-year">1980</p>
+          <div class="tl-content">
+            <p class="tl-title" data-en="Ronald Reagan Presidential Campaign" data-es="Campaña Presidencial de Ronald Reagan">Ronald Reagan Presidential Campaign</p>
+            <p class="tl-desc" data-en="Rene helps spearhead Latin media outreach alongside Al Cardenas, head of the Latin Campaign in South Florida." data-es="Rene ayuda a liderar el alcance en medios latinos junto a Al Cardenas, jefe de la Campaña Latina en el Sur de Florida.">Rene helps spearhead Latin media outreach alongside Al Cardenas, head of the Latin Campaign in South Florida.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-year">1982</p>
+          <div class="tl-content">
+            <p class="tl-title" data-en="Sábado Gigante — US Launch" data-es="Sábado Gigante — Lanzamiento en EE.UU.">Sábado Gigante — US Launch</p>
+            <p class="tl-desc" data-en="Rene helps spearhead the most successful Latin television program in US history. Goes nationwide in months." data-es="Rene ayuda a impulsar el programa de televisión latino más exitoso en la historia de EE.UU. Se expande a nivel nacional en meses.">Rene helps spearhead the most successful Latin television program in US history. Goes nationwide in months.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-year">1984</p>
+          <div class="tl-content">
+            <p class="tl-title" data-en="Reagan Re-Election Campaign" data-es="Campaña de Reelección de Reagan">Reagan Re-Election Campaign</p>
+            <p class="tl-desc" data-en="Returns to build Reagan's historic 49-state landslide campaign. The Latin media strategy becomes a political marketing model for decades." data-es="Regresa para construir la histórica campaña de reelección de Reagan con victoria en 49 estados.">Returns to build Reagan's historic 49-state landslide campaign. The Latin media strategy becomes a political marketing model for decades.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-year">1992</p>
+          <div class="tl-content">
+            <p class="tl-title" data-en="The Real World — Season 1, Miami Beach" data-es="The Real World — Temporada 1, Miami Beach">The Real World — Season 1, Miami Beach</p>
+            <p class="tl-desc" data-en="Rene builds the set for MTV's The Real World Season 1 in Miami Beach — one of the most iconic moments in reality television history." data-es="Rene construye el set de The Real World Temporada 1 de MTV en Miami Beach.">Rene builds the set for MTV's The Real World Season 1 in Miami Beach — one of the most iconic moments in reality television history.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-year">2026</p>
+          <div class="tl-content">
+            <p class="tl-title" data-en="AUDAZ Agency — Born Bold" data-es="AUDAZ Agency — Nacida con Audacia">AUDAZ Agency — Born Bold</p>
+            <p class="tl-desc" data-en="After 40+ years building audiences across radio, TV, political media, and digital — Rene and Bobbie launch AUDAZ Agency. Everything learned. Everything earned. Now all in for your small business." data-es="Después de 40+ años — Rene y Bobbie lanzan AUDAZ Agency. Todo aprendido. Todo ganado. Ahora todo para tu pequeño negocio.">After 40+ years building audiences across radio, TV, political media, and digital — Rene and Bobbie launch AUDAZ Agency. Everything learned. Everything earned. Now all in for your small business.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="godin-section">
+    <div class="container">
+      <div class="godin-inner">
+        <p class="godin-quote" data-en='"Marketing is no longer about the stuff you make, but the stories you tell."' data-es='"El marketing ya no se trata de las cosas que fabricas, sino de las historias que cuentas."'>"Marketing is no longer about the stuff you make, but the stories you tell."</p>
+        <p class="godin-attr">— Seth Godin &nbsp;|&nbsp; <span data-en="AUDAZ has been telling stories that move audiences for over 40 years." data-es="AUDAZ ha estado contando historias que mueven audiencias por más de 40 años.">AUDAZ has been telling stories that move audiences for over 40 years.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    function selectLang(l) {
+      document.querySelectorAll('.lang-opt').forEach(b => b.classList.remove('selected'));
+      event.target.classList.add('selected');
+    }
+  </script>
+</body>
+</html>

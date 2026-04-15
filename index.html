@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AUDAZ Agency LLC — Fortune 500 expertise for small businesses. Bilingual EN/ES marketing agency offering web design, strategy, advertising, content, video & podcasting. We don't do quiet.">
+  <meta property="og:title" content="AUDAZ Agency — We don't do quiet.">
+  <meta property="og:description" content="We've been making brands impossible to ignore since before the internet existed. Fortune 500 expertise for your small business.">
+  <meta property="og:url" content="https://audaz.agency">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>AUDAZ Agency — We don't do quiet.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+        <a href="contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero-dark">
+    <div class="container">
+      <div class="hero-badge"
+        data-en="Bold marketing for small businesses"
+        data-es="Marketing audaz para pequeños negocios">
+        Bold marketing for small businesses
+      </div>
+      <h1
+        data-en="We've worked with<br><span style='color:#EF9F27'>AT&T, Adidas & Yeti.</span><br>Now we're all in<br>for your small business."
+        data-es="Hemos trabajado con<br><span style='color:#EF9F27'>AT&T, Adidas y Yeti.</span><br>Ahora estamos al 100%<br>para tu pequeño negocio.">
+        We've worked with<br><span style="color:#EF9F27">AT&T, Adidas & Yeti.</span><br>Now we're all in<br>for your small business.
+      </h1>
+      <p
+        data-en="Fortune 500 expertise. Small business heart. We've been making brands impossible to ignore since before the internet existed."
+        data-es="Experiencia Fortune 500. Corazón de pequeño negocio. Hemos hecho marcas imposibles de ignorar desde antes de que existiera el internet.">
+        Fortune 500 expertise. Small business heart. We've been making brands impossible to ignore since before the internet existed.
+      </p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg"
+          data-en="Book a free consultation"
+          data-es="Consulta gratuita">
+          Book a free consultation
+        </a>
+        <a href="portfolio.html" class="btn btn-outline-white btn-lg"
+          data-en="See our work"
+          data-es="Ver nuestro trabajo">
+          See our work
+        </a>
+      </div>
+      <div class="creds-row">
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="40+ years in media & marketing" data-es="40+ años en medios y marketing">40+ years in media & marketing</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Trained by P&G executives" data-es="Entrenado por ejecutivos de P&G">Trained by P&G executives</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Reagan Campaign & Sábado Gigante" data-es="Campaña Reagan & Sábado Gigante">Reagan Campaign & Sábado Gigante</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Bilingual EN / ES" data-es="Bilingüe EN / ES">Bilingual EN / ES</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar animate">
+    <div class="stat-item">
+      <span class="stat-num">40+</span>
+      <span class="stat-label" data-en="Years in media & marketing" data-es="Años en medios y marketing">Years in media & marketing</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">20+</span>
+      <span class="stat-label" data-en="Major brands served" data-es="Grandes marcas atendidas">Major brands served</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2</span>
+      <span class="stat-label" data-en="Languages. One bold voice." data-es="Idiomas. Una voz audaz.">Languages. One bold voice.</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">F500</span>
+      <span class="stat-label" data-en="Expertise for your business" data-es="Experiencia para tu negocio">Expertise for your business</span>
+    </div>
+  </div>
+
+  <!-- Brand Wall -->
+  <section class="brand-wall animate">
+    <div class="container">
+      <span class="section-label" data-en="BRANDS WE'VE WORKED WITH" data-es="MARCAS CON LAS QUE HEMOS TRABAJADO">BRANDS WE'VE WORKED WITH</span>
+      <h2 data-en="Fortune 500 experience. Now working for you." data-es="Experiencia Fortune 500. Ahora trabajando para ti.">Fortune 500 experience. Now working for you.</h2>
+      <p style="max-width:600px;margin:0.5rem 0 2rem;"
+        data-en="Before AUDAZ, Rene spent decades in the rooms where big brands are built. Now he brings every lesson, every strategy, and every insight to your small business."
+        data-es="Antes de AUDAZ, Rene pasó décadas en las salas donde se construyen las grandes marcas. Ahora trae cada lección, cada estrategia y cada insight a tu pequeño negocio.">
+        Before AUDAZ, Rene spent decades in the rooms where big brands are built. Now he brings every lesson, every strategy, and every insight to your small business.
+      </p>
+      <div class="brand-category">
+        <span class="cat-label" data-en="TELECOM & TECHNOLOGY" data-es="TELECOMUNICACIONES Y TECNOLOGÍA">TELECOM & TECHNOLOGY</span>
+        <div class="brand-grid">
+          <span class="brand-pill featured">AT&T</span>
+          <span class="brand-pill featured">Google Fiber</span>
+          <span class="brand-pill featured">Dell</span>
+          <span class="brand-pill">Colt</span>
+          <span class="brand-pill">Telstra</span>
+          <span class="brand-pill">Clearfield</span>
+        </div>
+      </div>
+      <div class="brand-category">
+        <span class="cat-label" data-en="OUTDOOR, LIFESTYLE & CONSUMER" data-es="OUTDOOR, LIFESTYLE Y CONSUMO">OUTDOOR, LIFESTYLE & CONSUMER</span>
+        <div class="brand-grid">
+          <span class="brand-pill featured">Adidas</span>
+          <span class="brand-pill featured">Yeti Coolers</span>
+          <span class="brand-pill featured">Casio</span>
+          <span class="brand-pill">Xero Shoes</span>
+          <span class="brand-pill">AO Coolers</span>
+          <span class="brand-pill">Buff</span>
+          <span class="brand-pill">Bridgford Foods</span>
+          <span class="brand-pill">Coldpruf</span>
+          <span class="brand-pill">Fitterfirst</span>
+          <span class="brand-pill">Ledge Sports</span>
+          <span class="brand-pill">Thermore</span>
+          <span class="brand-pill">Terex</span>
+          <span class="brand-pill">Kovea</span>
+          <span class="brand-pill">Eartheasy</span>
+          <span class="brand-pill">Cold Creek</span>
+          <span class="brand-pill">MFI</span>
+          <span class="brand-pill">Luggage America</span>
+          <span class="brand-pill">Coolvision</span>
+          <span class="brand-pill">Gateway Funding</span>
+        </div>
+      </div>
+      <div class="brand-category">
+        <span class="cat-label" data-en="MEDIA & POLITICAL" data-es="MEDIOS Y POLÍTICA">MEDIA & POLITICAL</span>
+        <div class="brand-grid">
+          <span class="brand-pill featured">Reagan Campaign '80 & '84</span>
+          <span class="brand-pill featured">Sábado Gigante</span>
+          <span class="brand-pill featured">MTV — The Real World</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider-strip">
+    <div class="divider-inner">
+      <div>
+        <h3 data-en="We learned from the best. <span style='color:#EF9F27'>Now we work for you.</span>" data-es="Aprendimos de los mejores. <span style='color:#EF9F27'>Ahora trabajamos para ti.</span>">We learned from the best. <span style="color:#EF9F27">Now we work for you.</span></h3>
+        <p data-en="Small businesses deserve Fortune 500 thinking. That's exactly what AUDAZ delivers." data-es="Los pequeños negocios merecen el pensamiento Fortune 500. Eso es exactamente lo que AUDAZ entrega.">Small businesses deserve Fortune 500 thinking. That's exactly what AUDAZ delivers.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-en="Book a free consultation" data-es="Reserva una consulta gratuita">Book a free consultation</a>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section animate">
+    <div class="container">
+      <span class="section-label" data-en="WHAT WE DO" data-es="LO QUE HACEMOS">WHAT WE DO</span>
+      <h2 data-en="Everything your brand needs to grow" data-es="Todo lo que tu marca necesita para crecer">Everything your brand needs to grow</h2>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="11" rx="2" stroke="#854F0B" stroke-width="1.5"/><path d="M7 17h6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Website Design" data-es="Diseño Web">Website Design</p>
+          <p class="svc-desc" data-en="Stunning, fast, mobile-first websites that convert visitors into customers." data-es="Sitios web impresionantes, rápidos y optimizados para móviles.">Stunning, fast, mobile-first websites that convert visitors into customers.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M3 6h14M3 14h8" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Strategy" data-es="Estrategia">Strategy</p>
+          <p class="svc-desc" data-en="Bold marketing roadmaps built on 40 years of real-world brand experience." data-es="Planes de marketing audaces construidos en 40 años de experiencia real.">Bold marketing roadmaps built on 40 years of real-world brand experience.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="2" stroke="#854F0B" stroke-width="1.5"/><path d="M8 7l5 3-5 3V7z" fill="#854F0B"/></svg></div>
+          <p class="svc-title" data-en="Video Production" data-es="Producción de Video">Video Production</p>
+          <p class="svc-desc" data-en="Scroll-stopping video content for social, ads, and brand storytelling." data-es="Contenido de video que detiene el scroll para redes y anuncios.">Scroll-stopping video content for social, ads, and brand storytelling.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="#854F0B" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Advertising" data-es="Publicidad">Advertising</p>
+          <p class="svc-desc" data-en="Google, Meta, and social ads that put your brand in front of the right people." data-es="Anuncios en Google, Meta y redes que llegan a las personas correctas.">Google, Meta, and social ads that put your brand in front of the right people.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16l4-4 3 3 5-6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="svc-title" data-en="Content Creation" data-es="Creación de Contenido">Content Creation</p>
+          <p class="svc-desc" data-en="Bilingual content that builds your brand in English and Spanish." data-es="Contenido bilingüe que construye tu marca en inglés y español.">Bilingual content that builds your brand in English and Spanish.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="9" r="3" stroke="#854F0B" stroke-width="1.5"/><path d="M6 17c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/><path d="M4 8c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Podcasting" data-es="Podcasting">Podcasting</p>
+          <p class="svc-desc" data-en="Launch, produce, and grow your podcast — your voice, amplified." data-es="Lanza, produce y haz crecer tu podcast — tu voz, amplificada.">Launch, produce, and grow your podcast — your voice, amplified.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="services.html" class="btn btn-outline" data-en="View all services" data-es="Ver todos los servicios">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Godin Quote -->
+  <section class="godin-section">
+    <div class="container">
+      <div class="godin-inner">
+        <p class="godin-quote" data-en='"The riskiest thing you can do now is be safe. The safe path is too crowded."' data-es='"Lo más arriesgado que puedes hacer ahora es ser seguro. El camino seguro está demasiado concurrido."'>"The riskiest thing you can do now is be safe. The safe path is too crowded."</p>
+        <p class="godin-attr">— Seth Godin &nbsp;|&nbsp; <span data-en="Why AUDAZ exists — and why your small business needs to stop playing it safe" data-es="Por qué AUDAZ existe — y por qué tu negocio necesita dejar de jugar a lo seguro">Why AUDAZ exists — and why your small business needs to stop playing it safe</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-dark">
+    <div class="container">
+      <h2 data-en="Ready for <span style='color:#EF9F27'>Fortune 500 thinking</span> at small business prices?" data-es="¿Listo para el <span style='color:#EF9F27'>pensamiento Fortune 500</span> a precios de pequeño negocio?">Ready for <span style="color:#EF9F27">Fortune 500 thinking</span> at small business prices?</h2>
+      <p data-en="Book your free 60-minute consultation with Rene. No pitch. No pressure. Just 40 years of expertise working for your business." data-es="Reserva tu consulta gratuita de 60 minutos con Rene. Sin presión. Solo 40 años de experiencia.">Book your free 60-minute consultation with Rene. No pitch. No pressure. Just 40 years of expertise working for your business.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-en="Book your free consultation" data-es="Reserva tu consulta gratuita">Book your free consultation</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
