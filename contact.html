@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
   <style>
     .animate{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
     .animate.visible{opacity:1;transform:translateY(0)}
@@ -59,7 +63,7 @@
           <h2 style="font-size:24px;margin-bottom:0.5rem" data-en="Let's talk about your business" data-es="Hablemos de tu negocio">Let's talk about your business</h2>
           <p style="margin-bottom:1.5rem;font-size:14px" data-en="Fill out the form and Rene will personally reach out within 24 hours to schedule your free 60-minute strategy session." data-es="Completa el formulario y Rene te contactará personalmente en 24 horas para programar tu sesión de estrategia gratuita de 60 minutos.">Fill out the form and Rene will personally reach out within 24 hours to schedule your free 60-minute strategy session.</p>
 
-          <form id="contact-form">
+          <form id="contact-form" onsubmit="submitContactForm(event)">
             <div class="form-group">
               <label class="form-label" for="inp-name" data-en="Full name" data-es="Nombre completo">Full name</label>
               <input class="form-input" type="text" id="inp-name" name="name" placeholder="Your name" required>
@@ -98,6 +102,7 @@
                 <option data-en="Select a service" data-es="Selecciona un servicio">Select a service</option>
                 <option data-en="Website Design & Development" data-es="Diseño y Desarrollo Web">Website Design & Development</option>
                 <option data-en="Marketing Strategy" data-es="Estrategia de Marketing">Marketing Strategy</option>
+                <option data-en="GEO / AEO — AI Visibility" data-es="GEO / AEO — Visibilidad en IA">GEO / AEO — AI Visibility</option>
                 <option data-en="Digital Advertising" data-es="Publicidad Digital">Digital Advertising</option>
                 <option data-en="Content Creation" data-es="Creación de Contenido">Content Creation</option>
                 <option data-en="Video Production" data-es="Producción de Video">Video Production</option>
@@ -108,19 +113,19 @@
             <div class="form-group">
               <label class="form-label" data-en="Preferred language / Idioma preferido" data-es="Idioma preferido / Preferred language">Preferred language / Idioma preferido</label>
               <div class="lang-pref">
-                <button type="button" class="lang-opt selected" onclick="selectLang('en')">English</button>
-                <button type="button" class="lang-opt" onclick="selectLang('es')">Español</button>
-                <button type="button" class="lang-opt" onclick="selectLang('both')" data-en="Both / Ambos" data-es="Ambos / Both">Both / Ambos</button>
+                <button type="button" class="lang-opt selected" onclick="selectLang('en', event)">English</button>
+                <button type="button" class="lang-opt" onclick="selectLang('es', event)">Español</button>
+                <button type="button" class="lang-opt" onclick="selectLang('both', event)" data-en="Both / Ambos" data-es="Ambos / Both">Both / Ambos</button>
               </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="inp-msg" data-en="Tell us about your business & goals" data-es="Cuéntanos sobre tu negocio y metas">Tell us about your business & goals</label>
               <textarea class="form-textarea" id="inp-msg" name="message" placeholder="What are you trying to achieve? What's your biggest challenge right now?"></textarea>
             </div>
-            <button type="submit" class="btn btn-danger" style="width:100%;justify-content:center" data-en="Book my free consultation" data-es="Reserva mi consulta gratuita">Book my free consultation</button>
+            <button type="submit" class="btn btn-danger" id="submit-btn" style="width:100%;justify-content:center" data-en="Book my free consultation" data-es="Reserva mi consulta gratuita">Book my free consultation</button>
           </form>
 
-          <div class="success-msg" id="success-msg">
+          <div class="success-msg" id="success-msg" style="display:none">
             <p class="success-title" data-en="You're on your way to being unmissable!" data-es="¡Estás en camino a ser inolvidable!">You're on your way to being unmissable!</p>
             <p class="success-sub" data-en="Rene will personally reach out within 24 hours. Get ready to grow bold." data-es="Rene te contactará personalmente en 24 horas. Prepárate para crecer con audacia.">Rene will personally reach out within 24 hours. Get ready to grow bold.</p>
           </div>
@@ -236,10 +241,74 @@
 
   <script src="js/main.js"></script>
   <script>
-    function selectLang(l) {
+    // Language preference tracking
+    let selectedLang = 'en';
+    function selectLang(l, e) {
+      selectedLang = l;
       document.querySelectorAll('.lang-opt').forEach(b => b.classList.remove('selected'));
-      event.target.classList.add('selected');
+      if (e && e.target) e.target.classList.add('selected');
     }
+
+    // HubSpot Form Submission
+    async function submitContactForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Submitting...';
+
+      // Gather values
+      const fullname = document.getElementById('inp-name').value.trim();
+      const nameParts = fullname.split(' ');
+      const firstname = nameParts[0] || '';
+      const lastname = nameParts.slice(1).join(' ') || '';
+      const email = document.getElementById('inp-email').value.trim();
+      const phone = document.getElementById('inp-phone').value.trim();
+      const company = document.getElementById('inp-biz').value.trim();
+      const industry = document.getElementById('inp-industry').value;
+      const service = document.getElementById('inp-service').value;
+      const message = document.getElementById('inp-msg').value.trim();
+
+      const payload = {
+        portalId: '246149326',
+        formGuid: '5a293f22-8ba6-4bf4-9ff9-7868d5e59612',
+        fields: [
+          { name: 'firstname', value: firstname },
+          { name: 'lastname',  value: lastname },
+          { name: 'email',     value: email },
+          { name: 'phone',     value: phone },
+          { name: 'company',   value: company },
+          { name: 'industry',  value: industry },
+          { name: 'message',   value: `SERVICE: ${service}\nLANGUAGE: ${selectedLang}\n\n${message}` }
+        ],
+        context: {
+          pageUri:  window.location.href,
+          pageName: 'Contact — AUDAZ Agency'
+        }
+      };
+
+      try {
+        const res = await fetch(
+          'https://api.hsforms.com/submissions/v3/integration/submit/246149326/5a293f22-8ba6-4bf4-9ff9-7868d5e59612',
+          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
+        );
+        if (window._hsq) {
+          window._hsq.push(['identify', { email, firstname, lastname }]);
+          window._hsq.push(['trackPageView']);
+        }
+      } catch(err) {
+        console.warn('HubSpot fallback:', err);
+      }
+
+      // Show success regardless
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
