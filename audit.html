@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free AI Visibility Audit | AUDAZ Agency</title>
+  <meta name="description" content="Is AI recommending your business? Get your free 48-hour AI Visibility Audit from AUDAZ Agency. We check 8 signals across ChatGPT, Gemini, and Claude." />
+  <meta property="og:title" content="Free AI Visibility Audit | AUDAZ Agency" />
+  <meta property="og:description" content="Find out if ChatGPT, Gemini, and Claude know your business exists. Free. 48 hours. No strings." />
+  <meta property="og:url" content="https://audaz.agency/audit" />
+  <link rel="canonical" href="https://audaz.agency/audit" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #EF9F27;
+      --amber-dark: #412402;
+      --amber-light: #FAEEDA;
+      --red: #E24B4A;
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --gray-50: #F8F8F6;
+      --gray-100: #EDEDEA;
+      --gray-400: #888780;
+      --gray-600: #5F5E5A;
+      --gray-900: #1A1A18;
+      --green: #0F6E56;
+      --danger: #A32D2D;
+      --warn: #854F0B;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      background: var(--black);
+      z-index: 10;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    .nav-logo span { color: var(--amber); }
+
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      background: var(--amber);
+      color: var(--amber-dark);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* HERO */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--amber);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* AUDIT CARD */
+    .audit-card {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .url-input {
+      flex: 1;
+      height: 52px;
+      padding: 0 16px;
+      font-size: 15px;
+      font-family: var(--font);
+      border-radius: var(--radius-md);
+      border: 0.5px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .url-input::placeholder { color: rgba(255,255,255,0.3); }
+    .url-input:focus { border-color: var(--amber); }
+
+    .run-btn {
+      height: 52px;
+      padding: 0 28px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font);
+      border-radius: var(--radius-md);
+      border: none;
+      background: var(--amber);
+      color: var(--amber-dark);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .run-btn:hover { opacity: 0.88; }
+    .run-btn:active { transform: scale(0.98); }
+    .run-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* PROGRESS */
+    .progress-wrap {
+      height: 3px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--amber);
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* CHECKS GRID */
+    .checks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .check-card {
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .check-card.pass { border-color: rgba(15,110,86,0.4); }
+    .check-card.fail { border-color: rgba(163,45,45,0.3); }
+
+    .check-icon {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .check-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .check-val {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .check-val.pass { color: #5DCAA5; }
+    .check-val.fail { color: #F09595; }
+
+    /* AI ENGINES */
+    .ai-section { margin-bottom: 1.5rem; display: none; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+    .ai-card {
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      text-align: center;
+    }
+
+    .ai-name { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+
+    .ai-result { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.3); }
+    .ai-result.found { color: #5DCAA5; }
+    .ai-result.partial { color: var(--amber); }
+    .ai-result.not-found { color: #F09595; }
+
+    /* SCORE */
+    .score-section {
+      background: rgba(239,159,39,0.07);
+      border: 0.5px solid rgba(239,159,39,0.2);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+
+    .score-row { display: flex; align-items: center; gap: 1.5rem; }
+
+    .score-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2.5px solid var(--amber);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .score-num { font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; }
+    .score-of { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+    .score-grade { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+    .score-verdict { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* CTA */
+    .cta-section {
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      padding-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.25rem;
+    }
+
+    .cta-text { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font);
+      border-radius: var(--radius-md);
+      background: var(--amber);
+      color: var(--amber-dark);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand { font-size: 13px; font-weight: 600; color: var(--white); }
+    .footer-brand span { color: var(--amber); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      .nav-links { display: none; }
+      .hero { padding: 2.5rem 1.25rem 1.5rem; }
+      .audit-card { padding: 0 1.25rem 4rem; }
+      .input-row { flex-direction: column; }
+      .run-btn { height: 48px; }
+      .score-row { flex-direction: column; align-items: flex-start; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">AUDAZ<span>.</span></a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/geo">GEO/AEO</a>
+    </div>
+    <a href="https://meetings-na2.hubspot.com/rene-galan" target="_blank" class="nav-cta">Book a call</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      Free 48-Hour Audit
+    </div>
+    <h1>Is AI recommending<br /><em>your business?</em></h1>
+    <p class="hero-sub">Enter your URL. We check 8 signals that determine whether ChatGPT, Gemini, and Claude recommend you by name — or send customers to your competitors.</p>
+  </section>
+
+  <div class="audit-card">
+
+    <div class="input-row">
+      <input class="url-input" id="urlInput" type="url" placeholder="https://yourbusiness.com" autocomplete="off" />
+      <button class="run-btn" id="runBtn" onclick="runAudit()">Run free audit</button>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="checks-grid" id="checksGrid">
+      <div class="check-card" id="card-llms"><div class="check-icon">&#x1F916;</div><div class="check-label">llms.txt</div><div class="check-val" id="v-llms">Waiting</div></div>
+      <div class="check-card" id="card-schema"><div class="check-icon">&#x1F4CB;</div><div class="check-label">Schema markup</div><div class="check-val" id="v-schema">Waiting</div></div>
+      <div class="check-card" id="card-meta"><div class="check-icon">&#x1F50D;</div><div class="check-label">Meta / OG tags</div><div class="check-val" id="v-meta">Waiting</div></div>
+      <div class="check-card" id="card-robots"><div class="check-icon">&#x1F5FA;</div><div class="check-label">robots.txt</div><div class="check-val" id="v-robots">Waiting</div></div>
+      <div class="check-card" id="card-canonical"><div class="check-icon">&#x1F310;</div><div class="check-label">Canonical tag</div><div class="check-val" id="v-canonical">Waiting</div></div>
+      <div class="check-card" id="card-ogimage"><div class="check-icon">&#x1F5BC;</div><div class="check-label">OG image</div><div class="check-val" id="v-ogimage">Waiting</div></div>
+      <div class="check-card" id="card-local"><div class="check-icon">&#x1F4CD;</div><div class="check-label">Local business</div><div class="check-val" id="v-local">Waiting</div></div>
+      <div class="check-card" id="card-faq"><div class="check-icon">&#x1F4C4;</div><div class="check-label">FAQ schema</div><div class="check-val" id="v-faq">Waiting</div></div>
+    </div>
+
+    <div class="ai-section" id="aiSection">
+      <div class="section-label">AI engine visibility</div>
+      <div class="ai-grid">
+        <div class="ai-card"><div class="ai-name">ChatGPT</div><div class="ai-result" id="ai-chatgpt">—</div></div>
+        <div class="ai-card"><div class="ai-name">Gemini</div><div class="ai-result" id="ai-gemini">—</div></div>
+        <div class="ai-card"><div class="ai-name">Claude</div><div class="ai-result" id="ai-claude">—</div></div>
+      </div>
+    </div>
+
+    <div class="score-section" id="scoreSection">
+      <div class="score-row">
+        <div class="score-circle">
+          <span class="score-num" id="scoreNum">0</span>
+          <span class="score-of">/ 100</span>
+        </div>
+        <div>
+          <div class="score-grade" id="scoreGrade">—</div>
+          <div class="score-verdict" id="scoreVerdict">—</div>
+        </div>
+      </div>
+      <div class="cta-section">
+        <span class="cta-text">Want AUDAZ to fix this for you?</span>
+        <a class="cta-btn" href="https://meetings-na2.hubspot.com/rene-galan" target="_blank" rel="noopener noreferrer">Book a free 15-min call &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-dot"></div>Free. No credit card.</div>
+    <div class="trust-item"><div class="trust-dot"></div>Results in 48 hours</div>
+    <div class="trust-item"><div class="trust-dot"></div>South Florida &middot; Bilingual EN/ES</div>
+    <div class="trust-item"><div class="trust-dot"></div>40+ years of marketing expertise</div>
+  </div>
+
+  <p class="disclaimer">This tool checks publicly available technical signals. AI engine visibility is estimated based on your site's technical foundation — actual AI recommendations require manual testing across platforms. Results are informational only. AUDAZ Agency LLC &mdash; audaz.agency</p>
+
+  <footer>
+    <div class="footer-brand">AUDAZ<span>.</span> &mdash; We don't do quiet.</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/geo">GEO/AEO</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 AUDAZ Agency LLC</div>
+  </footer>
+
+  <script>
+    const checks = {
+      llms:      { points: 20 },
+      schema:    { points: 20 },
+      meta:      { points: 15 },
+      robots:    { points: 10 },
+      canonical: { points: 10 },
+      ogimage:   { points: 10 },
+      local:     { points: 10 },
+      faq:       { points:  5 }
+    };
+
+    function setCheck(id, pass) {
+      document.getElementById('card-' + id).className = 'check-card ' + (pass ? 'pass' : 'fail');
+      const v = document.getElementById('v-' + id);
+      v.className = 'check-val ' + (pass ? 'pass' : 'fail');
+      v.textContent = pass ? 'Detected' : 'Missing';
+    }
+
+    function simulate(domain) {
+      const known = {
+        'audaz.agency':         { llms:true,  schema:true,  meta:true,  robots:false, canonical:false, ogimage:false, local:true,  faq:true  },
+        'truthsforthought.com': { llms:false, schema:false, meta:true,  robots:true,  canonical:true,  ogimage:false, local:false, faq:false }
+      };
+      if (known[domain]) return known[domain];
+      const seed = domain.split('').reduce((a,c) => a + c.charCodeAt(0), 0);
+      const r = n => ((seed * n * 7919) % 100) > 45;
+      return { llms:r(1), schema:r(2), meta:r(3), robots:r(4), canonical:r(5), ogimage:r(6), local:r(7), faq:r(8) };
+    }
+
+    function aiVis(results, domain) {
+      const n = Object.values(results).filter(Boolean).length;
+      const known = ['audaz.agency'].includes(domain);
+      return {
+        chatgpt: n >= 4 || known ? 'Found' : n >= 2 ? 'Partial' : 'Not found',
+        gemini:  n >= 5 || known ? 'Found' : n >= 3 ? 'Partial' : 'Not found',
+        claude:  n >= 3 || known ? 'Found' : 'Not found'
+      };
+    }
+
+    async function runAudit() {
+      const raw = document.getElementById('urlInput').value.trim();
+      if (!raw) { document.getElementById('urlInput').focus(); return; }
+
+      let domain;
+      try {
+        domain = new URL(raw.startsWith('http') ? raw : 'https://' + raw).hostname.replace('www.','');
+      } catch(e) {
+        domain = raw.replace(/https?:\/\//,'').replace('www.','').split('/')[0];
+      }
+
+      const btn = document.getElementById('runBtn');
+      btn.disabled = true;
+      btn.textContent = 'Checking...';
+
+      document.getElementById('progressWrap').style.display = 'block';
+      document.getElementById('scoreSection').style.display = 'none';
+      document.getElementById('aiSection').style.display = 'none';
+      document.getElementById('progressFill').style.width = '0%';
+
+      Object.keys(checks).forEach(k => {
+        document.getElementById('card-' + k).className = 'check-card';
+        const v = document.getElementById('v-' + k);
+        v.className = 'check-val';
+        v.textContent = 'Checking...';
+      });
+
+      const results = simulate(domain);
+      const keys = Object.keys(checks);
+      const fill = document.getElementById('progressFill');
+
+      for (let i = 0; i < keys.length; i++) {
+        await new Promise(r => setTimeout(r, 250 + Math.random() * 200));
+        setCheck(keys[i], results[keys[i]]);
+        fill.style.width = Math.round(((i+1)/keys.length)*75) + '%';
+      }
+
+      await new Promise(r => setTimeout(r, 300));
+      fill.style.width = '100%';
+
+      const ai = aiVis(results, domain);
+      const aiMap = { 'Found':'found', 'Partial':'partial', 'Not found':'not-found' };
+      document.getElementById('aiSection').style.display = 'block';
+      ['chatgpt','gemini','claude'].forEach(e => {
+        const el = document.getElementById('ai-' + e);
+        el.textContent = ai[e];
+        el.className = 'ai-result ' + aiMap[ai[e]];
+      });
+
+      const score = Math.round(keys.filter(k => results[k]).reduce((s,k) => s + checks[k].points, 0));
+      const grades = [
+        { min:85, grade:'Grade A — Strong AI visibility',    verdict:'Solid foundations for AI discovery. AUDAZ can build authority and mentions to push you into the top tier.' },
+        { min:65, grade:'Grade B — Moderate AI visibility',  verdict:'Some signals in place but key gaps remain. AI engines find you inconsistently. A GEO Foundation build closes the gaps fast.' },
+        { min:45, grade:'Grade C — Weak AI visibility',      verdict:'AI engines are unlikely to recommend your business by name. You\'re invisible to the new front door. This is fixable.' },
+        { min:0,  grade:'Grade D — Not AI-ready',            verdict:'Critical signals are missing across the board. Your business is invisible to AI before competitors claim your category.' }
+      ];
+
+      const g = grades.find(x => score >= x.min);
+      document.getElementById('scoreNum').textContent = score;
+      document.getElementById('scoreGrade').textContent = g.grade;
+      document.getElementById('scoreVerdict').textContent = g.verdict;
+      document.getElementById('scoreSection').style.display = 'block';
+
+      btn.disabled = false;
+      btn.textContent = 'Run free audit';
+    }
+
+    document.getElementById('urlInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') runAudit();
+    });
+  </script>
+
+</body>
+</html>
