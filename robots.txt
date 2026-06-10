@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://audaz.agency/sitemap.xml
