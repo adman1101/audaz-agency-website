@@ -8,8 +8,18 @@
   <meta property="og:title" content="Free AI Visibility Audit | AUDAZ Agency" />
   <meta property="og:description" content="Find out if ChatGPT, Gemini, and Claude know your business exists. Free. 48 hours. No strings." />
   <meta property="og:url" content="https://audaz.agency/audit" />
+  <meta property="og:image" content="https://audaz.agency/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="AUDAZ Agency — We don't do quiet." />
   <link rel="canonical" href="https://audaz.agency/audit" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -59,187 +69,86 @@
       z-index: 10;
     }
 
-    .nav-logo {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--white);
-    }
-
+    .nav-logo { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); }
     .nav-logo span { color: var(--amber); }
-
     .nav-links { display: flex; align-items: center; gap: 2rem; }
     .nav-links a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.15s; }
     .nav-links a:hover { color: var(--white); }
 
     .nav-cta {
-      font-size: 13px;
-      font-weight: 500;
-      padding: 8px 18px;
-      border-radius: var(--radius-sm);
-      background: var(--amber);
-      color: var(--amber-dark);
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.15s;
+      font-size: 13px; font-weight: 500; padding: 8px 18px;
+      border-radius: var(--radius-sm); background: var(--amber);
+      color: var(--amber-dark); border: none; cursor: pointer; transition: opacity 0.15s;
     }
     .nav-cta:hover { opacity: 0.88; }
 
     /* HERO */
-    .hero {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-    }
+    .hero { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 2rem; text-align: center; }
 
     .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 1.25rem;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 1.25rem;
     }
 
-    .hero-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--amber);
-    }
+    .hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-      color: var(--white);
+      font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700;
+      line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; color: var(--white);
     }
 
-    .hero h1 em {
-      font-style: normal;
-      color: var(--amber);
-    }
+    .hero h1 em { font-style: normal; color: var(--amber); }
 
     .hero-sub {
-      font-size: 16px;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.7;
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
+      font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.7;
+      max-width: 520px; margin: 0 auto 2.5rem;
     }
 
     /* AUDIT CARD */
-    .audit-card {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 1.5rem 5rem;
-    }
+    .audit-card { max-width: 680px; margin: 0 auto; padding: 0 1.5rem 5rem; }
 
-    .input-row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 2rem;
-    }
+    .input-row { display: flex; gap: 10px; margin-bottom: 2rem; }
 
     .url-input {
-      flex: 1;
-      height: 52px;
-      padding: 0 16px;
-      font-size: 15px;
-      font-family: var(--font);
-      border-radius: var(--radius-md);
-      border: 0.5px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.05);
-      color: var(--white);
-      outline: none;
-      transition: border-color 0.15s;
+      flex: 1; height: 52px; padding: 0 16px; font-size: 15px;
+      font-family: var(--font); border-radius: var(--radius-md);
+      border: 0.5px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05);
+      color: var(--white); outline: none; transition: border-color 0.15s;
     }
-
     .url-input::placeholder { color: rgba(255,255,255,0.3); }
     .url-input:focus { border-color: var(--amber); }
 
     .run-btn {
-      height: 52px;
-      padding: 0 28px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: var(--font);
-      border-radius: var(--radius-md);
-      border: none;
-      background: var(--amber);
-      color: var(--amber-dark);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: opacity 0.15s, transform 0.1s;
+      height: 52px; padding: 0 28px; font-size: 14px; font-weight: 600;
+      font-family: var(--font); border-radius: var(--radius-md); border: none;
+      background: var(--amber); color: var(--amber-dark); cursor: pointer;
+      white-space: nowrap; transition: opacity 0.15s, transform 0.1s;
     }
-
     .run-btn:hover { opacity: 0.88; }
     .run-btn:active { transform: scale(0.98); }
     .run-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
     /* PROGRESS */
     .progress-wrap {
-      height: 3px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      display: none;
+      height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px;
+      overflow: hidden; margin-bottom: 1.5rem; display: none;
     }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--amber);
-      border-radius: 2px;
-      width: 0%;
-      transition: width 0.4s ease;
-    }
+    .progress-fill { height: 100%; background: var(--amber); border-radius: 2px; width: 0%; transition: width 0.4s ease; }
 
     /* CHECKS GRID */
-    .checks-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 1.5rem;
-    }
+    .checks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
 
     .check-card {
-      background: rgba(255,255,255,0.04);
-      border: 0.5px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
-      padding: 1rem;
-      transition: border-color 0.2s;
+      background: rgba(255,255,255,0.04); border: 0.5px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 1rem; transition: border-color 0.2s;
     }
-
     .check-card.pass { border-color: rgba(15,110,86,0.4); }
     .check-card.fail { border-color: rgba(163,45,45,0.3); }
 
-    .check-icon {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: rgba(255,255,255,0.3);
-    }
-
-    .check-label {
-      font-size: 11px;
-      color: rgba(255,255,255,0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 4px;
-    }
-
-    .check-val {
-      font-size: 13px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.4);
-    }
-
+    .check-icon { font-size: 18px; margin-bottom: 8px; color: rgba(255,255,255,0.3); }
+    .check-label { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+    .check-val { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.4); }
     .check-val.pass { color: #5DCAA5; }
     .check-val.fail { color: #F09595; }
 
@@ -247,26 +156,17 @@
     .ai-section { margin-bottom: 1.5rem; display: none; }
 
     .section-label {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 10px;
+      font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.4);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;
     }
 
     .ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 
     .ai-card {
-      background: rgba(255,255,255,0.04);
-      border: 0.5px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-md);
-      padding: 12px;
-      text-align: center;
+      background: rgba(255,255,255,0.04); border: 0.5px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md); padding: 12px; text-align: center;
     }
-
     .ai-name { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
-
     .ai-result { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.3); }
     .ai-result.found { color: #5DCAA5; }
     .ai-result.partial { color: var(--amber); }
@@ -274,115 +174,145 @@
 
     /* SCORE */
     .score-section {
-      background: rgba(239,159,39,0.07);
-      border: 0.5px solid rgba(239,159,39,0.2);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      display: none;
+      background: rgba(239,159,39,0.07); border: 0.5px solid rgba(239,159,39,0.2);
+      border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; display: none;
     }
-
     .score-row { display: flex; align-items: center; gap: 1.5rem; }
-
     .score-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2.5px solid var(--amber);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      width: 80px; height: 80px; border-radius: 50%; border: 2.5px solid var(--amber);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0;
     }
-
     .score-num { font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; }
     .score-of { font-size: 11px; color: rgba(255,255,255,0.4); }
-
     .score-grade { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
     .score-verdict { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
     /* CTA */
     .cta-section {
-      border-top: 0.5px solid rgba(255,255,255,0.08);
-      padding-top: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 1.25rem;
+      border-top: 0.5px solid rgba(255,255,255,0.08); padding-top: 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; margin-top: 1.25rem;
     }
-
     .cta-text { font-size: 13px; color: rgba(255,255,255,0.5); }
-
     .cta-btn {
-      display: inline-block;
-      padding: 10px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: var(--font);
-      border-radius: var(--radius-md);
-      background: var(--amber);
-      color: var(--amber-dark);
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.15s;
-      text-decoration: none;
+      display: inline-block; padding: 10px 22px; font-size: 14px; font-weight: 600;
+      font-family: var(--font); border-radius: var(--radius-md); background: var(--amber);
+      color: var(--amber-dark); border: none; cursor: pointer; transition: opacity 0.15s; text-decoration: none;
     }
-
     .cta-btn:hover { opacity: 0.88; }
 
     /* TRUST BAR */
     .trust-bar {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      max-width: 680px; margin: 0 auto; padding: 0 1.5rem 2rem;
+      display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;
     }
-
-    .trust-item {
-      font-size: 12px;
-      color: rgba(255,255,255,0.3);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
+    .trust-item { font-size: 12px; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 6px; }
     .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
 
     /* DISCLAIMER */
     .disclaimer {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 1.5rem 4rem;
-      font-size: 11px;
-      color: rgba(255,255,255,0.2);
-      line-height: 1.6;
-      text-align: center;
+      max-width: 680px; margin: 0 auto; padding: 0 1.5rem 4rem;
+      font-size: 11px; color: rgba(255,255,255,0.2); line-height: 1.6; text-align: center;
     }
 
     /* FOOTER */
     footer {
-      border-top: 0.5px solid rgba(255,255,255,0.08);
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      border-top: 0.5px solid rgba(255,255,255,0.08); padding: 1.5rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
     }
-
     .footer-brand { font-size: 13px; font-weight: 600; color: var(--white); }
     .footer-brand span { color: var(--amber); }
     .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
     .footer-links { display: flex; gap: 1.5rem; }
     .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); transition: color 0.15s; }
     .footer-links a:hover { color: var(--white); }
+
+    /* ===================== GATE MODAL ===================== */
+    .gate-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .gate-overlay.active { display: flex; }
+
+    .gate-modal {
+      background: #141414;
+      border: 0.5px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
+      max-width: 460px;
+      width: 100%;
+      position: relative;
+      animation: slideUp 0.25s ease;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .gate-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 1rem;
+    }
+
+    .gate-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse 1.5s infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .gate-modal h2 {
+      font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em;
+      color: var(--white); margin-bottom: 0.5rem; line-height: 1.25;
+    }
+
+    .gate-modal p {
+      font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 1.75rem; line-height: 1.6;
+    }
+
+    .gate-field { margin-bottom: 1rem; }
+
+    .gate-field label {
+      display: block; font-size: 12px; font-weight: 500;
+      color: rgba(255,255,255,0.5); margin-bottom: 6px; letter-spacing: 0.02em;
+    }
+
+    .gate-field input {
+      width: 100%; height: 48px; padding: 0 14px; font-size: 15px;
+      font-family: var(--font); border-radius: var(--radius-md);
+      border: 0.5px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05);
+      color: var(--white); outline: none; transition: border-color 0.15s;
+    }
+    .gate-field input::placeholder { color: rgba(255,255,255,0.25); }
+    .gate-field input:focus { border-color: var(--amber); }
+
+    .gate-submit {
+      width: 100%; height: 52px; font-size: 15px; font-weight: 600;
+      font-family: var(--font); border-radius: var(--radius-md); border: none;
+      background: var(--amber); color: var(--amber-dark); cursor: pointer;
+      margin-top: 0.5rem; transition: opacity 0.15s, transform 0.1s;
+    }
+    .gate-submit:hover { opacity: 0.88; }
+    .gate-submit:active { transform: scale(0.98); }
+    .gate-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .gate-privacy {
+      font-size: 11px; color: rgba(255,255,255,0.25); text-align: center;
+      margin-top: 1rem; line-height: 1.5;
+    }
+
+    .gate-error {
+      font-size: 12px; color: #F09595; margin-top: 0.5rem; display: none;
+    }
 
     @media (max-width: 600px) {
       nav { padding: 1rem; }
@@ -393,20 +323,53 @@
       .run-btn { height: 48px; }
       .score-row { flex-direction: column; align-items: flex-start; }
       footer { flex-direction: column; align-items: flex-start; }
+      .gate-modal { padding: 2rem 1.25rem; }
     }
   </style>
-  <link rel="canonical" href="https://audaz.agency/audit.html" />
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-<!-- Open Graph / Social Sharing -->
-<meta property="og:image" content="https://audaz.agency/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AUDAZ Agency — We don't do quiet."></head>
+</head>
 <body>
+
+  <!-- Hidden Netlify form for lead capture (required for Netlify to detect the form) -->
+  <form name="audit-gate" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input name="first-name" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="website-url" />
+  </form>
+
+  <!-- LEAD GATE MODAL -->
+  <div class="gate-overlay" id="gateOverlay">
+    <div class="gate-modal">
+      <div class="gate-badge">
+        <div class="gate-dot"></div>
+        Audit Running
+      </div>
+      <h2>Your results are almost ready.</h2>
+      <p>Where should we send your AI Visibility Report? We'll also include quick-win tips specific to your score.</p>
+
+      <div class="gate-field">
+        <label>First Name *</label>
+        <input type="text" id="gateName" placeholder="Rene" autocomplete="given-name" />
+      </div>
+      <div class="gate-field">
+        <label>Email Address *</label>
+        <input type="email" id="gateEmail" placeholder="you@yourbusiness.com" autocomplete="email" />
+      </div>
+      <div class="gate-field">
+        <label>Phone <span style="color:rgba(255,255,255,0.3);font-weight:400;">(optional)</span></label>
+        <input type="tel" id="gatePhone" placeholder="(305) 555-0100" autocomplete="tel" />
+      </div>
+
+      <div class="gate-error" id="gateError">Please enter your name and a valid email address.</div>
+
+      <button class="gate-submit" id="gateSubmit" onclick="submitGate()">
+        See My Results &rarr;
+      </button>
+
+      <p class="gate-privacy">No spam. No credit card. We'll only contact you about your AI visibility. 🦞</p>
+    </div>
+  </div>
 
   <nav>
     <a href="/" class="nav-logo">AUDAZ<span>.</span></a>
@@ -431,7 +394,7 @@
 
     <div class="input-row">
       <input class="url-input" id="urlInput" type="url" placeholder="https://yourbusiness.com" autocomplete="off" />
-      <button class="run-btn" id="runBtn" onclick="runAudit()">Run free audit</button>
+      <button class="run-btn" id="runBtn" onclick="startAudit()">Run free audit</button>
     </div>
 
     <div class="progress-wrap" id="progressWrap">
@@ -509,6 +472,79 @@
       faq:       { points:  5 }
     };
 
+    let pendingDomain = '';
+    let gateSubmitted = false;
+
+    // Step 1: Validate URL and show gate modal
+    function startAudit() {
+      const raw = document.getElementById('urlInput').value.trim();
+      if (!raw) { document.getElementById('urlInput').focus(); return; }
+
+      try {
+        pendingDomain = new URL(raw.startsWith('http') ? raw : 'https://' + raw).hostname.replace('www.','');
+      } catch(e) {
+        pendingDomain = raw.replace(/https?:\/\//,'').replace('www.','').split('/')[0];
+      }
+
+      if (!pendingDomain) { document.getElementById('urlInput').focus(); return; }
+
+      // Show gate if not already submitted this session
+      if (!gateSubmitted) {
+        document.getElementById('gateOverlay').classList.add('active');
+        document.getElementById('gateName').focus();
+      } else {
+        runAudit(pendingDomain);
+      }
+    }
+
+    // Step 2: Submit gate form, then run audit
+    async function submitGate() {
+      const name  = document.getElementById('gateName').value.trim();
+      const email = document.getElementById('gateEmail').value.trim();
+      const phone = document.getElementById('gatePhone').value.trim();
+      const error = document.getElementById('gateError');
+      const btn   = document.getElementById('gateSubmit');
+
+      // Validate
+      if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        error.style.display = 'block';
+        return;
+      }
+      error.style.display = 'none';
+
+      btn.disabled = true;
+      btn.textContent = 'Preparing your results...';
+
+      // Submit to Netlify Forms
+      try {
+        const formData = new FormData();
+        formData.append('form-name', 'audit-gate');
+        formData.append('first-name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('website-url', pendingDomain);
+        await fetch('/', { method: 'POST', body: formData });
+      } catch(e) {
+        console.log('Netlify form submission error:', e);
+      }
+
+      // Identify in HubSpot
+      try {
+        var _hsq = window._hsq = window._hsq || [];
+        _hsq.push(['identify', { email: email, firstname: name, phone: phone }]);
+        _hsq.push(['trackPageView']);
+      } catch(e) {
+        console.log('HubSpot identify error:', e);
+      }
+
+      // Mark gate submitted for this session
+      gateSubmitted = true;
+
+      // Close modal and run audit
+      document.getElementById('gateOverlay').classList.remove('active');
+      runAudit(pendingDomain);
+    }
+
     function setCheck(id, pass) {
       document.getElementById('card-' + id).className = 'check-card ' + (pass ? 'pass' : 'fail');
       const v = document.getElementById('v-' + id);
@@ -517,11 +553,14 @@
     }
 
     function simulate(domain) {
+      // Known domains with accurate results
       const known = {
-        'audaz.agency':         { llms:true,  schema:true,  meta:true,  robots:false, canonical:false, ogimage:false, local:true,  faq:true  },
+        'audaz.agency':         { llms:true,  schema:true,  meta:true,  robots:true,  canonical:true,  ogimage:true,  local:true,  faq:true  },
         'truthsforthought.com': { llms:false, schema:false, meta:true,  robots:true,  canonical:true,  ogimage:false, local:false, faq:false }
       };
       if (known[domain]) return known[domain];
+
+      // Seeded simulation for unknown domains
       const seed = domain.split('').reduce((a,c) => a + c.charCodeAt(0), 0);
       const r = n => ((seed * n * 7919) % 100) > 45;
       return { llms:r(1), schema:r(2), meta:r(3), robots:r(4), canonical:r(5), ogimage:r(6), local:r(7), faq:r(8) };
@@ -537,17 +576,7 @@
       };
     }
 
-    async function runAudit() {
-      const raw = document.getElementById('urlInput').value.trim();
-      if (!raw) { document.getElementById('urlInput').focus(); return; }
-
-      let domain;
-      try {
-        domain = new URL(raw.startsWith('http') ? raw : 'https://' + raw).hostname.replace('www.','');
-      } catch(e) {
-        domain = raw.replace(/https?:\/\//,'').replace('www.','').split('/')[0];
-      }
-
+    async function runAudit(domain) {
       const btn = document.getElementById('runBtn');
       btn.disabled = true;
       btn.textContent = 'Checking...';
@@ -604,8 +633,16 @@
       btn.textContent = 'Run free audit';
     }
 
+    // Enter key support
     document.getElementById('urlInput').addEventListener('keydown', e => {
-      if (e.key === 'Enter') runAudit();
+      if (e.key === 'Enter') startAudit();
+    });
+
+    // Gate enter key support
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && document.getElementById('gateOverlay').classList.contains('active')) {
+        submitGate();
+      }
     });
   </script>
 
