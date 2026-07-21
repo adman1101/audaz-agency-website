@@ -416,8 +416,8 @@
     // ── HELPERS ────────────────────────────────────────────────────
     function simulate(domain) {
       const known = {
-        'audaz.agency':         { llms:true,  schema:false, meta:true,  robots:false, canonical:true,  ogimage:false, local:true,  faq:false },
-        'truthsforthought.com': { llms:false, schema:false, meta:true,  robots:true,  canonical:true,  ogimage:false, local:false, faq:false },
+        'audaz.agency':        { llms:true,  schema:true,  meta:true,  robots:true,  canonical:true,  ogimage:true,  local:true,  faq:true  },
+        
         'ourbestforhim.com':    { llms:true,  schema:false, meta:true,  robots:false, canonical:true,  ogimage:true,  local:false, faq:true  }
       };
       if (known[domain]) return known[domain];
