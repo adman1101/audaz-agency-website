@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AUDAZ Agency builds custom bilingual (EN/ES) AI concierge bots for property management, service businesses, and professional practices. Trained on your real operation, connected to live data, with strict privacy guardrails.">
+  <meta property="og:title" content="AI Concierge Bots — Built by AUDAZ Agency">
+  <meta property="og:description" content="Not a chat widget with a FAQ bolted on. Bilingual AI concierge bots trained on your properties, services, and policies — answering real customer questions 24/7.">
+  <meta property="og:url" content="https://audaz.agency/bots">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/bots" />
+
+  <title>AI Concierge Bots — Custom Bilingual Chatbots | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Concierge Bots — Built by AUDAZ Agency">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://audaz.agency/bots#service",
+      "name": "Custom AI Concierge Bots",
+      "serviceType": "AI chatbot development",
+      "url": "https://audaz.agency/bots",
+      "description": "Custom bilingual (English and Spanish) AI concierge chatbots built for property management companies, service businesses, and professional practices. Trained on a client's specific properties, services, and policies, integrated with live booking and management systems, with a memory layer and strict privacy guardrails.",
+      "provider": { "@id": "https://audaz.agency/#organization" },
+      "availableLanguage": ["English", "Spanish"],
+      "areaServed": [
+        { "@type": "State", "name": "Florida" },
+        { "@type": "Country", "name": "United States" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/bots#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AI concierge bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI concierge bot is a chatbot trained on a specific business's real operation — its properties, services, policies, and details — rather than generic answers. AUDAZ builds bilingual concierge bots that connect to live booking and management systems so they answer from current data, not a static document."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a normal website chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most website chatbots deflect and loop because they don't know anything specific about the business. AUDAZ bots are trained on every property, service, and policy individually, connected to live systems, and remember context across conversations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do AUDAZ bots work in Spanish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every AUDAZ concierge bot is built bilingually in English and Spanish from the start, not translated afterward."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AUDAZ handle sensitive customer data in bots?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AUDAZ bots include a redaction filter that blocks payment information, door codes, WiFi passwords, government IDs, and health data before they can ever appear in a response."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="audit.html" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero-dark">
+    <div class="container">
+      <div class="hero-badge" data-en="Custom AI concierge bots — built, trained, and maintained by AUDAZ" data-es="Bots conserje con IA — creados, entrenados y mantenidos por AUDAZ">Custom AI concierge bots — built, trained, and maintained by AUDAZ</div>
+      <h1 class="hero-headline" data-en="We build bots that actually <span style='color:#EF9F27'>know your business.</span>" data-es="Creamos bots que <span style='color:#EF9F27'>sí conocen tu negocio.</span>">We build bots that actually <span style="color:#EF9F27">know your business.</span></h1>
+
+      <p data-en="Not a chat widget with a FAQ bolted on. A bilingual AI concierge trained on your properties, your services, your policies — answering real customer questions at 2am without waking anyone up." data-es="No es un widget de chat con preguntas frecuentes. Es un conserje de IA bilingüe entrenado en tus propiedades, tus servicios y tus políticas — respondiendo preguntas reales a las 2am sin despertar a nadie.">Not a chat widget with a FAQ bolted on. A bilingual AI concierge trained on your properties, your services, your policies — answering real customer questions at 2am without waking anyone up.</p>
+
+      <div class="hero-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg" data-en="Talk to us about a bot" data-es="Hablemos de un bot">Talk to us about a bot</a>
+        <a href="audit.html" class="btn btn-outline-white btn-lg" data-en="Get your free AI audit" data-es="Obtén tu auditoría gratis">Get your free AI audit</a>
+      </div>
+
+      <div class="creds-row">
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Live across 26+ properties" data-es="Activo en más de 26 propiedades">Live across 26+ properties</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Bilingual EN / ES" data-es="Bilingüe EN / ES">Bilingual EN / ES</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Connected to live booking data" data-es="Conectado a datos de reservas en vivo">Connected to live booking data</span></div>
+        <div class="cred"><svg width="12" height="12" viewBox="0 0 12 12"><polygon points="7,1 3,7 6,7 5,11 9,5 6,5 7,1" fill="#EF9F27"/></svg><span data-en="Privacy guardrails built in" data-es="Protecciones de privacidad integradas">Privacy guardrails built in</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar animate">
+    <div class="stat-item"><span class="stat-num">26+</span><span class="stat-label" data-en="Properties trained into one bot" data-es="Propiedades entrenadas en un bot">Properties trained into one bot</span></div>
+    <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label" data-en="Answers without staff involvement" data-es="Respuestas sin intervención del personal">Answers without staff involvement</span></div>
+    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label" data-en="Languages. One bold voice." data-es="Idiomas. Una voz audaz.">Languages. One bold voice.</span></div>
+    <div class="stat-item"><span class="stat-num">0</span><span class="stat-label" data-en="Sensitive details ever exposed" data-es="Datos sensibles expuestos">Sensitive details ever exposed</span></div>
+  </div>
+
+  <!-- What makes a bot worth building -->
+  <section class="section animate">
+    <div class="container">
+      <span class="section-label" data-en="HOW WE BUILD THEM" data-es="CÓMO LOS CONSTRUIMOS">HOW WE BUILD THEM</span>
+      <h2 data-en="What makes a bot worth building" data-es="Qué hace que un bot valga la pena">What makes a bot worth building</h2>
+      <p style="max-width:600px;margin:0.5rem 0 2rem;" data-en="Most business chatbots fail for the same reason: they don't know anything specific. They deflect, they loop, and customers give up and call anyway. The difference is what the bot is actually connected to." data-es="La mayoría de los chatbots fallan por la misma razón: no saben nada específico. Evaden, dan vueltas, y el cliente termina llamando de todos modos. La diferencia está en a qué está conectado el bot.">Most business chatbots fail for the same reason: they don't know anything specific. They deflect, they loop, and customers give up and call anyway. The difference is what the bot is actually connected to.</p>
+
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16l4-4 3 3 5-6" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="svc-title" data-en="Trained on your real operation" data-es="Entrenado en tu operación real">Trained on your real operation</p>
+          <p class="svc-desc" data-en="Every property, service, policy, and quirk — including the small stuff staff answer a hundred times a week. If your team knows it, the bot knows it." data-es="Cada propiedad, servicio, política y detalle — incluyendo lo que tu equipo responde cien veces por semana. Si tu equipo lo sabe, el bot lo sabe.">Every property, service, policy, and quirk — including the small stuff staff answer a hundred times a week. If your team knows it, the bot knows it.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="#854F0B" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Connected to live data" data-es="Conectado a datos en vivo">Connected to live data</p>
+          <p class="svc-desc" data-en="Booking systems, property management platforms, availability. The bot answers from what's true right now, not a document written six months ago." data-es="Sistemas de reservas, plataformas de gestión, disponibilidad. El bot responde con lo que es cierto ahora, no con un documento de hace seis meses.">Booking systems, property management platforms, availability. The bot answers from what's true right now, not a document written six months ago.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M3 6h14M3 14h8" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p class="svc-title" data-en="Memory across conversations" data-es="Memoria entre conversaciones">Memory across conversations</p>
+          <p class="svc-desc" data-en="It remembers who it's talking to and what was already discussed, so returning customers don't start from zero every time." data-es="Recuerda con quién habla y qué ya se discutió, para que los clientes recurrentes no empiecen de cero cada vez.">It remembers who it's talking to and what was already discussed, so returning customers don't start from zero every time.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l6 3v5c0 3.5-2.5 6.5-6 8-3.5-1.5-6-4.5-6-8V5l6-3z" stroke="#854F0B" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <p class="svc-title" data-en="Guardrails that hold" data-es="Protecciones que resisten">Guardrails that hold</p>
+          <p class="svc-desc" data-en="Payment info, door codes, WiFi passwords, IDs, health data — filtered and blocked before they ever reach a response. Non-negotiable." data-es="Datos de pago, códigos de acceso, contraseñas WiFi, identificaciones, datos de salud — filtrados y bloqueados antes de llegar a una respuesta. No negociable.">Payment info, door codes, WiFi passwords, IDs, health data — filtered and blocked before they ever reach a response. Non-negotiable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider-strip">
+    <div class="divider-inner">
+      <div>
+        <h3 data-en="Built and running. <span style='color:#EF9F27'>Not a demo.</span>" data-es="Construido y funcionando. <span style='color:#EF9F27'>No es un demo.</span>">Built and running. <span style="color:#EF9F27">Not a demo.</span></h3>
+        <p data-en="The clearest way to explain what we build is to show one that's live right now." data-es="La forma más clara de explicar lo que construimos es mostrar uno que está activo ahora mismo.">The clearest way to explain what we build is to show one that's live right now.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-en="Talk to us about a bot" data-es="Hablemos de un bot">Talk to us about a bot</a>
+    </div>
+  </div>
+
+  <!-- Case study -->
+  <section class="section animate">
+    <div class="container">
+      <span class="section-label" data-en="CASE — VACATION RENTAL CONCIERGE" data-es="CASO — CONSERJE DE ALQUILER VACACIONAL">CASE — VACATION RENTAL CONCIERGE</span>
+      <h2 data-en="A 26-property concierge bot in the Florida Keys" data-es="Un bot conserje para 26 propiedades en los Cayos de Florida">A 26-property concierge bot in the Florida Keys</h2>
+
+      <p style="max-width:680px;margin:0.5rem 0 1rem;" data-en="A vacation rental management company was fielding the same guest questions around the clock — check-in times, WiFi, appliance quirks, local recommendations — across dozens of individual properties, each with its own details." data-es="Una empresa de gestión de alquileres vacacionales recibía las mismas preguntas de huéspedes a toda hora — horarios de entrada, WiFi, detalles de electrodomésticos, recomendaciones locales — en decenas de propiedades, cada una con sus particularidades.">A vacation rental management company was fielding the same guest questions around the clock — check-in times, WiFi, appliance quirks, local recommendations — across dozens of individual properties, each with its own details.</p>
+
+      <p style="max-width:680px;margin:0 0 2rem;" data-en="We built a bilingual concierge bot trained on every unit, integrated with their property management platform, with a memory layer so returning guests aren't treated like strangers." data-es="Construimos un bot conserje bilingüe entrenado en cada unidad, integrado con su plataforma de gestión, con una capa de memoria para que los huéspedes recurrentes no sean tratados como desconocidos.">We built a bilingual concierge bot trained on every unit, integrated with their property management platform, with a memory layer so returning guests aren't treated like strangers.</p>
+
+      <div class="svc-grid">
+        <div class="svc-card">
+          <p class="svc-title" data-en="Every property, individually" data-es="Cada propiedad, individualmente">Every property, individually</p>
+          <p class="svc-desc" data-en="Trained unit by unit with property-specific detail — not generic answers dressed up as personalization." data-es="Entrenado unidad por unidad con detalles específicos — no respuestas genéricas disfrazadas de personalización.">Trained unit by unit with property-specific detail — not generic answers dressed up as personalization.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Live system integration" data-es="Integración con sistemas en vivo">Live system integration</p>
+          <p class="svc-desc" data-en="Connected directly to their booking and property management platform, so answers reflect current reality." data-es="Conectado directamente a su plataforma de reservas y gestión, para que las respuestas reflejen la realidad actual.">Connected directly to their booking and property management platform, so answers reflect current reality.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Memory layer" data-es="Capa de memoria">Memory layer</p>
+          <p class="svc-desc" data-en="Guest context carries across conversations, so repeat guests pick up where they left off." data-es="El contexto del huésped se mantiene entre conversaciones, para que los recurrentes continúen donde quedaron.">Guest context carries across conversations, so repeat guests pick up where they left off.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Redaction filter" data-es="Filtro de redacción">Redaction filter</p>
+          <p class="svc-desc" data-en="Payment details, door codes, WiFi passwords, government IDs, and health data blocked at the source." data-es="Datos de pago, códigos de acceso, contraseñas WiFi, identificaciones y datos de salud bloqueados en la fuente.">Payment details, door codes, WiFi passwords, government IDs, and health data blocked at the source.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Embedded on their own site" data-es="Integrado en su propio sitio">Embedded on their own site</p>
+          <p class="svc-desc" data-en="Dropped into their existing website — no platform migration, no rebuild required." data-es="Integrado en su sitio web existente — sin migración de plataforma, sin reconstrucción.">Dropped into their existing website — no platform migration, no rebuild required.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Bilingual from day one" data-es="Bilingüe desde el primer día">Bilingual from day one</p>
+          <p class="svc-desc" data-en="English and Spanish built in from the start — not a translation layer added later." data-es="Inglés y español desde el inicio — no una capa de traducción añadida después.">English and Spanish built in from the start — not a translation layer added later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section animate">
+    <div class="container">
+      <span class="section-label" data-en="WHO THIS IS FOR" data-es="PARA QUIÉN ES ESTO">WHO THIS IS FOR</span>
+      <h2 data-en="When a bot actually pays for itself" data-es="Cuándo un bot realmente se paga solo">When a bot actually pays for itself</h2>
+      <p style="max-width:600px;margin:0.5rem 0 2rem;" data-en="Bots are worth it when the same questions arrive constantly and answering them costs real staff time. If that's your operation, the math works." data-es="Los bots valen la pena cuando las mismas preguntas llegan constantemente y responderlas cuesta tiempo real de tu equipo. Si esa es tu operación, las cuentas cuadran.">Bots are worth it when the same questions arrive constantly and answering them costs real staff time. If that's your operation, the math works.</p>
+
+      <div class="svc-grid">
+        <div class="svc-card">
+          <p class="svc-title" data-en="Property &amp; rental management" data-es="Gestión de propiedades y alquileres">Property &amp; rental management</p>
+          <p class="svc-desc" data-en="Guest questions, check-in logistics, and unit-specific details across a portfolio." data-es="Preguntas de huéspedes, logística de entrada y detalles específicos de cada unidad.">Guest questions, check-in logistics, and unit-specific details across a portfolio.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Service businesses" data-es="Negocios de servicios">Service businesses</p>
+          <p class="svc-desc" data-en="Scheduling, service scope, pricing questions, quote requests — captured instead of missed." data-es="Agendamiento, alcance del servicio, precios, solicitudes de cotización — capturados en vez de perdidos.">Scheduling, service scope, pricing questions, quote requests — captured instead of missed.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Professional practices" data-es="Despachos y consultorios">Professional practices</p>
+          <p class="svc-desc" data-en="Intake, qualification, and routing — with hard guardrails around advice and sensitive data." data-es="Recepción, calificación y derivación — con protecciones estrictas sobre asesoría y datos sensibles.">Intake, qualification, and routing — with hard guardrails around advice and sensitive data.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-title" data-en="Bilingual markets" data-es="Mercados bilingües">Bilingual markets</p>
+          <p class="svc-desc" data-en="If half your customers prefer Spanish, a single-language bot is only doing half the job." data-es="Si la mitad de tus clientes prefiere español, un bot en un solo idioma hace la mitad del trabajo.">If half your customers prefer Spanish, a single-language bot is only doing half the job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-dark">
+    <div class="container">
+      <h2 data-en="Want one of these for <span style='color:#EF9F27'>your business?</span>" data-es="¿Quieres uno de estos para <span style='color:#EF9F27'>tu negocio?</span>">Want one of these for <span style="color:#EF9F27">your business?</span></h2>
+      <p data-en="Tell us what your team answers over and over. If a bot would genuinely help, we'll tell you — and if it wouldn't, we'll tell you that too." data-es="Cuéntanos qué responde tu equipo una y otra vez. Si un bot realmente ayudaría, te lo diremos — y si no, también.">Tell us what your team answers over and over. If a bot would genuinely help, we'll tell you — and if it wouldn't, we'll tell you that too.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg" data-en="Start a conversation" data-es="Iniciar una conversación">Start a conversation</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
