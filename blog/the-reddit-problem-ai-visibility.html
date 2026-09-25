@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reddit is the most-cited source in AI answers and the fastest place for a small business to get banned. How Reddit grades your account before anyone reads you, what gets cited, which South Florida subreddits matter, and a 30-day plan — from someone who got banned.">
+  <meta property="og:title" content="The Reddit Problem: Why the #1 AI Source Is the One Small Businesses Can't Use">
+  <meta property="og:description" content="I got banned from the #1 AI source. It took three months to find out why, and it wasn't what I wrote. The playbook for showing up on Reddit without getting banned.">
+  <meta property="og:url" content="https://audaz.agency/blog/the-reddit-problem-ai-visibility">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-25">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/the-reddit-problem-ai-visibility" />
+
+  <title>The Reddit Problem: Why the #1 AI Source Is the One Small Businesses Can't Use | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/reddit-problem-hero.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/the-reddit-problem-ai-visibility#article",
+      "headline": "The Reddit Problem: Why the #1 AI Source Is the One Small Businesses Can't Use",
+      "description": "Reddit is the most-cited source in AI answers and the fastest place for a small business to get banned. How Reddit grades your account before anyone reads you, what gets cited, which South Florida subreddits matter, and a 30-day plan — from someone who got banned.",
+      "image": "https://audaz.agency/images/blog/reddit-problem-hero.png",
+      "url": "https://audaz.agency/blog/the-reddit-problem-ai-visibility",
+      "datePublished": "2026-09-25",
+      "dateModified": "2026-09-25",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/the-reddit-problem-ai-visibility",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "Reddit marketing",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization"
+      ],
+      "keywords": "Reddit, AI visibility, AEO, GEO, Contributor Quality Score, ban evasion, small business marketing, South Florida"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/the-reddit-problem-ai-visibility#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does AI really use Reddit to recommend local businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, unevenly. Perplexity cites Reddit in roughly 45–70% of sourced answers depending on the study; ChatGPT's use has swung from about 60% of responses to near zero within months. Google AI Mode sits in the middle. For \"who should I hire\" questions, a cited Reddit comment is often the only place a small business's name appears."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay someone to post about my business on Reddit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can, and it is the most common way businesses get banned. Undisclosed promotional comments survive moderation about 18% of the time; disclosed ones about 83%. Anyone posting for you from a linked device or network also exposes you to a ban-evasion suspension if any account gets banned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before Reddit activity shows up in AI answers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Months, not days. The threads AI engines cite are typically 3 to 16 months old and already rank on Google. One tracked business went from being named in 1 of 12 AI shortlist prompts to 4 of 12 over 14 weeks of disclosed participation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I've already been banned from a subreddit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stop posting there from every account you or your team control. A subreddit ban is local; evading it is a sitewide offense with escalating suspensions. Pick a different community and start clean."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Reddit worth it if ChatGPT stopped citing it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for two reasons. Other engines still lean on it, and Reddit threads rank on Google independently of any AI engine. A useful answer in a ranking thread is visible to customers whether or not a model cites it this month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was my comment removed by AutoModerator with no rule cited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually your account's Contributor Quality Score. Reddit rates every account in five tiers from its history, karma, email verification and network signals; many subreddits auto-remove comments from the bottom tiers. Fix it by verifying your email, commenting usefully for a few weeks in less strict communities, and never sharing a device or network with a banned account."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Reddit Problem",
+          "item": "https://audaz.agency/blog/the-reddit-problem-ai-visibility"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="../about.html" class="nav-link" id="nav-about">About</a>
+        <a href="../services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="../portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="../blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="../contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="../audit.html" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="../contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 07" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 07">THE AI VISIBILITY BRIEF · ISSUE 07</span>
+
+      <!-- H1: the question a buyer types, with brand + topic in the line -->
+      <h1 data-en="The Reddit Problem: Why the #1 AI Source Is the One Small Businesses Can't Use" data-es="El problema de Reddit: por qué la fuente #1 de la IA es la que los pequeños negocios no pueden usar">The Reddit Problem: Why the #1 AI Source Is the One Small Businesses Can't Use</h1>
+
+      <!-- Byline + dateline: named author, published + updated both visible -->
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp;amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published September 25, 2026" data-es="Publicado el 25 de septiembre de 2026">Published September 25, 2026</span>
+        <span data-en="Updated September 25, 2026" data-es="Actualizado el 25 de septiembre de 2026">Updated September 25, 2026</span>
+      </div>
+
+      <!-- Answer block: direct answer, before any preamble -->
+      <div class="answer-block" data-en="Reddit is the most-cited source in AI answers, and it is the fastest place for a small business to get banned. This is the playbook: how Reddit grades your account before anyone reads you, what actually gets cited, which South Florida subreddits matter, what gets you banned, and a 30-day plan. It opens with how I got banned." data-es="Reddit es la fuente más citada en las respuestas de la IA, y es el lugar donde un pequeño negocio se gana una expulsión más rápido. Esta es la guía: cómo Reddit califica tu cuenta antes de que alguien te lea, qué se cita realmente, cuáles subreddits del sur de Florida importan, qué te hace expulsar y un plan de 30 días. Empieza con cómo me expulsaron a mí.">Reddit is the most-cited source in AI answers, and it is the fastest place for a small business to get banned. This is the playbook: how Reddit grades your account before anyone reads you, what actually gets cited, which South Florida subreddits matter, what gets you banned, and a 30-day plan. It opens with how I got banned.</div>
+
+      <img src="../images/blog/reddit-problem-hero.png" alt="One glowing amber sphere among dozens of dim grey spheres on a dark background — the one account that gets seen" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <h2 data-en="I got banned from the one place AI trusts most" data-es="Me expulsaron del único lugar en el que la IA más confía">I got banned from the one place AI trusts most</h2>
+
+        <p data-en="On June 7, 2026, the moderators of r/SEO removed a comment of mine and banned my account. The thread was a pile-on about &quot;AI visibility&quot; tools being snake oil. I wrote back that the cynicism was earned, that scoring tools are mostly unverifiable, and that the real work — schema, entity consistency, structured content — is measurable and is the same foundation SEO was built on. Polite. On topic. No link, no company name." data-es="El 7 de junio de 2026, los moderadores de r/SEO eliminaron un comentario mío y expulsaron mi cuenta. El hilo era una avalancha de críticas contra las herramientas de &quot;visibilidad en IA&quot; como si fueran un fraude. Respondí que el escepticismo era merecido, que las herramientas de puntuación son en su mayoría imposibles de verificar, y que el trabajo real — schema, consistencia de entidad, contenido estructurado — sí es medible y es la misma base sobre la que se construyó el SEO. Cortés. En tema. Sin enlace, sin nombre de empresa.">On June 7, 2026, the moderators of r/SEO removed a comment of mine and banned my account. The thread was a pile-on about "AI visibility" tools being snake oil. I wrote back that the cynicism was earned, that scoring tools are mostly unverifiable, and that the real work — schema, entity consistency, structured content — is measurable and is the same foundation SEO was built on. Polite. On topic. No link, no company name.</p>
+
+        <p data-en="Removed anyway, and banned. For three months I assumed it was for what I wrote: an agency owner defending AEO in a thread mocking AEO, in prose a little too polished to be fully human. Then I clicked into the removed comment and found the actual reason, from AutoModerator: <em>&quot;Your post/comment has been removed because your account has a low CQS Score.&quot;</em>" data-es="Eliminado de todos modos, y expulsado. Durante tres meses supuse que fue por lo que escribí: el dueño de una agencia defendiendo el AEO en un hilo que se burlaba del AEO, con una prosa demasiado pulida para ser del todo humana. Luego abrí el comentario eliminado y encontré la verdadera razón, de AutoModerator: <em>&quot;Tu publicación/comentario fue eliminado porque tu cuenta tiene un CQS Score bajo.&quot;</em>">Removed anyway, and banned. For three months I assumed it was for what I wrote: an agency owner defending AEO in a thread mocking AEO, in prose a little too polished to be fully human. Then I clicked into the removed comment and found the actual reason, from AutoModerator: <em>"Your post/comment has been removed because your account has a low CQS Score."</em></p>
+
+        <p data-en="Not the content. The account. Reddit gives every account a <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Contributor Quality Score</a> — five tiers, built from &quot;past actions taken on a redditor's account, network and location signals, and steps a redditor has taken to secure their account.&quot; r/SEO's bot removes anything from the bottom tiers before a moderator ever reads it. Eight years old, 71 karma, and the mess I'm about to describe had put me there. My comment was never judged. It was never seen." data-es="No el contenido. La cuenta. Reddit le asigna a cada cuenta un <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Contributor Quality Score</a> — cinco niveles, construidos a partir de &quot;acciones pasadas en la cuenta, señales de red y ubicación, y los pasos que el usuario ha tomado para proteger su cuenta.&quot; El bot de r/SEO elimina cualquier cosa que venga de los niveles más bajos antes de que un moderador la lea. Ocho años de antigüedad, 71 de karma, y el desorden que estoy a punto de describir me había puesto ahí. Mi comentario nunca fue juzgado. Nunca fue visto.">Not the content. The account. Reddit gives every account a <a href="https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score" target="_blank" rel="noopener">Contributor Quality Score</a> — five tiers, built from "past actions taken on a redditor's account, network and location signals, and steps a redditor has taken to secure their account." r/SEO's bot removes anything from the bottom tiers before a moderator ever reads it. Eight years old, 71 karma, and the mess I'm about to describe had put me there. My comment was never judged. It was never seen.</p>
+
+        <p data-en="That should have been the end of it. Instead, a few weeks later, Reddit suspended me sitewide for seven days for &quot;ban evasion.&quot; Then it did it again. Then a third time. I hadn't posted in r/SEO. What I had was four Reddit accounts on one computer: three on one email address, two of which I'd forgotten existed, and a fourth with an auto-generated name that Reddit created the day I clicked &quot;Continue with Google&quot; on some page. That fourth account was born the same month as the ban, and I'd browsed r/SEO from it. Reddit links accounts by device, network and sign-in patterns — its own help center says the filter &quot;isn't 100% accurate&quot; — and a new account appearing the week the old one gets banned looks exactly like evasion, whether it ever posts in the subreddit or not." data-es="Eso debió haber sido el final. En cambio, unas semanas después, Reddit me suspendió en todo el sitio por siete días por &quot;evasión de expulsión&quot;. Luego lo hizo otra vez. Y una tercera. Yo no había publicado en r/SEO. Lo que tenía eran cuatro cuentas de Reddit en una sola computadora: tres con el mismo correo, dos de las cuales había olvidado que existían, y una cuarta con un nombre generado automáticamente que Reddit creó el día que hice clic en &quot;Continuar con Google&quot; en alguna página. Esa cuarta cuenta nació el mismo mes de la expulsión, y desde ella había navegado por r/SEO. Reddit vincula cuentas por dispositivo, red y patrones de inicio de sesión — su propio centro de ayuda admite que el filtro &quot;no es 100% preciso&quot; — y una cuenta nueva que aparece la misma semana en que expulsan a la vieja se ve exactamente como una evasión, publique o no en el subreddit.">That should have been the end of it. Instead, a few weeks later, Reddit suspended me sitewide for seven days for "ban evasion." Then it did it again. Then a third time. I hadn't posted in r/SEO. What I had was four Reddit accounts on one computer: three on one email address, two of which I'd forgotten existed, and a fourth with an auto-generated name that Reddit created the day I clicked "Continue with Google" on some page. That fourth account was born the same month as the ban, and I'd browsed r/SEO from it. Reddit links accounts by device, network and sign-in patterns — its own help center says the filter "isn't 100% accurate" — and a new account appearing the week the old one gets banned looks exactly like evasion, whether it ever posts in the subreddit or not.</p>
+
+        <p data-en="And here is the part I'd rather not tell you. Scroll further down my comment history and there's one from a month earlier, in r/smallbusinessowner, replying to a founder who was &quot;desperately looking for a partner&quot;: <em>&quot;We help solo founders at your stage build an AI agent team — so you stop being the bottleneck. Let's do a 20-minute AI Visibility &amp;amp; Operations Audit. No pitch. Just clarity.&quot;</em> That is a pitch. It says it isn't, which makes it worse. If I were the moderator I'd have banned me too." data-es="Y aquí viene la parte que preferiría no contarte. Más abajo en mi historial de comentarios hay uno de un mes antes, en r/smallbusinessowner, respondiendo a un fundador que &quot;buscaba desesperadamente un socio&quot;: <em>&quot;Ayudamos a fundadores solitarios en tu etapa a construir un equipo de agentes de IA — para que dejes de ser el cuello de botella. Hagamos una auditoría de 20 minutos de Visibilidad en IA y Operaciones. Sin pitch. Solo claridad.&quot;</em> Eso es un pitch. Dice que no lo es, lo cual lo hace peor. Si yo fuera el moderador, también me habría expulsado.">And here is the part I'd rather not tell you. Scroll further down my comment history and there's one from a month earlier, in r/smallbusinessowner, replying to a founder who was "desperately looking for a partner": <em>"We help solo founders at your stage build an AI agent team — so you stop being the bottleneck. Let's do a 20-minute AI Visibility &amp; Operations Audit. No pitch. Just clarity."</em> That is a pitch. It says it isn't, which makes it worse. If I were the moderator I'd have banned me too.</p>
+
+        <p data-en="So I run an AI-visibility agency, I write a newsletter about how AI engines pick their sources, and I am locked out of the source they trust most — partly by Reddit's filter, mostly by my own hand. That is the Reddit Problem in one person." data-es="Así que dirijo una agencia de visibilidad en IA, escribo un boletín sobre cómo los motores de IA eligen sus fuentes, y estoy fuera de la fuente en la que más confían — en parte por el filtro de Reddit, en su mayor parte por mi propia mano. Ese es el problema de Reddit en una sola persona.">So I run an AI-visibility agency, I write a newsletter about how AI engines pick their sources, and I am locked out of the source they trust most — partly by Reddit's filter, mostly by my own hand. That is the Reddit Problem in one person.</p>
+
+        <p data-en="It is also the problem every plumber, property manager, med spa and law firm in South Florida has — they just don't know it yet. This is the playbook I wish I'd read in May." data-es="También es el problema de cada plomero, administrador de propiedades, med spa y bufete de abogados del sur de Florida — solo que todavía no lo saben. Esta es la guía que me hubiera gustado leer en mayo.">It is also the problem every plumber, property manager, med spa and law firm in South Florida has — they just don't know it yet. This is the playbook I wish I'd read in May.</p>
+
+        <h2 data-en="How much does Reddit actually matter to AI answers?" data-es="¿Cuánto importa Reddit realmente en las respuestas de la IA?">How much does Reddit actually matter to AI answers?</h2>
+
+        <p class="short-answer" data-en="<strong>Short answer:</strong> Reddit is the single most-cited domain across AI engines in aggregate, but its weight swings wildly by engine and by month. Perplexity leans on it heavily. ChatGPT's use of it has been volatile. Google's AI Mode uses it moderately. The one constant: when someone asks an AI &quot;who should I hire?&quot;, the answer is often assembled from Reddit comments." data-es="<strong>Respuesta corta:</strong> Reddit es el dominio más citado por los motores de IA en conjunto, pero su peso cambia drásticamente según el motor y el mes. Perplexity se apoya mucho en él. El uso que le da ChatGPT ha sido volátil. El AI Mode de Google lo usa con moderación. La única constante: cuando alguien le pregunta a una IA &quot;¿a quién contrato?&quot;, la respuesta suele armarse con comentarios de Reddit."><strong>Short answer:</strong> Reddit is the single most-cited domain across AI engines in aggregate, but its weight swings wildly by engine and by month. Perplexity leans on it heavily. ChatGPT's use of it has been volatile. Google's AI Mode uses it moderately. The one constant: when someone asks an AI "who should I hire?", the answer is often assembled from Reddit comments.</p>
+
+        <p data-en="The numbers, from studies that were actually published (not vendor slides):" data-es="Los números, de estudios que sí se publicaron (no diapositivas de proveedores):">The numbers, from studies that were actually published (not vendor slides):</p>
+
+        <div class="table-wrap"><table>
+
+          <thead><tr><th data-en="Study" data-es="Estudio">Study</th><th data-en="What it measured" data-es="Qué midió">What it measured</th><th data-en="Reddit's share" data-es="Participación de Reddit">Reddit's share</th></tr></thead>
+
+          <tbody>
+
+            <tr><td data-en="<a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Peec AI</a>" data-es="<a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Peec AI</a>"><a href="https://peec.ai" target="_blank" rel="noopener">Peec AI</a></td><td data-en="30M sources across AI engines" data-es="30M de fuentes en motores de IA">30M sources across AI engines</td><td data-en="#1 domain overall" data-es="Dominio #1 en general">#1 domain overall</td></tr>
+
+            <tr><td data-en="<a href=&quot;https://www.semrush.com/blog/most-cited-domains-ai/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Semrush</a>, Jul–Oct 2025" data-es="<a href=&quot;https://www.semrush.com/blog/most-cited-domains-ai/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Semrush</a>, jul–oct 2025"><a href="https://www.semrush.com/blog/most-cited-domains-ai/" target="_blank" rel="noopener">Semrush</a>, Jul–Oct 2025</td><td data-en="230K+ prompts across ChatGPT, Google AI Mode and Perplexity" data-es="230K+ consultas en ChatGPT, Google AI Mode y Perplexity">230K+ prompts across ChatGPT, Google AI Mode and Perplexity</td><td data-en="#2 domain overall. On ChatGPT: cited in ~60% of responses in early Aug 2025, ~10% by mid-Sept" data-es="Dominio #2 en general. En ChatGPT: citado en ~60% de las respuestas a principios de agosto de 2025, ~10% a mediados de septiembre">#2 domain overall. On ChatGPT: cited in ~60% of responses in early Aug 2025, ~10% by mid-Sept</td></tr>
+
+            <tr><td data-en="<a href=&quot;https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Readyt</a>, 2026" data-es="<a href=&quot;https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Readyt</a>, 2026"><a href="https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/" target="_blank" rel="noopener">Readyt</a>, 2026</td><td data-en="500 &quot;best X for a small team&quot; shopping prompts on Perplexity" data-es="500 consultas de compra tipo &quot;mejor X para un equipo pequeño&quot; en Perplexity">500 "best X for a small team" shopping prompts on Perplexity</td><td data-en="44.7% of sourced answers cited Reddit; listed first in 23.5%" data-es="44.7% de las respuestas con fuentes citaron Reddit; primero en la lista en 23.5%">44.7% of sourced answers cited Reddit; listed first in 23.5%</td></tr>
+
+            <tr><td data-en="<a href=&quot;https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Pierview</a>, Jul–Aug 2026" data-es="<a href=&quot;https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Pierview</a>, jul–ago 2026"><a href="https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026" target="_blank" rel="noopener">Pierview</a>, Jul–Aug 2026</td><td data-en="50K+ browser-based prompts, daily citation counts" data-es="50K+ consultas en navegador, conteo diario de citas">50K+ browser-based prompts, daily citation counts</td><td data-en="71% of Perplexity's tracked citations. ChatGPT's Reddit share fell from 3.8% to 0.2% between Aug 1 and Aug 14, 2026" data-es="71% de las citas rastreadas en Perplexity. La participación de Reddit en ChatGPT cayó de 3.8% a 0.2% entre el 1 y el 14 de agosto de 2026">71% of Perplexity's tracked citations. ChatGPT's Reddit share fell from 3.8% to 0.2% between Aug 1 and Aug 14, 2026</td></tr>
+
+            <tr><td data-en="<a href=&quot;https://maxaeo.ai/blog/reddit-chatgpt-recommendations/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>MaxAEO</a>, 2026" data-es="<a href=&quot;https://maxaeo.ai/blog/reddit-chatgpt-recommendations/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>MaxAEO</a>, 2026"><a href="https://maxaeo.ai/blog/reddit-chatgpt-recommendations/" target="_blank" rel="noopener">MaxAEO</a>, 2026</td><td data-en="1.2M citations on recommendation-style queries" data-es="1.2M de citas en consultas de recomendación">1.2M citations on recommendation-style queries</td><td data-en="8.1% ChatGPT · 9.6% Google AI Mode · 7.2% AI Overviews · 17.9% Perplexity (Jan)" data-es="8.1% ChatGPT · 9.6% Google AI Mode · 7.2% AI Overviews · 17.9% Perplexity (enero)">8.1% ChatGPT · 9.6% Google AI Mode · 7.2% AI Overviews · 17.9% Perplexity (Jan)</td></tr>
+
+          </tbody></table></div>
+
+        <p data-en="Two things in that table matter more than the headline number." data-es="Dos cosas en esa tabla importan más que el número principal.">Two things in that table matter more than the headline number.</p>
+
+        <p data-en="First, the volatility is real. ChatGPT turned Reddit down twice in twelve months. Anyone who built an entire strategy on &quot;get mentioned on Reddit&quot; watched it evaporate. Reddit is a source, not a strategy." data-es="Primero, la volatilidad es real. ChatGPT le bajó el volumen a Reddit dos veces en doce meses. Quien construyó toda una estrategia sobre &quot;que te mencionen en Reddit&quot; la vio evaporarse. Reddit es una fuente, no una estrategia.">First, the volatility is real. ChatGPT turned Reddit down twice in twelve months. Anyone who built an entire strategy on "get mentioned on Reddit" watched it evaporate. Reddit is a source, not a strategy.</p>
+
+        <p data-en="Second, look at <em>what kind</em> of Reddit content gets cited. The MaxAEO data says 71% of cited threads came from subreddits under 500K members, the median cited comment had 38 upvotes, 58% of citations pointed at a single comment rather than a post, and 62% of cited threads already ranked on page one of Google for a related search." data-es="Segundo, mira <em>qué tipo</em> de contenido de Reddit se cita. Los datos de MaxAEO dicen que el 71% de los hilos citados venían de subreddits con menos de 500K miembros, el comentario citado promedio tenía 38 votos positivos, el 58% de las citas apuntaban a un solo comentario y no a una publicación, y el 62% de los hilos citados ya estaban en la primera página de Google para una búsqueda relacionada.">Second, look at <em>what kind</em> of Reddit content gets cited. The MaxAEO data says 71% of cited threads came from subreddits under 500K members, the median cited comment had 38 upvotes, 58% of citations pointed at a single comment rather than a post, and 62% of cited threads already ranked on page one of Google for a related search.</p>
+
+        <p data-en="Read that again. AI engines are not citing viral posts in giant subreddits. They are citing a specific, useful comment with 38 upvotes in a mid-sized community, in a thread Google already ranks. That is a bar a local business can clear." data-es="Léelo otra vez. Los motores de IA no citan publicaciones virales en subreddits gigantes. Citan un comentario específico y útil con 38 votos en una comunidad mediana, en un hilo que Google ya posiciona. Esa es una barra que un negocio local sí puede superar.">Read that again. AI engines are not citing viral posts in giant subreddits. They are citing a specific, useful comment with 38 upvotes in a mid-sized community, in a thread Google already ranks. That is a bar a local business can clear.</p>
+
+        <h2 data-en="Why can't a business just post there?" data-es="¿Por qué un negocio no puede simplemente publicar ahí?">Why can't a business just post there?</h2>
+
+        <p class="short-answer" data-en="<strong>Short answer:</strong> Because Reddit is built to reject exactly what most businesses do first. Four layers stack on top of each other, the first one invisible, and the people enforcing the rest are unpaid volunteers who have seen your move ten thousand times." data-es="<strong>Respuesta corta:</strong> Porque Reddit está diseñado para rechazar exactamente lo primero que hace la mayoría de los negocios. Cuatro capas se apilan una sobre otra, la primera invisible, y quienes hacen cumplir el resto son voluntarios sin sueldo que ya han visto tu jugada diez mil veces."><strong>Short answer:</strong> Because Reddit is built to reject exactly what most businesses do first. Four layers stack on top of each other, the first one invisible, and the people enforcing the rest are unpaid volunteers who have seen your move ten thousand times.</p>
+
+        <p data-en="<strong>Layer 0 — the score you can't see.</strong> Before any rule applies, Reddit has already graded your account. The <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Contributor Quality Score</a> puts every account in one of five tiers — highest to lowest — from your history, your karma, whether your email is verified, and &quot;network and location signals&quot; (read: what else is on your Wi-Fi). Moderators can tell AutoModerator to remove anything from the low tiers on sight, and the strict subreddits do. A new account, a dormant one, or one that shares a router with a banned account starts in the basement. Nothing you write gets read until you climb out." data-es="<strong>Capa 0 — la calificación que no puedes ver.</strong> Antes de que aplique cualquier regla, Reddit ya calificó tu cuenta. El <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Contributor Quality Score</a> pone a cada cuenta en uno de cinco niveles — del más alto al más bajo — según tu historial, tu karma, si tu correo está verificado y &quot;señales de red y ubicación&quot; (léase: qué más hay en tu Wi-Fi). Los moderadores pueden ordenarle a AutoModerator que elimine de inmediato todo lo que venga de los niveles bajos, y los subreddits estrictos lo hacen. Una cuenta nueva, una inactiva, o una que comparte router con una cuenta expulsada empieza en el sótano. Nada de lo que escribas se lee hasta que salgas de ahí."><strong>Layer 0 — the score you can't see.</strong> Before any rule applies, Reddit has already graded your account. The <a href="https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score" target="_blank" rel="noopener">Contributor Quality Score</a> puts every account in one of five tiers — highest to lowest — from your history, your karma, whether your email is verified, and "network and location signals" (read: what else is on your Wi-Fi). Moderators can tell AutoModerator to remove anything from the low tiers on sight, and the strict subreddits do. A new account, a dormant one, or one that shares a router with a banned account starts in the basement. Nothing you write gets read until you climb out.</p>
+
+        <p data-en="<strong>Layer 1 — Reddit's sitewide rule.</strong> Reddit's own <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>self-promotion guideline</a> is the 9:1 rule: &quot;only 1 out of every 10 of your submissions should be your own content.&quot; It adds a line every business owner should tape to the monitor: if that's all you ever post, or it always gets voted down, &quot;you just might be a spammer.&quot;" data-es="<strong>Capa 1 — la regla general de Reddit.</strong> La propia <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>guía de autopromoción</a> de Reddit es la regla 9:1: &quot;solo 1 de cada 10 de tus publicaciones debería ser contenido propio.&quot; Y agrega una línea que todo dueño de negocio debería pegar en el monitor: si eso es todo lo que publicas, o siempre recibe votos negativos, &quot;puede que seas un spammer.&quot;"><strong>Layer 1 — Reddit's sitewide rule.</strong> Reddit's own <a href="https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion" target="_blank" rel="noopener">self-promotion guideline</a> is the 9:1 rule: "only 1 out of every 10 of your submissions should be your own content." It adds a line every business owner should tape to the monitor: if that's all you ever post, or it always gets voted down, "you just might be a spammer."</p>
+
+        <p data-en="<strong>Layer 2 — each subreddit's rules.</strong> Sitewide rules are the floor. Every community adds its own, and the business-relevant ones are strict:" data-es="<strong>Capa 2 — las reglas de cada subreddit.</strong> Las reglas generales son el piso. Cada comunidad agrega las suyas, y las relevantes para negocios son estrictas:"><strong>Layer 2 — each subreddit's rules.</strong> Sitewide rules are the floor. Every community adds its own, and the business-relevant ones are strict:</p>
+
+        <ul>
+
+          <li data-en="r/smallbusiness: &quot;No business promotion posts are allowed. Promote your business in the weekly Promote-your-business thread only.&quot;" data-es="r/smallbusiness: &quot;No se permiten publicaciones de promoción de negocios. Promociona tu negocio únicamente en el hilo semanal Promote-your-business.&quot;">r/smallbusiness: "No business promotion posts are allowed. Promote your business in the weekly Promote-your-business thread only."</li>
+
+          <li data-en="r/Entrepreneur: Rule 2, &quot;Posts that are direct product pitches, advertisements, or exist solely to promote a business/service will be removed.&quot; Promotion is confined to Marketplace Tuesday and Feedback Friday threads." data-es="r/Entrepreneur: Regla 2, &quot;Las publicaciones que sean pitches directos de producto, anuncios, o que existan solo para promocionar un negocio/servicio serán eliminadas.&quot; La promoción se limita a los hilos Marketplace Tuesday y Feedback Friday.">r/Entrepreneur: Rule 2, "Posts that are direct product pitches, advertisements, or exist solely to promote a business/service will be removed." Promotion is confined to Marketplace Tuesday and Feedback Friday threads.</li>
+
+          <li data-en="r/Miami: Rule 2, &quot;We're a community, not a bulletin board or marketplace. You may not use us to increase the popularity, profit, or market presence of a personal project.&quot; Original Miami-related content is allowed &quot;but retain a proper ratio with other subreddit content.&quot; And Rule 4, in full: &quot;No Low-Effort Posts, No Spam, No AI-Slop.&quot;" data-es="r/Miami: Regla 2, &quot;Somos una comunidad, no un tablón de anuncios ni un mercado. No puedes usarnos para aumentar la popularidad, las ganancias o la presencia de mercado de un proyecto personal.&quot; Se permite contenido original relacionado con Miami &quot;pero mantén una proporción adecuada con el resto del contenido del subreddit.&quot; Y la Regla 4, completa: &quot;Sin publicaciones de bajo esfuerzo, sin spam, sin basura generada por IA.&quot;">r/Miami: Rule 2, "We're a community, not a bulletin board or marketplace. You may not use us to increase the popularity, profit, or market presence of a personal project." Original Miami-related content is allowed "but retain a proper ratio with other subreddit content." And Rule 4, in full: "No Low-Effort Posts, No Spam, No AI-Slop."</li>
+
+        </ul>
+
+        <p data-en="<strong>Layer 3 — the ban-evasion system.</strong> This is the one nobody warns you about. Get banned from one subreddit, and any account Reddit <em>links to you</em> that keeps posting there is evading a ban. Reddit's <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>policy</a> calls that &quot;a violation of the Reddit Rules&quot; that &quot;could result in a sitewide suspension.&quot; Sitewide means every subreddit, every account, not just the one that got banned." data-es="<strong>Capa 3 — el sistema contra la evasión de expulsiones.</strong> De esta nadie te advierte. Si te expulsan de un subreddit, cualquier cuenta que Reddit <em>vincule contigo</em> y que siga publicando ahí está evadiendo la expulsión. La <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>política</a> de Reddit lo llama &quot;una violación de las Reglas de Reddit&quot; que &quot;podría resultar en una suspensión en todo el sitio.&quot; En todo el sitio significa cada subreddit, cada cuenta, no solo la que fue expulsada."><strong>Layer 3 — the ban-evasion system.</strong> This is the one nobody warns you about. Get banned from one subreddit, and any account Reddit <em>links to you</em> that keeps posting there is evading a ban. Reddit's <a href="https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion" target="_blank" rel="noopener">policy</a> calls that "a violation of the Reddit Rules" that "could result in a sitewide suspension." Sitewide means every subreddit, every account, not just the one that got banned.</p>
+
+        <p data-en="And &quot;links to you&quot; is broader than you think. The <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>ban-evasion filter</a> works off account signals — how you connect and what information the accounts share — and Reddit doesn't tell moderators (or you) which accounts it linked. A colleague's account on your office Wi-Fi, an old account you forgot about, a marketing assistant posting from your laptop: any of them can trip it." data-es="Y &quot;vincule contigo&quot; es más amplio de lo que crees. El <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>filtro contra evasión</a> funciona con señales de cuenta — cómo te conectas y qué información comparten las cuentas — y Reddit no les dice a los moderadores (ni a ti) qué cuentas vinculó. La cuenta de un colega en el Wi-Fi de tu oficina, una cuenta vieja que olvidaste, un asistente de marketing publicando desde tu laptop: cualquiera puede activarlo.">And "links to you" is broader than you think. The <a href="https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter" target="_blank" rel="noopener">ban-evasion filter</a> works off account signals — how you connect and what information the accounts share — and Reddit doesn't tell moderators (or you) which accounts it linked. A colleague's account on your office Wi-Fi, an old account you forgot about, a marketing assistant posting from your laptop: any of them can trip it.</p>
+
+        <p data-en="That is why the obvious workaround — &quot;I'll have someone on my team post for me&quot; — is the single fastest way to lose the whole account." data-es="Por eso la solución obvia — &quot;que alguien de mi equipo publique por mí&quot; — es la forma más rápida de perder la cuenta entera.">That is why the obvious workaround — "I'll have someone on my team post for me" — is the single fastest way to lose the whole account.</p>
+
+        <h2 data-en="What does &quot;authentic participation&quot; actually look like?" data-es="¿Cómo se ve realmente la &quot;participación auténtica&quot;?">What does "authentic participation" actually look like?</h2>
+
+        <p class="short-answer" data-en="<strong>Short answer:</strong> Answer other people's questions, in your own name, with your affiliation stated, and never link to yourself unless asked. Do it in the communities where your customers already complain about your industry. That's it. It is slow, it is unglamorous, and it is the only version that survives." data-es="<strong>Respuesta corta:</strong> Responde las preguntas de otros, con tu propio nombre, declarando tu afiliación, y nunca enlaces a tu negocio a menos que te lo pidan. Hazlo en las comunidades donde tus clientes ya se quejan de tu industria. Eso es todo. Es lento, no tiene glamur, y es la única versión que sobrevive."><strong>Short answer:</strong> Answer other people's questions, in your own name, with your affiliation stated, and never link to yourself unless asked. Do it in the communities where your customers already complain about your industry. That's it. It is slow, it is unglamorous, and it is the only version that survives.</p>
+
+        <p data-en="The MaxAEO study tracked what happened to business comments after moderators saw them. Comments where the business <strong>disclosed</strong> who they were survived at 83%. Undisclosed promotional comments survived at 18%. Disclosure isn't a nicety; it is the difference between staying and vanishing." data-es="El estudio de MaxAEO rastreó qué pasó con los comentarios de negocios después de que los moderadores los vieron. Los comentarios donde el negocio <strong>declaró</strong> quién era sobrevivieron en un 83%. Los comentarios promocionales sin declarar sobrevivieron en un 18%. Declararlo no es cortesía; es la diferencia entre quedarte y desaparecer.">The MaxAEO study tracked what happened to business comments after moderators saw them. Comments where the business <strong>disclosed</strong> who they were survived at 83%. Undisclosed promotional comments survived at 18%. Disclosure isn't a nicety; it is the difference between staying and vanishing.</p>
+
+        <p data-en="Five moves that work:" data-es="Cinco movidas que funcionan:">Five moves that work:</p>
+
+        <ol>
+
+          <li data-en="<strong>Build the account before you need it.</strong> Four to six weeks of on-topic comments with zero mention of your business. Real karma, real history, a real name or a consistent handle. A two-day-old account with a company name in it is a red flag to every moderator and every filter." data-es="<strong>Construye la cuenta antes de necesitarla.</strong> De cuatro a seis semanas de comentarios en tema sin mencionar tu negocio. Karma real, historial real, un nombre real o un alias consistente. Una cuenta de dos días con el nombre de una empresa es una bandera roja para cada moderador y cada filtro."><strong>Build the account before you need it.</strong> Four to six weeks of on-topic comments with zero mention of your business. Real karma, real history, a real name or a consistent handle. A two-day-old account with a company name in it is a red flag to every moderator and every filter.</li>
+
+          <li data-en="<strong>Answer, don't announce.</strong> Find questions people are already asking (&quot;Who does hurricane shutters in Broward?&quot;, &quot;Is it normal for an AC quote to be $9K?&quot;) and answer them the way you would for a friend at a barbecue. Three to six sentences. Specific. No pitch." data-es="<strong>Responde, no anuncies.</strong> Busca preguntas que la gente ya está haciendo (&quot;¿Quién instala persianas para huracanes en Broward?&quot;, &quot;¿Es normal que un presupuesto de aire acondicionado sea de $9K?&quot;) y respóndelas como lo harías con un amigo en una parrillada. De tres a seis oraciones. Específico. Sin pitch."><strong>Answer, don't announce.</strong> Find questions people are already asking ("Who does hurricane shutters in Broward?", "Is it normal for an AC quote to be $9K?") and answer them the way you would for a friend at a barbecue. Three to six sentences. Specific. No pitch.</li>
+
+          <li data-en="<strong>Disclose in the first line when it's relevant.</strong> &quot;I run an HVAC company in Miami, so take this with that in mind —&quot; and then give the honest answer, including when a competitor is the better fit. That sentence is what keeps the comment alive and, quietly, what tells an AI engine who you are." data-es="<strong>Declara en la primera línea cuando sea relevante.</strong> &quot;Tengo una empresa de aire acondicionado en Miami, así que tómalo con eso en mente —&quot; y luego da la respuesta honesta, incluso cuando un competidor sea la mejor opción. Esa oración es la que mantiene vivo el comentario y, silenciosamente, la que le dice a un motor de IA quién eres."><strong>Disclose in the first line when it's relevant.</strong> "I run an HVAC company in Miami, so take this with that in mind —" and then give the honest answer, including when a competitor is the better fit. That sentence is what keeps the comment alive and, quietly, what tells an AI engine who you are.</li>
+
+          <li data-en="<strong>Go where the thread already ranks.</strong> Search Google for your service plus &quot;reddit&quot; (&quot;pool resurfacing reddit Fort Lauderdale&quot;). The threads on page one are the ones AI engines are reading. A good answer in a two-year-old thread that ranks is worth more than a new post nobody sees." data-es="<strong>Ve donde el hilo ya posiciona.</strong> Busca en Google tu servicio más &quot;reddit&quot; (&quot;pool resurfacing reddit Fort Lauderdale&quot;). Los hilos de la primera página son los que leen los motores de IA. Una buena respuesta en un hilo de hace dos años que posiciona vale más que una publicación nueva que nadie ve."><strong>Go where the thread already ranks.</strong> Search Google for your service plus "reddit" ("pool resurfacing reddit Fort Lauderdale"). The threads on page one are the ones AI engines are reading. A good answer in a two-year-old thread that ranks is worth more than a new post nobody sees.</li>
+
+          <li data-en="<strong>Let people ask for the link.</strong> If your answer is useful, someone will ask who you are. Reply once, in the thread. Never DM." data-es="<strong>Deja que la gente pida el enlace.</strong> Si tu respuesta es útil, alguien preguntará quién eres. Responde una vez, en el hilo. Nunca por mensaje directo."><strong>Let people ask for the link.</strong> If your answer is useful, someone will ask who you are. Reply once, in the thread. Never DM.</li>
+
+        </ol>
+
+        <p data-en="One rule of thumb for the whole thing: if you would be embarrassed to have the moderator read it out loud with your company name attached, don't post it." data-es="Una regla general para todo esto: si te daría vergüenza que el moderador lo leyera en voz alta con el nombre de tu empresa al lado, no lo publiques.">One rule of thumb for the whole thing: if you would be embarrassed to have the moderator read it out loud with your company name attached, don't post it.</p>
+
+        <h2 data-en="Which subreddits matter for a South Florida service business?" data-es="¿Cuáles subreddits importan para un negocio de servicios del sur de Florida?">Which subreddits matter for a South Florida service business?</h2>
+
+        <p class="short-answer" data-en="<strong>Short answer:</strong> Two local communities where your customers live, one or two trade communities where your peers answer questions, and one general small-business community for the promo thread. Five subreddits, not fifty. Read each one's rules page before your first comment — they change, and moderators do not accept &quot;I didn't know.&quot;" data-es="<strong>Respuesta corta:</strong> Dos comunidades locales donde viven tus clientes, una o dos comunidades de tu oficio donde tus colegas responden preguntas, y una comunidad general de pequeños negocios para el hilo de promoción. Cinco subreddits, no cincuenta. Lee la página de reglas de cada uno antes de tu primer comentario — cambian, y los moderadores no aceptan &quot;no sabía&quot;."><strong>Short answer:</strong> Two local communities where your customers live, one or two trade communities where your peers answer questions, and one general small-business community for the promo thread. Five subreddits, not fifty. Read each one's rules page before your first comment — they change, and moderators do not accept "I didn't know."</p>
+
+        <div class="table-wrap"><table>
+
+          <thead><tr><th data-en="Subreddit" data-es="Subreddit">Subreddit</th><th data-en="Who's there" data-es="Quién está ahí">Who's there</th><th data-en="Business promotion" data-es="Promoción de negocios">Business promotion</th><th data-en="Where you can actually help" data-es="Dónde puedes ayudar de verdad">Where you can actually help</th></tr></thead>
+
+          <tbody>
+
+            <tr><td data-en="r/Miami" data-es="r/Miami">r/Miami</td><td data-en="Residents, new arrivals, tourists asking for recommendations" data-es="Residentes, recién llegados, turistas pidiendo recomendaciones">Residents, new arrivals, tourists asking for recommendations</td><td data-en="Rule 2: not a marketplace; your own content only in &quot;proper ratio.&quot; Rule 4: no AI slop" data-es="Regla 2: no es un mercado; contenido propio solo en &quot;proporción adecuada&quot;. Regla 4: sin basura de IA">Rule 2: not a marketplace; your own content only in "proper ratio." Rule 4: no AI slop</td><td data-en="&quot;Who do you use for X?&quot; threads, hurricane prep; moving and tourism questions live in the monthly megathreads" data-es="Hilos de &quot;¿a quién usan para X?&quot;, preparación para huracanes; las preguntas de mudanza y turismo van en los megahilos mensuales">"Who do you use for X?" threads, hurricane prep; moving and tourism questions live in the monthly megathreads</td></tr>
+
+            <tr><td data-en="r/fortlauderdale <span class=&quot;sub-note&quot;>also r/WestPalmBeach, r/Broward, r/PalmBeach</span>" data-es="r/fortlauderdale <span class=&quot;sub-note&quot;>también r/WestPalmBeach, r/Broward, r/PalmBeach</span>">r/fortlauderdale <span class="sub-note">also r/WestPalmBeach, r/Broward, r/PalmBeach</span></td><td data-en="Same, further north" data-es="Lo mismo, más al norte">Same, further north</td><td data-en="Rule 2: &quot;No Advertising / No Spam / No Donation Requests of Any Kind&quot;; the others run the same rulebook" data-es="Regla 2: &quot;Sin publicidad / Sin spam / Sin solicitudes de donación de ningún tipo&quot;; los demás siguen el mismo reglamento">Rule 2: "No Advertising / No Spam / No Donation Requests of Any Kind"; the others run the same rulebook</td><td data-en="Local recommendation threads; the pinned Tourist Questions megathread (1,300+ comments) is where visitors ask" data-es="Hilos de recomendaciones locales; el megahilo fijado de Preguntas de Turistas (1,300+ comentarios) es donde preguntan los visitantes">Local recommendation threads; the pinned Tourist Questions megathread (1,300+ comments) is where visitors ask</td></tr>
+
+            <tr><td data-en="r/florida" data-es="r/florida">r/florida</td><td data-en="Statewide; insurance, storms, cost of living" data-es="Todo el estado; seguros, tormentas, costo de vida">Statewide; insurance, storms, cost of living</td><td data-en="No advertising" data-es="Sin publicidad">No advertising</td><td data-en="Insurance, contractor and storm-prep questions" data-es="Preguntas de seguros, contratistas y preparación para tormentas">Insurance, contractor and storm-prep questions</td></tr>
+
+            <tr><td data-en="r/FloridaKeys <span class=&quot;sub-note&quot;>also r/KeyWest</span>" data-es="r/FloridaKeys <span class=&quot;sub-note&quot;>también r/KeyWest</span>">r/FloridaKeys <span class="sub-note">also r/KeyWest</span></td><td data-en="Visitors planning trips, locals" data-es="Visitantes planeando viajes, locales">Visitors planning trips, locals</td><td data-en="No advertising; read the rules page" data-es="Sin publicidad; lee la página de reglas">No advertising; read the rules page</td><td data-en="Trip-planning and lodging questions" data-es="Preguntas de planificación de viaje y alojamiento">Trip-planning and lodging questions</td></tr>
+
+            <tr><td data-en="r/smallbusiness" data-es="r/smallbusiness">r/smallbusiness</td><td data-en="Owners asking about tools, taxes, hiring, marketing" data-es="Dueños preguntando sobre herramientas, impuestos, contratación, marketing">Owners asking about tools, taxes, hiring, marketing</td><td data-en="No promo posts; weekly Promote-your-business thread only" data-es="Sin publicaciones promocionales; solo el hilo semanal Promote-your-business">No promo posts; weekly Promote-your-business thread only</td><td data-en="Answer operations questions from experience; use the weekly thread" data-es="Responde preguntas operativas desde la experiencia; usa el hilo semanal">Answer operations questions from experience; use the weekly thread</td></tr>
+
+            <tr><td data-en="r/Entrepreneur" data-es="r/Entrepreneur">r/Entrepreneur</td><td data-en="Founders, side-hustlers" data-es="Fundadores, emprendedores de medio tiempo">Founders, side-hustlers</td><td data-en="Rule 2, no ads; Marketplace Tuesday and Feedback Friday threads" data-es="Regla 2, sin anuncios; hilos Marketplace Tuesday y Feedback Friday">Rule 2, no ads; Marketplace Tuesday and Feedback Friday threads</td><td data-en="Share what worked, with numbers" data-es="Comparte lo que funcionó, con números">Share what worked, with numbers</td></tr>
+
+            <tr><td data-en="Your trade sub <span class=&quot;sub-note&quot;>r/HVAC, r/Plumbing, r/electricians, r/lawncare, r/Contractor, r/realtors, r/vacationrentals, r/airbnb_hosts, r/Dentistry, r/LawFirm</span>" data-es="El subreddit de tu oficio <span class=&quot;sub-note&quot;>r/HVAC, r/Plumbing, r/electricians, r/lawncare, r/Contractor, r/realtors, r/vacationrentals, r/airbnb_hosts, r/Dentistry, r/LawFirm</span>">Your trade sub <span class="sub-note">r/HVAC, r/Plumbing, r/electricians, r/lawncare, r/Contractor, r/realtors, r/vacationrentals, r/airbnb_hosts, r/Dentistry, r/LawFirm</span></td><td data-en="Peers and DIYers" data-es="Colegas y aficionados al bricolaje">Peers and DIYers</td><td data-en="Varies; most ban solicitation, several ban homeowners' &quot;quote me&quot; posts" data-es="Varía; la mayoría prohíbe la solicitación, varios prohíben publicaciones de &quot;cotízame&quot; de propietarios">Varies; most ban solicitation, several ban homeowners' "quote me" posts</td><td data-en="Answer technical questions; DIYers and future customers read these" data-es="Responde preguntas técnicas; los aficionados y futuros clientes las leen">Answer technical questions; DIYers and future customers read these</td></tr>
+
+          </tbody></table></div>
+
+        <p data-en="What to skip: r/legaladvice (attorneys cannot solicit there and mods remove practitioners who try), any &quot;AskX&quot; subreddit unless you've read its verification rules, and any subreddit where your first search shows other businesses' comments deleted." data-es="Qué evitar: r/legaladvice (los abogados no pueden solicitar clientes ahí y los moderadores eliminan a los profesionales que lo intentan), cualquier subreddit &quot;AskX&quot; a menos que hayas leído sus reglas de verificación, y cualquier subreddit donde tu primera búsqueda muestre comentarios de otros negocios eliminados.">What to skip: r/legaladvice (attorneys cannot solicit there and mods remove practitioners who try), any "AskX" subreddit unless you've read its verification rules, and any subreddit where your first search shows other businesses' comments deleted.</p>
+
+        <p data-en="As for me: when Reddit lets me back in, I'll be in r/smallbusiness and r/Miami, under my own name, answering questions from one account. If you ever catch me pitching, screenshot it and send it to me." data-es="En cuanto a mí: cuando Reddit me deje volver, estaré en r/smallbusiness y r/Miami, con mi propio nombre, respondiendo preguntas desde una sola cuenta. Si alguna vez me ves haciendo un pitch, tómale captura y envíamela.">As for me: when Reddit lets me back in, I'll be in r/smallbusiness and r/Miami, under my own name, answering questions from one account. If you ever catch me pitching, screenshot it and send it to me.</p>
+
+        <h2 data-en="What gets you banned?" data-es="¿Qué te hace expulsar?">What gets you banned?</h2>
+
+        <p class="short-answer" data-en="<strong>Short answer:</strong> Linking to yourself, posting instead of commenting, using a second account, and letting anyone else post on your behalf. In that order of frequency — and the last two are the ones that end your account, not just your post." data-es="<strong>Respuesta corta:</strong> Enlazar a tu negocio, publicar en lugar de comentar, usar una segunda cuenta y dejar que alguien más publique por ti. En ese orden de frecuencia — y las dos últimas son las que acaban con tu cuenta, no solo con tu publicación."><strong>Short answer:</strong> Linking to yourself, posting instead of commenting, using a second account, and letting anyone else post on your behalf. In that order of frequency — and the last two are the ones that end your account, not just your post.</p>
+
+        <ol>
+
+          <li data-en="<strong>A link to your site in your first week.</strong> Auto-removed in most subreddits. Repeat it and you're flagged as a spammer sitewide." data-es="<strong>Un enlace a tu sitio en tu primera semana.</strong> Se elimina automáticamente en la mayoría de los subreddits. Repítelo y te marcan como spammer en todo el sitio."><strong>A link to your site in your first week.</strong> Auto-removed in most subreddits. Repeat it and you're flagged as a spammer sitewide.</li>
+
+          <li data-en="<strong>Posting about your business instead of commenting on someone else's problem.</strong> This is the r/smallbusiness rule, the r/Entrepreneur rule, and every city subreddit's rule. Posts are for the promo thread. Comments are where you earn trust." data-es="<strong>Publicar sobre tu negocio en lugar de comentar sobre el problema de alguien más.</strong> Esta es la regla de r/smallbusiness, la de r/Entrepreneur y la de cada subreddit de ciudad. Las publicaciones van en el hilo de promoción. Los comentarios son donde te ganas la confianza."><strong>Posting about your business instead of commenting on someone else's problem.</strong> This is the r/smallbusiness rule, the r/Entrepreneur rule, and every city subreddit's rule. Posts are for the promo thread. Comments are where you earn trust.</li>
+
+          <li data-en="<strong>The same comment in several subreddits.</strong> Cross-posting a pitch is the pattern Reddit's spam filter was built to catch." data-es="<strong>El mismo comentario en varios subreddits.</strong> Repetir un pitch en varias comunidades es el patrón para el que se construyó el filtro de spam de Reddit."><strong>The same comment in several subreddits.</strong> Cross-posting a pitch is the pattern Reddit's spam filter was built to catch.</li>
+
+          <li data-en="<strong>Asking for upvotes.</strong> From customers, from staff, from a group chat. Reddit's rules name this specifically, and vote manipulation is a sitewide offense." data-es="<strong>Pedir votos positivos.</strong> A clientes, a empleados, en un chat de grupo. Las reglas de Reddit lo nombran específicamente, y la manipulación de votos es una falta en todo el sitio."><strong>Asking for upvotes.</strong> From customers, from staff, from a group chat. Reddit's rules name this specifically, and vote manipulation is a sitewide offense.</li>
+
+          <li data-en="<strong>A brand-new account with your company name.</strong> Not a violation by itself, but moderators treat it as one. Use a person's name or a neutral handle, and let the disclosure do the work. And write the comment yourself: a growing number of subreddits remove anything that reads as AI-generated — r/Miami's Rule 4 says &quot;Especially no AI Slop&quot; in so many words, and a paragraph of tidy em-dashes reads that way even when the ideas are yours." data-es="<strong>Una cuenta nueva con el nombre de tu empresa.</strong> No es una violación por sí misma, pero los moderadores la tratan como tal. Usa el nombre de una persona o un alias neutral, y deja que la declaración haga el trabajo. Y escribe el comentario tú mismo: cada vez más subreddits eliminan todo lo que se lea como generado por IA — la Regla 4 de r/Miami dice &quot;Especialmente nada de basura de IA&quot; con esas palabras, y un párrafo de rayas perfectamente ordenadas se lee así aunque las ideas sean tuyas."><strong>A brand-new account with your company name.</strong> Not a violation by itself, but moderators treat it as one. Use a person's name or a neutral handle, and let the disclosure do the work. And write the comment yourself: a growing number of subreddits remove anything that reads as AI-generated — r/Miami's Rule 4 says "Especially no AI Slop" in so many words, and a paragraph of tidy em-dashes reads that way even when the ideas are yours.</li>
+
+          <li data-en="<strong>Arguing with the moderator.</strong> Modmail is for one short, polite question. Anything else shortens your stay." data-es="<strong>Discutir con el moderador.</strong> El modmail es para una pregunta corta y cortés. Cualquier otra cosa acorta tu estadía."><strong>Arguing with the moderator.</strong> Modmail is for one short, polite question. Anything else shortens your stay.</li>
+
+          <li data-en="<strong>A second account, or a colleague's account, after a ban.</strong> This is the ban-evasion rule, and it is the one that took me out three times. Reddit links accounts by connection signals it never explains. If one account in your office is banned from a subreddit, nobody in your office posts there. Period. And don't create a new account for anything in the weeks after a ban, even by accident: a fresh account on the same device is the signal the filter is watching for." data-es="<strong>Una segunda cuenta, o la cuenta de un colega, después de una expulsión.</strong> Esta es la regla contra la evasión, y es la que me sacó tres veces. Reddit vincula cuentas por señales de conexión que nunca explica. Si una cuenta de tu oficina es expulsada de un subreddit, nadie en tu oficina publica ahí. Punto. Y no crees una cuenta nueva para nada en las semanas siguientes a una expulsión, ni por accidente: una cuenta fresca en el mismo dispositivo es la señal que el filtro está buscando."><strong>A second account, or a colleague's account, after a ban.</strong> This is the ban-evasion rule, and it is the one that took me out three times. Reddit links accounts by connection signals it never explains. If one account in your office is banned from a subreddit, nobody in your office posts there. Period. And don't create a new account for anything in the weeks after a ban, even by accident: a fresh account on the same device is the signal the filter is watching for.</li>
+
+        </ol>
+
+        <p data-en="If you get banned from a subreddit: stop posting there, from every account, immediately. You can send one modmail asking what happened. Do not make a new account. Do not ask a friend to post for you. A subreddit ban is a closed door; ban evasion is a lost house." data-es="Si te expulsan de un subreddit: deja de publicar ahí, desde todas las cuentas, de inmediato. Puedes enviar un modmail preguntando qué pasó. No crees una cuenta nueva. No le pidas a un amigo que publique por ti. Una expulsión de un subreddit es una puerta cerrada; evadirla es una casa perdida.">If you get banned from a subreddit: stop posting there, from every account, immediately. You can send one modmail asking what happened. Do not make a new account. Do not ask a friend to post for you. A subreddit ban is a closed door; ban evasion is a lost house.</p>
+
+        <h2 data-en="The 30-day starter plan" data-es="El plan inicial de 30 días">The 30-day starter plan</h2>
+
+        <p data-en="One account, one person, twenty minutes a day. If that sounds like a lot, it is roughly what one Google Ads campaign costs in attention and far less in cash." data-es="Una cuenta, una persona, veinte minutos al día. Si suena a mucho, es más o menos lo que cuesta una campaña de Google Ads en atención y mucho menos en dinero.">One account, one person, twenty minutes a day. If that sounds like a lot, it is roughly what one Google Ads campaign costs in attention and far less in cash.</p>
+
+        <ul class="checklist">
+
+          <li data-en="<strong>Days 1–3:</strong> Create or dust off one account under a real name or neutral handle, and verify its email (it raises your quality score). Read the rules of your five subreddits. Join them. Post nothing." data-es="<strong>Días 1–3:</strong> Crea o desempolva una cuenta con un nombre real o un alias neutral, y verifica su correo (sube tu calificación). Lee las reglas de tus cinco subreddits. Únete. No publiques nada."><strong>Days 1–3:</strong> Create or dust off one account under a real name or neutral handle, and verify its email (it raises your quality score). Read the rules of your five subreddits. Join them. Post nothing.</li>
+
+          <li data-en="<strong>Days 4–14:</strong> Comment only. Answer three questions a day in your trade sub and your local subs. No links, no company name in the text. Upvote good answers from others." data-es="<strong>Días 4–14:</strong> Solo comenta. Responde tres preguntas al día en el subreddit de tu oficio y en los locales. Sin enlaces, sin nombre de empresa en el texto. Vota positivo las buenas respuestas de otros."><strong>Days 4–14:</strong> Comment only. Answer three questions a day in your trade sub and your local subs. No links, no company name in the text. Upvote good answers from others.</li>
+
+          <li data-en="<strong>Day 15:</strong> Search Google for your service + your city + &quot;reddit.&quot; List the ten threads on page one. Bookmark them." data-es="<strong>Día 15:</strong> Busca en Google tu servicio + tu ciudad + &quot;reddit&quot;. Anota los diez hilos de la primera página. Guárdalos en favoritos."><strong>Day 15:</strong> Search Google for your service + your city + "reddit." List the ten threads on page one. Bookmark them.</li>
+
+          <li data-en="<strong>Days 15–28:</strong> Add one useful, disclosed answer to each of those threads where you have something real to say. &quot;I run a [trade] company in [city] —&quot; then the honest answer. Skip the threads where you don't." data-es="<strong>Días 15–28:</strong> Agrega una respuesta útil y declarada en cada uno de esos hilos donde tengas algo real que decir. &quot;Tengo una empresa de [oficio] en [ciudad] —&quot; y luego la respuesta honesta. Salta los hilos donde no tengas nada que aportar."><strong>Days 15–28:</strong> Add one useful, disclosed answer to each of those threads where you have something real to say. "I run a [trade] company in [city] —" then the honest answer. Skip the threads where you don't.</li>
+
+          <li data-en="<strong>Day 29:</strong> Post once in r/smallbusiness's weekly Promote-your-business thread. Two sentences, what you do, who it's for, where. That is your one allowed pitch." data-es="<strong>Día 29:</strong> Publica una vez en el hilo semanal Promote-your-business de r/smallbusiness. Dos oraciones: qué haces, para quién, dónde. Ese es tu único pitch permitido."><strong>Day 29:</strong> Post once in r/smallbusiness's weekly Promote-your-business thread. Two sentences, what you do, who it's for, where. That is your one allowed pitch.</li>
+
+          <li data-en="<strong>Day 30:</strong> Ask ChatGPT, Perplexity and Google AI Mode the question a customer would ask (&quot;best [trade] in [city]&quot;). Note who they name and which Reddit threads they cite. That is your baseline for month two." data-es="<strong>Día 30:</strong> Pregúntale a ChatGPT, Perplexity y Google AI Mode lo que preguntaría un cliente (&quot;mejor [oficio] en [ciudad]&quot;). Anota a quién nombran y qué hilos de Reddit citan. Esa es tu línea base para el segundo mes."><strong>Day 30:</strong> Ask ChatGPT, Perplexity and Google AI Mode the question a customer would ask ("best [trade] in [city]"). Note who they name and which Reddit threads they cite. That is your baseline for month two.</li>
+
+        </ul>
+
+        <p class="takeaway" data-en="If you do only one thing from this article: verify your email, comment for a month without mentioning your business, and say who you are when you finally do." data-es="Si solo haces una cosa de este artículo: verifica tu correo, comenta durante un mes sin mencionar tu negocio, y di quién eres cuando finalmente lo hagas.">If you do only one thing from this article: verify your email, comment for a month without mentioning your business, and say who you are when you finally do.</p>
+
+        <p class="author-note" data-en="<em>Rene Galan runs AUDAZ, an AI-visibility agency in Miami, and at press time is still locked out of Reddit.</em>" data-es="<em>Rene Galan dirige AUDAZ, una agencia de visibilidad en IA en Miami, y al cierre de esta edición sigue fuera de Reddit.</em>"><em>Rene Galan runs AUDAZ, an AI-visibility agency in Miami, and at press time is still locked out of Reddit.</em></p>
+
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+
+        <ul>
+
+          <li data-en="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>What is the Contributor Quality Score?</a>" data-es="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>What is the Contributor Quality Score?</a>">Reddit Help, <a href="https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score" target="_blank" rel="noopener">What is the Contributor Quality Score?</a></li>
+
+          <li data-en="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Self-promotion guidelines</a>" data-es="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Self-promotion guidelines</a>">Reddit Help, <a href="https://support.reddithelp.com/hc/en-us/articles/205926439-Reddit-Rules-Self-promotion" target="_blank" rel="noopener">Self-promotion guidelines</a></li>
+
+          <li data-en="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>What is ban evasion?</a>" data-es="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>What is ban evasion?</a>">Reddit Help, <a href="https://support.reddithelp.com/hc/en-us/articles/360043504811-What-is-ban-evasion" target="_blank" rel="noopener">What is ban evasion?</a></li>
+
+          <li data-en="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Ban evasion filter</a>" data-es="Reddit Help, <a href=&quot;https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Ban evasion filter</a>">Reddit Help, <a href="https://support.reddithelp.com/hc/en-us/articles/15484544471444-Ban-evasion-filter" target="_blank" rel="noopener">Ban evasion filter</a></li>
+
+          <li data-en="Semrush, <a href=&quot;https://www.semrush.com/blog/most-cited-domains-ai/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>The Most-Cited Domains in AI: A 3-Month Study</a> (Jul–Oct 2025)" data-es="Semrush, <a href=&quot;https://www.semrush.com/blog/most-cited-domains-ai/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>The Most-Cited Domains in AI: A 3-Month Study</a> (jul–oct 2025)">Semrush, <a href="https://www.semrush.com/blog/most-cited-domains-ai/" target="_blank" rel="noopener">The Most-Cited Domains in AI: A 3-Month Study</a> (Jul–Oct 2025)</li>
+
+          <li data-en="Readyt, <a href=&quot;https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>How Often Does ChatGPT Cite Reddit?</a>" data-es="Readyt, <a href=&quot;https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>How Often Does ChatGPT Cite Reddit?</a>">Readyt, <a href="https://www.readyt.ai/blog/how-often-does-chatgpt-cite-reddit/" target="_blank" rel="noopener">How Often Does ChatGPT Cite Reddit?</a></li>
+
+          <li data-en="Pierview, <a href=&quot;https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Reddit Citations Fell Off a Cliff in ChatGPT, While Perplexity Doubled Down</a> (Jul–Aug 2026)" data-es="Pierview, <a href=&quot;https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Reddit Citations Fell Off a Cliff in ChatGPT, While Perplexity Doubled Down</a> (jul–ago 2026)">Pierview, <a href="https://www.pierview.ai/guides/reddit-citations-chatgpt-perplexity-decline-2026" target="_blank" rel="noopener">Reddit Citations Fell Off a Cliff in ChatGPT, While Perplexity Doubled Down</a> (Jul–Aug 2026)</li>
+
+          <li data-en="MaxAEO, <a href=&quot;https://maxaeo.ai/blog/reddit-chatgpt-recommendations/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>How Reddit Shapes ChatGPT Recommendations (1.2M-Citation Study)</a>" data-es="MaxAEO, <a href=&quot;https://maxaeo.ai/blog/reddit-chatgpt-recommendations/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>How Reddit Shapes ChatGPT Recommendations (1.2M-Citation Study)</a>">MaxAEO, <a href="https://maxaeo.ai/blog/reddit-chatgpt-recommendations/" target="_blank" rel="noopener">How Reddit Shapes ChatGPT Recommendations (1.2M-Citation Study)</a></li>
+
+          <li data-en="OneUp, <a href=&quot;https://oneup.today/tools/reddit-self-promotion-checker/smallbusiness&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>r/smallbusiness self-promotion rules</a>; ReplyAgent, <a href=&quot;https://www.replyagent.ai/blog/r-entrepreneur-self-promotion-rules-guide&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>r/Entrepreneur self-promotion rules</a> — secondary summaries of each subreddit's rules" data-es="OneUp, <a href=&quot;https://oneup.today/tools/reddit-self-promotion-checker/smallbusiness&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>r/smallbusiness self-promotion rules</a>; ReplyAgent, <a href=&quot;https://www.replyagent.ai/blog/r-entrepreneur-self-promotion-rules-guide&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>r/Entrepreneur self-promotion rules</a> — resúmenes secundarios de las reglas de cada subreddit">OneUp, <a href="https://oneup.today/tools/reddit-self-promotion-checker/smallbusiness" target="_blank" rel="noopener">r/smallbusiness self-promotion rules</a>; ReplyAgent, <a href="https://www.replyagent.ai/blog/r-entrepreneur-self-promotion-rules-guide" target="_blank" rel="noopener">r/Entrepreneur self-promotion rules</a> — secondary summaries of each subreddit's rules</li>
+
+        </ul>
+
+      </div>
+
+      <!-- FAQ block: real questions as headers, clean answers underneath -->
+      <div class="faq-block">
+        <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+
+        <h3 data-en="Does AI really use Reddit to recommend local businesses?" data-es="¿La IA realmente usa Reddit para recomendar negocios locales?">Does AI really use Reddit to recommend local businesses?</h3>
+        <p data-en="Yes, unevenly. Perplexity cites Reddit in roughly 45–70% of sourced answers depending on the study; ChatGPT's use has swung from about 60% of responses to near zero within months. Google AI Mode sits in the middle. For &quot;who should I hire&quot; questions, a cited Reddit comment is often the only place a small business's name appears." data-es="Sí, de forma desigual. Perplexity cita Reddit en aproximadamente el 45–70% de las respuestas con fuentes según el estudio; el uso de ChatGPT ha oscilado de cerca del 60% de las respuestas a casi cero en cuestión de meses. Google AI Mode está en el medio. Para preguntas de &quot;¿a quién contrato?&quot;, un comentario de Reddit citado suele ser el único lugar donde aparece el nombre de un pequeño negocio.">Yes, unevenly. Perplexity cites Reddit in roughly 45–70% of sourced answers depending on the study; ChatGPT's use has swung from about 60% of responses to near zero within months. Google AI Mode sits in the middle. For "who should I hire" questions, a cited Reddit comment is often the only place a small business's name appears.</p>
+
+        <h3 data-en="Can I pay someone to post about my business on Reddit?" data-es="¿Puedo pagarle a alguien para que publique sobre mi negocio en Reddit?">Can I pay someone to post about my business on Reddit?</h3>
+        <p data-en="You can, and it is the most common way businesses get banned. Undisclosed promotional comments survive moderation about 18% of the time; disclosed ones about 83%. Anyone posting for you from a linked device or network also exposes you to a ban-evasion suspension if any account gets banned." data-es="Puedes, y es la forma más común en que los negocios terminan expulsados. Los comentarios promocionales sin declarar sobreviven a la moderación cerca del 18% de las veces; los declarados, cerca del 83%. Además, cualquiera que publique por ti desde un dispositivo o red vinculados te expone a una suspensión por evasión si alguna cuenta es expulsada.">You can, and it is the most common way businesses get banned. Undisclosed promotional comments survive moderation about 18% of the time; disclosed ones about 83%. Anyone posting for you from a linked device or network also exposes you to a ban-evasion suspension if any account gets banned.</p>
+
+        <h3 data-en="How long before Reddit activity shows up in AI answers?" data-es="¿Cuánto tarda la actividad en Reddit en aparecer en las respuestas de la IA?">How long before Reddit activity shows up in AI answers?</h3>
+        <p data-en="Months, not days. The threads AI engines cite are typically 3 to 16 months old and already rank on Google. One tracked business went from being named in 1 of 12 AI shortlist prompts to 4 of 12 over 14 weeks of disclosed participation." data-es="Meses, no días. Los hilos que citan los motores de IA suelen tener entre 3 y 16 meses y ya posicionan en Google. Un negocio rastreado pasó de ser nombrado en 1 de 12 consultas de lista corta de IA a 4 de 12 en 14 semanas de participación declarada.">Months, not days. The threads AI engines cite are typically 3 to 16 months old and already rank on Google. One tracked business went from being named in 1 of 12 AI shortlist prompts to 4 of 12 over 14 weeks of disclosed participation.</p>
+
+        <h3 data-en="What if I've already been banned from a subreddit?" data-es="¿Y si ya me expulsaron de un subreddit?">What if I've already been banned from a subreddit?</h3>
+        <p data-en="Stop posting there from every account you or your team control. A subreddit ban is local; evading it is a sitewide offense with escalating suspensions. Pick a different community and start clean." data-es="Deja de publicar ahí desde todas las cuentas que tú o tu equipo controlen. Una expulsión de un subreddit es local; evadirla es una falta en todo el sitio con suspensiones cada vez más largas. Elige otra comunidad y empieza limpio.">Stop posting there from every account you or your team control. A subreddit ban is local; evading it is a sitewide offense with escalating suspensions. Pick a different community and start clean.</p>
+
+        <h3 data-en="Is Reddit worth it if ChatGPT stopped citing it?" data-es="¿Vale la pena Reddit si ChatGPT dejó de citarlo?">Is Reddit worth it if ChatGPT stopped citing it?</h3>
+        <p data-en="Yes, for two reasons. Other engines still lean on it, and Reddit threads rank on Google independently of any AI engine. A useful answer in a ranking thread is visible to customers whether or not a model cites it this month." data-es="Sí, por dos razones. Otros motores siguen apoyándose en él, y los hilos de Reddit posicionan en Google independientemente de cualquier motor de IA. Una respuesta útil en un hilo que posiciona es visible para los clientes, la cite o no un modelo este mes.">Yes, for two reasons. Other engines still lean on it, and Reddit threads rank on Google independently of any AI engine. A useful answer in a ranking thread is visible to customers whether or not a model cites it this month.</p>
+
+        <h3 data-en="Why was my comment removed by AutoModerator with no rule cited?" data-es="¿Por qué AutoModerator eliminó mi comentario sin citar ninguna regla?">Why was my comment removed by AutoModerator with no rule cited?</h3>
+        <p data-en="Usually your account's Contributor Quality Score. Reddit rates every account in five tiers from its history, karma, email verification and network signals; many subreddits auto-remove comments from the bottom tiers. Fix it by verifying your email, commenting usefully for a few weeks in less strict communities, and never sharing a device or network with a banned account." data-es="Normalmente por el Contributor Quality Score de tu cuenta. Reddit califica cada cuenta en cinco niveles según su historial, karma, verificación de correo y señales de red; muchos subreddits eliminan automáticamente los comentarios de los niveles bajos. Se arregla verificando tu correo, comentando de forma útil durante unas semanas en comunidades menos estrictas, y nunca compartiendo dispositivo o red con una cuenta expulsada.">Usually your account's Contributor Quality Score. Reddit rates every account in five tiers from its history, karma, email verification and network signals; many subreddits auto-remove comments from the bottom tiers. Fix it by verifying your email, commenting usefully for a few weeks in less strict communities, and never sharing a device or network with a banned account.</p>
+      </div>
+
+      <!-- The next step: one clear action -->
+      <div class="article-cta">
+        <h3 data-en="Find out which Reddit threads AI is pulling from in your category" data-es="Descubre de qué hilos de Reddit está sacando la IA en tu categoría">Find out which Reddit threads AI is pulling from in your category</h3>
+        <p data-en="Send us your website. We'll ask ChatGPT, Perplexity and Google AI Mode who they recommend in your category and city, and tell you which Reddit threads they're pulling from — and whether you're in them. Free, no tool, no upsell." data-es="Envíanos tu sitio web. Le preguntaremos a ChatGPT, Perplexity y Google AI Mode a quién recomiendan en tu categoría y ciudad, y te diremos de qué hilos de Reddit están sacando la información — y si estás en ellos. Gratis, sin herramienta, sin venta adicional.">Send us your website. We'll ask ChatGPT, Perplexity and Google AI Mode who they recommend in your category and city, and tell you which Reddit threads they're pulling from — and whether you're in them. Free, no tool, no upsell.</p>
+        <a href="../audit.html" class="btn btn-primary btn-lg" data-en="Run the free check" data-es="Hacer el diagnóstico gratis">Run the free check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="../services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="../portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="../contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
