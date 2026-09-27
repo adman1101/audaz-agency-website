@@ -38,9 +38,27 @@
   </url>
   <url>
     <loc>https://audaz.agency/blog</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://audaz.agency/blog/what-ai-says-about-your-business</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://audaz.agency/blog/the-reddit-problem-ai-visibility</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://audaz.agency/portfolio</loc>

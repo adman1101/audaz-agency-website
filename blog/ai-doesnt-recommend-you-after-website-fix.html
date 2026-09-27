@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fixing your website teaches AI how to describe your business. It doesn't teach AI to trust it. AUDAZ rewrote its own homepage, then found zero agency overlap across ChatGPT, Gemini, and Perplexity — here's the off-site trust signals that actually move the needle.">
+  <meta property="og:title" content="You Fixed Your Website. AI Still Doesn't Recommend You. Here's Why.">
+  <meta property="og:description" content="We rewrote our own homepage, added schema, fixed every on-site signal. ChatGPT described us perfectly — and still didn't recommend us. Here's what AI actually checks before it names a business.">
+  <meta property="og:url" content="https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-09-16">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix" />
+
+  <title>You Fixed Your Website. AI Still Doesn't Recommend You. Here's Why. | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/ai-doesnt-recommend-you-hero.jpg">
+  <meta property="og:image:width" content="958">
+  <meta property="og:image:height" content="536">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix#article",
+      "headline": "You Fixed Your Website. AI Still Doesn't Recommend You. Here's Why.",
+      "description": "Fixing your website teaches AI how to describe your business. It doesn't teach AI to trust it. AUDAZ rewrote its own homepage, then found zero agency overlap across ChatGPT, Gemini, and Perplexity — here's the off-site trust signals that actually move the needle.",
+      "image": "https://audaz.agency/images/blog/ai-doesnt-recommend-you-hero.jpg",
+      "url": "https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix",
+      "datePublished": "2026-09-16",
+      "dateModified": "2026-09-27",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "Off-site SEO",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization"
+      ],
+      "keywords": "AI visibility, AEO, GEO, off-site trust signals, third-party citations, small business marketing, South Florida"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this different from backlinks and SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Related but not the same. Traditional SEO valued backlinks as a vote of authority. AI engines care about off-site mentions as corroboration — confirming what your website already claims through sources you don't control. A link helps. A sentence describing what you do, written by someone else, helps more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be on Reddit, YouTube, and LinkedIn specifically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You need to be wherever your customers and peers actually talk. A contractor gets more from an active Google Business Profile and a neighborhood Facebook group than from a Reddit account nobody reads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before this changes what AI says about me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Website fixes show up in days. Off-site trust usually takes one to three months of consistent presence before an AI engine treats you as an established answer rather than an unverified claim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this apply to AI search in Spanish too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and the opportunity is bigger. Fewer businesses have built any Spanish-language off-site presence, so even a modest bilingual footprint stands out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I fix this myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The listing cleanup takes an afternoon. Knowing what AI currently says about you and where it's getting that information is the part worth having someone else check first."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "You Fixed Your Website",
+          "item": "https://audaz.agency/blog/ai-doesnt-recommend-you-after-website-fix"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="../about.html" class="nav-link" id="nav-about">About</a>
+        <a href="../services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="../portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="../blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="../contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="../audit.html" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="../contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 06" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 06">THE AI VISIBILITY BRIEF · ISSUE 06</span>
+
+      <h1 data-en="You Fixed Your Website. AI Still Doesn't Recommend You. Here's Why." data-es="Arreglaste tu sitio web. La IA sigue sin recomendarte. Esta es la razón.">You Fixed Your Website. AI Still Doesn't Recommend You. Here's Why.</h1>
+
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published September 16, 2026" data-es="Publicado el 16 de septiembre de 2026">Published September 16, 2026</span>
+        <span data-en="Updated September 27, 2026" data-es="Actualizado el 27 de septiembre de 2026">Updated September 27, 2026</span>
+      </div>
+
+      <div class="answer-block" data-en="Fixing your website teaches AI how to describe you. It doesn't teach AI to trust you. Trust comes from what everyone else says about your business — reviews, directories, and community platforms — and AI engines weight those sources far more heavily than your own homepage. Most small businesses have never touched this half of AI visibility." data-es="Arreglar tu sitio web le enseña a la IA cómo describirte. No le enseña a confiar en ti. La confianza viene de lo que dicen los demás sobre tu negocio — reseñas, directorios y plataformas comunitarias — y los motores de IA le dan mucho más peso a esas fuentes que a tu propia página. La mayoría de los pequeños negocios nunca han tocado esta mitad de la visibilidad en IA.">Fixing your website teaches AI how to describe you. It doesn't teach AI to trust you. Trust comes from what everyone else says about your business — reviews, directories, and community platforms — and AI engines weight those sources far more heavily than your own homepage. Most small businesses have never touched this half of AI visibility.</div>
+
+      <img src="../images/blog/ai-doesnt-recommend-you-hero.jpg" alt="One glowing amber puzzle piece completing a circle of dim grey pieces on a dark background — the missing piece AI is still looking for" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <h2 data-en="We fixed the site. The website still wasn't enough." data-es="Arreglamos el sitio. La página seguía sin ser suficiente.">We fixed the site. The website still wasn't enough.</h2>
+
+        <p data-en="Last issue, we rewrote our own homepage line by line, added FAQ content built around the questions people actually ask, and shipped schema markup across every page. It worked exactly the way it was supposed to: ask ChatGPT to describe AUDAZ today and it gets it right — bilingual AI consulting, South Florida, GEO/AEO." data-es="En la edición pasada, reescribimos nuestra propia página de inicio línea por línea, agregamos contenido de preguntas frecuentes basado en lo que la gente realmente pregunta, e implementamos marcado de schema en cada página. Funcionó exactamente como debía: si le pides a ChatGPT hoy que describa a AUDAZ, lo hace bien — consultoría en IA bilingüe, sur de Florida, GEO/AEO.">Last issue, we rewrote our own homepage line by line, added FAQ content built around the questions people actually ask, and shipped schema markup across every page. It worked exactly the way it was supposed to: ask ChatGPT to describe AUDAZ today and it gets it right — bilingual AI consulting, South Florida, GEO/AEO.</p>
+
+        <p data-en="Then we asked the harder question: &quot;who should I hire for AI visibility in South Florida?&quot; We ran it on ChatGPT, Gemini, and Perplexity. Nineteen agencies came back across the three engines. Zero overlap between them. AUDAZ wasn't on any of the three lists." data-es="Luego hicimos la pregunta más difícil: &quot;¿a quién debería contratar para visibilidad en IA en el sur de Florida?&quot; La corrimos en ChatGPT, Gemini y Perplexity. Salieron diecinueve agencias entre los tres motores. Cero coincidencias entre ellos. AUDAZ no apareció en ninguna de las tres listas.">Then we asked the harder question: "who should I hire for AI visibility in South Florida?" We ran it on ChatGPT, Gemini, and Perplexity. Nineteen agencies came back across the three engines. Zero overlap between them. AUDAZ wasn't on any of the three lists.</p>
+
+        <p data-en="ChatGPT told us flatly why, when we asked what it weighs before recommending an agency instead of just describing one: &quot;entity clarity, authoritative third-party mentions, reviews, structured data, local signals, useful content, and how the business actually shows up when I'm asked about it.&quot; Five of those seven live somewhere other than the business's own website." data-es="ChatGPT nos lo dijo sin rodeos cuando le preguntamos qué evalúa antes de recomendar una agencia, en vez de solo describirla: &quot;claridad de la entidad, menciones de terceros con autoridad, reseñas, datos estructurados, señales locales, contenido útil, y cómo aparece realmente el negocio cuando me preguntan por él.&quot; Cinco de esos siete viven en algún lugar que no es la propia página web del negocio.">ChatGPT told us flatly why, when we asked what it weighs before recommending an agency instead of just describing one: "entity clarity, authoritative third-party mentions, reviews, structured data, local signals, useful content, and how the business actually shows up when I'm asked about it." Five of those seven live somewhere other than the business's own website.</p>
+
+        <h2 data-en="Why doesn't a correct description turn into a recommendation?" data-es="¿Por qué una descripción correcta no se convierte en una recomendación?">Why doesn't a correct description turn into a recommendation?</h2>
+
+        <p data-en="Describing a business is a lookup. The website is a reasonably trustworthy source for what a business says about itself, and AI is good at reading it back accurately. Recommending a business is a judgment call, and a judgment call needs corroboration — something confirming from outside the business that it's real, active, and worth naming. A great résumé with no references gets a polite description and no callback." data-es="Describir un negocio es una búsqueda. La página web es una fuente razonablemente confiable de lo que el negocio dice de sí mismo, y la IA es buena repitiéndolo con precisión. Recomendar un negocio es un juicio de valor, y un juicio de valor necesita corroboración — algo que confirme desde afuera que el negocio es real, está activo y vale la pena mencionarlo. Un currículum excelente sin referencias recibe una descripción cortés y ninguna llamada de vuelta.">Describing a business is a lookup. The website is a reasonably trustworthy source for what a business says about itself, and AI is good at reading it back accurately. Recommending a business is a judgment call, and a judgment call needs corroboration — something confirming from outside the business that it's real, active, and worth naming. A great résumé with no references gets a polite description and no callback.</p>
+
+        <h2 data-en="Where does AI actually get its trust signals?" data-es="¿De dónde saca la IA sus señales de confianza?">Where does AI actually get its trust signals?</h2>
+
+        <p data-en="A 2026 Peec AI analysis of roughly 30 million citations across the major AI engines found the same pattern we found in our own testing: the most heavily cited sources were <a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Reddit, YouTube, and LinkedIn</a> — community and third-party platforms where people talk about businesses, not where businesses talk about themselves." data-es="Un análisis de Peec AI de 2026 sobre unas 30 millones de citas en los principales motores de IA encontró el mismo patrón que nosotros vimos en nuestras propias pruebas: las fuentes más citadas fueron <a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Reddit, YouTube y LinkedIn</a> — plataformas comunitarias y de terceros donde la gente habla de los negocios, no donde los negocios hablan de sí mismos.">A 2026 Peec AI analysis of roughly 30 million citations across the major AI engines found the same pattern we found in our own testing: the most heavily cited sources were <a href="https://peec.ai" target="_blank" rel="noopener">Reddit, YouTube, and LinkedIn</a> — community and third-party platforms where people talk about businesses, not where businesses talk about themselves.</p>
+
+        <p data-en="When Perplexity described AUDAZ, it didn't cite audaz.agency. It cited our Clutch profile — a directory listing with exactly one verified client review." data-es="Cuando Perplexity describió a AUDAZ, no citó audaz.agency. Citó nuestro perfil en Clutch — una ficha de directorio con exactamente una reseña verificada de un cliente.">When Perplexity described AUDAZ, it didn't cite audaz.agency. It cited our Clutch profile — a directory listing with exactly one verified client review.</p>
+
+        <h2 data-en="What does this mean for a business with no Reddit presence?" data-es="¿Qué significa esto para un negocio sin presencia en Reddit?">What does this mean for a business with no Reddit presence?</h2>
+
+        <p data-en="You don't need to be famous on Reddit. You need the corroboration signals AI is actually checking for, and most small businesses are missing all of them at once:" data-es="No necesitas ser famoso en Reddit. Necesitas las señales de corroboración que la IA realmente está buscando, y la mayoría de los pequeños negocios no tienen ninguna:">You don't need to be famous on Reddit. You need the corroboration signals AI is actually checking for, and most small businesses are missing all of them at once:</p>
+
+        <ul class="checklist">
+          <li data-en="Conflicting information across platforms — a different address or phone number on Google than on Facebook" data-es="Información contradictoria entre plataformas — una dirección o teléfono distinto en Google que en Facebook">Conflicting information across platforms — a different address or phone number on Google than on Facebook</li>
+          <li data-en="Reviews sitting on one platform only, instead of spread across two or three" data-es="Reseñas concentradas en una sola plataforma, en vez de repartidas en dos o tres">Reviews sitting on one platform only, instead of spread across two or three</li>
+          <li data-en="A LinkedIn company page that hasn't been touched in a year" data-es="Una página de empresa en LinkedIn que no se toca desde hace un año">A LinkedIn company page that hasn't been touched in a year</li>
+          <li data-en="Zero independent, external writing that describes what the business actually does" data-es="Cero artículos independientes y externos que describan lo que realmente hace el negocio">Zero independent, external writing that describes what the business actually does</li>
+        </ul>
+
+        <h2 data-en="How do you start building off-site trust without it feeling like spam?" data-es="¿Cómo empiezas a construir confianza fuera de tu sitio sin que se sienta como spam?">How do you start building off-site trust without it feeling like spam?</h2>
+
+        <ul>
+          <li data-en="<strong>Make every listing agree.</strong> Same name, address, and phone number on Google, Yelp, BBB, LinkedIn, and every industry directory you're in. AI cross-checks this before it trusts any of it." data-es="<strong>Haz que todas tus fichas coincidan.</strong> El mismo nombre, dirección y teléfono en Google, Yelp, BBB, LinkedIn y cada directorio del sector donde apareces. La IA cruza esta información antes de confiar en cualquiera de ellas."><strong>Make every listing agree.</strong> Same name, address, and phone number on Google, Yelp, BBB, LinkedIn, and every industry directory you're in. AI cross-checks this before it trusts any of it.</li>
+          <li data-en="<strong>Put your reviews in more than one place.</strong> Reviews concentrated entirely on Google read as thinner than the same number spread across Google, Facebook, and an industry-specific directory." data-es="<strong>Pon tus reseñas en más de un lugar.</strong> Las reseñas concentradas solo en Google se ven más débiles que la misma cantidad repartida entre Google, Facebook y un directorio específico de tu sector."><strong>Put your reviews in more than one place.</strong> Reviews concentrated entirely on Google read as thinner than the same number spread across Google, Facebook, and an industry-specific directory.</li>
+          <li data-en="<strong>Show up where your customers actually talk.</strong> Genuine participation in the communities your customers use, before you ever mention what you sell." data-es="<strong>Aparece donde tus clientes realmente hablan.</strong> Participación genuina en las comunidades que usan tus clientes, antes de mencionar siquiera lo que vendes."><strong>Show up where your customers actually talk.</strong> Genuine participation in the communities your customers use, before you ever mention what you sell.</li>
+          <li data-en="<strong>Get someone else to write about you.</strong> An independent article describing what you do outweighs anything you publish about yourself." data-es="<strong>Consigue que alguien más escriba sobre ti.</strong> Un artículo independiente que describa lo que haces pesa más que cualquier cosa que publiques tú mismo sobre tu negocio."><strong>Get someone else to write about you.</strong> An independent article describing what you do outweighs anything you publish about yourself.</li>
+        </ul>
+
+        <p class="takeaway" data-en="If you do only one thing from this issue: make your name, address, and phone number match everywhere you're listed, then get one independent review or article that isn't on your own site." data-es="Si solo haces una cosa de esta edición: haz que tu nombre, dirección y teléfono coincidan en todos lados donde apareces, y luego consigue una reseña o artículo independiente que no esté en tu propio sitio.">If you do only one thing from this issue: make your name, address, and phone number match everywhere you're listed, then get one independent review or article that isn't on your own site.</p>
+
+        <p class="author-note" data-en="<em>Rene Galan runs AUDAZ, an AI-visibility agency in Miami, that spent months getting its own website right before finding out the website was never the whole problem.</em>" data-es="<em>Rene Galan dirige AUDAZ, una agencia de visibilidad en IA en Miami, que pasó meses perfeccionando su propia página web antes de descubrir que la página nunca fue todo el problema.</em>"><em>Rene Galan runs AUDAZ, an AI-visibility agency in Miami, that spent months getting its own website right before finding out the website was never the whole problem.</em></p>
+
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+
+        <ul>
+          <li data-en="<a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Peec AI</a>, 2026 analysis of ~30 million AI citations across major engines" data-es="<a href=&quot;https://peec.ai&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Peec AI</a>, análisis de 2026 sobre ~30 millones de citas de IA en los principales motores">Peec AI</li>
+        </ul>
+
+      </div>
+
+      <!-- FAQ block -->
+      <div class="faq-block">
+        <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+
+        <h3 data-en="Is this different from backlinks and SEO?" data-es="¿Esto es distinto de los backlinks y el SEO?">Is this different from backlinks and SEO?</h3>
+        <p data-en="Related but not the same. Traditional SEO valued backlinks as a vote of authority. AI engines care about off-site mentions as corroboration — confirming what your website already claims through sources you don't control. A link helps. A sentence describing what you do, written by someone else, helps more." data-es="Relacionado, pero no es lo mismo. El SEO tradicional valoraba los backlinks como un voto de autoridad. A los motores de IA les importan las menciones fuera de tu sitio como corroboración — confirmar lo que tu página ya dice, pero desde fuentes que no controlas. Un enlace ayuda. Una frase que describa lo que haces, escrita por alguien más, ayuda todavía más.">Related but not the same. Traditional SEO valued backlinks as a vote of authority. AI engines care about off-site mentions as corroboration — confirming what your website already claims through sources you don't control. A link helps. A sentence describing what you do, written by someone else, helps more.</p>
+
+        <h3 data-en="Do I need to be on Reddit, YouTube, and LinkedIn specifically?" data-es="¿Necesito estar específicamente en Reddit, YouTube y LinkedIn?">Do I need to be on Reddit, YouTube, and LinkedIn specifically?</h3>
+        <p data-en="No. You need to be wherever your customers and peers actually talk. A contractor gets more from an active Google Business Profile and a neighborhood Facebook group than from a Reddit account nobody reads." data-es="No. Necesitas estar donde tus clientes y colegas realmente hablan. Un contratista gana más con un perfil activo de Google Business y un grupo de Facebook del vecindario que con una cuenta de Reddit que nadie lee.">No. You need to be wherever your customers and peers actually talk. A contractor gets more from an active Google Business Profile and a neighborhood Facebook group than from a Reddit account nobody reads.</p>
+
+        <h3 data-en="How long before this changes what AI says about me?" data-es="¿Cuánto tarda esto en cambiar lo que la IA dice de mí?">How long before this changes what AI says about me?</h3>
+        <p data-en="Website fixes show up in days. Off-site trust usually takes one to three months of consistent presence before an AI engine treats you as an established answer rather than an unverified claim." data-es="Los arreglos en tu sitio se notan en días. La confianza fuera del sitio suele tardar de uno a tres meses de presencia constante antes de que un motor de IA te trate como una respuesta establecida en vez de una afirmación sin verificar.">Website fixes show up in days. Off-site trust usually takes one to three months of consistent presence before an AI engine treats you as an established answer rather than an unverified claim.</p>
+
+        <h3 data-en="Does this apply to AI search in Spanish too?" data-es="¿Esto también aplica a la búsqueda en IA en español?">Does this apply to AI search in Spanish too?</h3>
+        <p data-en="Yes, and the opportunity is bigger. Fewer businesses have built any Spanish-language off-site presence, so even a modest bilingual footprint stands out." data-es="Sí, y la oportunidad es mayor. Menos negocios han construido presencia fuera de su sitio en español, así que incluso una huella bilingüe modesta destaca.">Yes, and the opportunity is bigger. Fewer businesses have built any Spanish-language off-site presence, so even a modest bilingual footprint stands out.</p>
+
+        <h3 data-en="Can I fix this myself?" data-es="¿Puedo arreglar esto yo mismo?">Can I fix this myself?</h3>
+        <p data-en="The listing cleanup takes an afternoon. Knowing what AI currently says about you and where it's getting that information is the part worth having someone else check first." data-es="Limpiar tus fichas toma una tarde. Saber qué dice la IA de ti ahora mismo y de dónde saca esa información es la parte que vale la pena que alguien más revise primero.">The listing cleanup takes an afternoon. Knowing what AI currently says about you and where it's getting that information is the part worth having someone else check first.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta">
+        <h3 data-en="Find out what's actually stopping AI from recommending you" data-es="Descubre qué le está impidiendo a la IA recomendarte">Find out what's actually stopping AI from recommending you</h3>
+        <p data-en="Send us your website. We'll ask ChatGPT, Gemini, and Perplexity who they recommend in your category and city, show you where they're getting their information, and tell you exactly which off-site signals you're missing. Free, no tool, no upsell." data-es="Envíanos tu sitio web. Le preguntaremos a ChatGPT, Gemini y Perplexity a quién recomiendan en tu categoría y ciudad, te mostraremos de dónde sacan su información, y te diremos exactamente qué señales fuera de tu sitio te faltan. Gratis, sin herramienta, sin venta adicional.">Send us your website. We'll ask ChatGPT, Gemini, and Perplexity who they recommend in your category and city, show you where they're getting their information, and tell you exactly which off-site signals you're missing. Free, no tool, no upsell.</p>
+        <a href="../audit.html" class="btn btn-primary btn-lg" data-en="Run the free check" data-es="Hacer el diagnóstico gratis">Run the free check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="../services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="../portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="../contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
