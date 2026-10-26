@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Google Business Profile is the top source AI uses for local answers. Here&#x27;s a 15-minute tune-up before you let Gemini help run it.">
+  <meta property="og:title" content="Gemini Can Now Read Your Google Business Profile. Here&#x27;s What to Let It Do.">
+  <meta property="og:description" content="Your Google Business Profile is the top source AI uses for local answers. Here&#x27;s a 15-minute tune-up before you let Gemini help run it.">
+  <meta property="og:url" content="https://audaz.agency/blog/gemini-google-business-profile">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-10-26">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/gemini-google-business-profile" />
+
+  <title>Gemini Can Now Read Your Google Business Profile. Here&#x27;s What to Let It Do. | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+    .article-body h3 { margin-top: 2rem; margin-bottom: 0.6rem; font-size: 1.25rem; }
+    .article-body blockquote { border-left: 4px solid #EF9F27; margin: 0 0 1.25rem; padding: 0.75rem 1.25rem; background: #fff7e8; font-style: italic; line-height: 1.6; }
+    .article-body table.equal-cols td:first-child { font-weight: 400; }
+  </style>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/gemini-google-business-profile-hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1072">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/gemini-google-business-profile#article",
+      "headline": "Gemini Can Now Read Your Google Business Profile. Here's What to Let It Do.",
+      "description": "Your Google Business Profile is the top source AI uses for local answers. Here's a 15-minute tune-up before you let Gemini help run it.",
+      "image": "https://audaz.agency/images/blog/gemini-google-business-profile-hero.jpg",
+      "url": "https://audaz.agency/blog/gemini-google-business-profile",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/gemini-google-business-profile",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "Google Business Profile",
+        "Gemini",
+        "Local SEO",
+        "Answer Engine Optimization"
+      ],
+      "keywords": "Google Business Profile, Gemini, AI visibility, local search, AEO, GEO, small business marketing"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/gemini-google-business-profile#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What can Gemini do with my Google Business Profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to reports on Google's announcement and help pages, Gemini can read your reviews, customer questions and performance, write posts and draft replies to reviews, and change your opening hours and publish posts. Review anything before it goes live."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why don't I see the Google Business Profile connection in Gemini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The rollout is still in progress. The connection works only with a personal Google account, not a work or school one, and it isn't available if your login manages more than one verified profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AI rely on my Google Business Profile for local answers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the single biggest source. In a BrightLocal study of more than 1,300 business locations, it made up about 28.5% of all citations across ChatGPT, Google AI Mode and AI Overviews. The next biggest directory, Yelp, was under 10%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I post on my Google Business Profile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google doesn't give a number, but posts older than six months are archived unless they have a date range. Our rule of thumb: weekly is ideal, and monthly is the minimum."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gemini and Google Business Profile",
+          "item": "https://audaz.agency/blog/gemini-google-business-profile"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="../about.html" class="nav-link" id="nav-about">About</a>
+        <a href="../services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="../portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="../blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="../contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="../audit.html" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="../contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 10" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 10">THE AI VISIBILITY BRIEF · ISSUE 10</span>
+
+      <h1 data-en="Gemini Can Now Read Your Google Business Profile. Here&#x27;s What to Let It Do." data-es="Gemini ya puede leer tu Perfil de Empresa en Google. Esto es lo que debes dejar que haga.">Gemini Can Now Read Your Google Business Profile. Here's What to Let It Do.</h1>
+
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp;amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published October 26, 2026" data-es="Publicado el 26 de octubre de 2026">Published October 26, 2026</span>
+        <span data-en="Updated October 26, 2026" data-es="Actualizado el 26 de octubre de 2026">Updated October 26, 2026</span>
+      </div>
+
+      <div class="answer-block" data-en="On October 20, Google added a business hub to the Gemini app that connects to your Google Business Profile, so Google&#x27;s own AI can now read your listing and, with your permission, help you change it. Your profile is already the single biggest source AI uses for local answers: about 28.5% of citations in one BrightLocal study. Here&#x27;s what to let Gemini do, what to keep for yourself, and a 15-minute tune-up to do first." data-es="El 20 de octubre, Google agregó a la app de Gemini un centro para negocios que se conecta con tu Perfil de Empresa en Google, así que la propia IA de Google ya puede leer tu ficha y, con tu permiso, ayudarte a cambiarla. Tu perfil ya es la fuente más grande que usa la IA para respuestas locales: cerca del 28.5% de las citas en un estudio de BrightLocal. Esto es lo que puedes dejar que haga Gemini, lo que te conviene hacer tú, y una puesta a punto de 15 minutos para hacer primero.">On October 20, Google added a business hub to the Gemini app that connects to your Google Business Profile, so Google's own AI can now read your listing and, with your permission, help you change it. Your profile is already the single biggest source AI uses for local answers: about 28.5% of citations in one BrightLocal study. Here's what to let Gemini do, what to keep for yourself, and a 15-minute tune-up to do first.</div>
+
+      <img src="../images/blog/gemini-google-business-profile-hero.jpg" alt="A glowing amber map-location pin standing upright among dozens of dark grey tiles on a dark surface" width="1920" height="1072" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <p data-en="Last week I spent a morning on our own Google Business Profile. I set our real hours, cleaned up our service areas, and posted our latest issue. Then I matched everything on Bing." data-es="La semana pasada le dediqué una mañana a nuestro propio Perfil de Empresa en Google. Puse nuestro horario real, ordené nuestras áreas de servicio y publiqué nuestra edición más reciente. Después dejé todo igual en Bing.">Last week I spent a morning on our own Google Business Profile. I set our real hours, cleaned up our service areas, and posted our latest issue. Then I matched everything on Bing.</p>
+
+        <p data-en="It felt like housekeeping. Days later, Google made it look a lot more important." data-es="Se sintió como limpieza de rutina. Días después, Google lo hizo ver mucho más importante.">It felt like housekeeping. Days later, Google made it look a lot more important.</p>
+
+        <p data-en="On October 20, Google added a business hub to the Gemini app. One of its connections is your Google Business Profile. That means Google&#x27;s own AI can now read your listing, and with your permission, help you change it." data-es="El 20 de octubre, Google agregó un centro para negocios a la app de Gemini. Una de sus conexiones es tu Perfil de Empresa en Google (Google Business Profile). Eso significa que la propia IA de Google ya puede leer tu ficha y, con tu permiso, ayudarte a cambiarla.">On October 20, Google added a business hub to the Gemini app. One of its connections is your Google Business Profile. That means Google's own AI can now read your listing, and with your permission, help you change it.</p>
+
+        <h2 data-en="What changed this week" data-es="Qué cambió esta semana">What changed this week</h2>
+
+        <p data-en="The new hub is a business page inside the Gemini app. It groups tools for building your brand, checking your finances and understanding your customers. Google says it is rolling out globally to all Gemini app users, and it named no price." data-es="El nuevo centro es una página para negocios dentro de la app de Gemini. Reúne herramientas para construir tu marca, revisar tus finanzas y entender a tus clientes. Google dice que lo está lanzando en todo el mundo para todos los usuarios de la app de Gemini, y no mencionó ningún precio.">The new hub is a business page inside the Gemini app. It groups tools for building your brand, checking your finances and understanding your customers. Google says it is rolling out globally to all Gemini app users, and it named no price.</p>
+
+        <p data-en="The part that matters most for local businesses is the Business Profile connection. According to reports on Google&#x27;s announcement and help pages, Gemini can:" data-es="Para un negocio local, lo más importante es la conexión con el Perfil de Empresa. Según los reportes sobre el anuncio de Google y sus páginas de ayuda, Gemini puede:">The part that matters most for local businesses is the Business Profile connection. According to reports on Google's announcement and help pages, Gemini can:</p>
+
+        <ul>
+<li data-en="&lt;strong&gt;Read&lt;/strong&gt; your reviews, customer questions and performance, like searches, calls and direction requests." data-es="&lt;strong&gt;Leer&lt;/strong&gt; tus reseñas, las preguntas de tus clientes y tu rendimiento, como búsquedas, llamadas y solicitudes de cómo llegar."><strong>Read</strong> your reviews, customer questions and performance, like searches, calls and direction requests.</li>
+<li data-en="&lt;strong&gt;Write&lt;/strong&gt; posts and draft replies to reviews in your voice." data-es="&lt;strong&gt;Escribir&lt;/strong&gt; publicaciones y borradores de respuestas a reseñas con tu propio estilo."><strong>Write</strong> posts and draft replies to reviews in your voice.</li>
+<li data-en="&lt;strong&gt;Change&lt;/strong&gt; your opening hours and publish posts. Review anything before it goes live." data-es="&lt;strong&gt;Cambiar&lt;/strong&gt; tu horario de atención y publicar. Revisa todo antes de que salga en vivo."><strong>Change</strong> your opening hours and publish posts. Review anything before it goes live.</li>
+</ul>
+
+        <p data-en="Two limits to know. It works with a personal Google account, not a work or school one. And it isn&#x27;t available if your login manages more than one verified profile, so most agency logins won&#x27;t see it." data-es="Hay dos límites que debes conocer. Funciona con una cuenta personal de Google, no con una de trabajo o de escuela. Y no está disponible si tu usuario administra más de un perfil verificado, así que la mayoría de las cuentas de agencias no lo van a ver.">Two limits to know. It works with a personal Google account, not a work or school one. And it isn't available if your login manages more than one verified profile, so most agency logins won't see it.</p>
+
+        <h2 data-en="Why your profile matters to AI" data-es="Por qué tu perfil le importa a la IA">Why your profile matters to AI</h2>
+
+        <p data-en="Your Google Business Profile is already the single biggest source AI uses for local answers. In a &lt;a href=&quot;https://www.brightlocal.com/resources/ai-directory-sources/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BrightLocal study&lt;/a&gt; of more than 1,300 business locations, it made up about 28.5% of all citations across ChatGPT, Google AI Mode and AI Overviews. The next biggest directory, Yelp, was under 10%." data-es="Tu Perfil de Empresa en Google ya es, por sí solo, la fuente más grande que usa la IA para respuestas locales. En un &lt;a href=&quot;https://www.brightlocal.com/resources/ai-directory-sources/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;estudio de BrightLocal&lt;/a&gt; con más de 1,300 ubicaciones de negocios, representó cerca del 28.5% de todas las citas en ChatGPT, Google AI Mode y AI Overviews. El siguiente directorio más grande, Yelp, quedó por debajo del 10%.">Your Google Business Profile is already the single biggest source AI uses for local answers. In a <a href="https://www.brightlocal.com/resources/ai-directory-sources/" target="_blank" rel="noopener">BrightLocal study</a> of more than 1,300 business locations, it made up about 28.5% of all citations across ChatGPT, Google AI Mode and AI Overviews. The next biggest directory, Yelp, was under 10%.</p>
+
+        <p data-en="So when someone asks AI for a plumber, a dentist or a caterer near them, your listing is often where the answer comes from. Wrong hours, an old description or a thin services list get repeated back to customers." data-es="Así que cuando alguien le pide a la IA un plomero, un dentista o un servicio de catering cerca, muchas veces la respuesta sale de tu ficha. Un horario equivocado, una descripción vieja o una lista de servicios pobre se les repite tal cual a los clientes.">So when someone asks AI for a plumber, a dentist or a caterer near them, your listing is often where the answer comes from. Wrong hours, an old description or a thin services list get repeated back to customers.</p>
+
+        <p data-en="Now Google&#x27;s own AI can see that listing up close. That is a reason to make sure it&#x27;s right before you hand it the keys." data-es="Ahora la propia IA de Google puede ver esa ficha de cerca. Es una razón más para asegurarte de que esté bien antes de entregarle las llaves.">Now Google's own AI can see that listing up close. That is a reason to make sure it's right before you hand it the keys.</p>
+
+        <h2 data-en="What to let Gemini do, and what not to" data-es="Qué dejar que haga Gemini, y qué no">What to let Gemini do, and what not to</h2>
+
+        <p data-en="Treat Gemini like a sharp new assistant on their first week. Let it read, summarize and draft. Keep the final say on anything customers will see." data-es="Trata a Gemini como a un asistente nuevo y muy capaz en su primera semana. Deja que lea, resuma y prepare borradores. Quédate con la última palabra en todo lo que vayan a ver tus clientes.">Treat Gemini like a sharp new assistant on their first week. Let it read, summarize and draft. Keep the final say on anything customers will see.</p>
+
+        <div class="table-wrap"><table class="equal-cols">
+<thead><tr><th data-en="Let it" data-es="Déjalo">Let it</th><th data-en="Check it first" data-es="Revísalo antes">Check it first</th><th data-en="Keep for yourself" data-es="Hazlo tú">Keep for yourself</th></tr></thead>
+<tbody>
+<tr><td data-en="Summarize your reviews and spot patterns" data-es="Resumir tus reseñas y detectar patrones">Summarize your reviews and spot patterns</td><td data-en="Drafted replies to reviews" data-es="Borradores de respuestas a reseñas">Drafted replies to reviews</td><td data-en="Changing your hours" data-es="Cambiar tu horario">Changing your hours</td></tr>
+<tr><td data-en="Report on calls, searches and directions" data-es="Darte reportes de llamadas, búsquedas y solicitudes de cómo llegar">Report on calls, searches and directions</td><td data-en="New posts and offers" data-es="Publicaciones y ofertas nuevas">New posts and offers</td><td data-en="Deleting anything" data-es="Borrar cualquier cosa">Deleting anything</td></tr>
+<tr><td data-en="Find gaps in your listing" data-es="Encontrar lo que le falta a tu ficha">Find gaps in your listing</td><td data-en="Your business description" data-es="La descripción de tu negocio">Your business description</td><td data-en="Anything during a holiday or emergency" data-es="Cualquier cosa durante un feriado o una emergencia">Anything during a holiday or emergency</td></tr>
+</tbody></table></div>
+
+        <p data-en="The rule is simple: AI can save you time, but your name is on every word. One wrong holiday hour can send a customer to a locked door." data-es="La regla es sencilla: la IA te puede ahorrar tiempo, pero tu nombre va en cada palabra. Un solo horario de feriado equivocado puede mandar a un cliente a una puerta cerrada.">The rule is simple: AI can save you time, but your name is on every word. One wrong holiday hour can send a customer to a locked door.</p>
+
+        <h2 data-en="Do this week: a 15-minute profile tune-up" data-es="Para esta semana: una puesta a punto de tu perfil en 15 minutos">Do this week: a 15-minute profile tune-up</h2>
+
+        <p data-en="Search your business name on Google and click &lt;strong&gt;Edit profile&lt;/strong&gt;. Then:" data-es="Busca el nombre de tu negocio en Google y haz clic en &lt;strong&gt;Editar perfil&lt;/strong&gt; (Edit profile). Luego:">Search your business name on Google and click <strong>Edit profile</strong>. Then:</p>
+
+        <ul class="checklist">
+<li data-en="&lt;strong&gt;Hours.&lt;/strong&gt; Set your real hours. Add holiday hours now for Thanksgiving, Christmas and New Year&#x27;s Day." data-es="&lt;strong&gt;Horario.&lt;/strong&gt; Pon tu horario real. Agrega desde ya el horario de días festivos para Thanksgiving (Día de Acción de Gracias), Navidad y Año Nuevo."><strong>Hours.</strong> Set your real hours. Add holiday hours now for Thanksgiving, Christmas and New Year's Day.</li>
+<li data-en="&lt;strong&gt;Description.&lt;/strong&gt; Say what you do, who you serve and where, in plain words. If you serve customers in Spanish, say so, and add a line in Spanish." data-es="&lt;strong&gt;Descripción.&lt;/strong&gt; Di qué haces, a quién atiendes y dónde, en palabras sencillas. Si atiendes clientes en español, dilo, y agrega una línea en español."><strong>Description.</strong> Say what you do, who you serve and where, in plain words. If you serve customers in Spanish, say so, and add a line in Spanish.</li>
+<li data-en="&lt;strong&gt;Services.&lt;/strong&gt; List each service by the name customers use, not your internal name." data-es="&lt;strong&gt;Servicios.&lt;/strong&gt; Pon cada servicio con el nombre que usan tus clientes, no con el que usan ustedes internamente."><strong>Services.</strong> List each service by the name customers use, not your internal name.</li>
+<li data-en="&lt;strong&gt;Service areas.&lt;/strong&gt; List the real cities and counties you cover." data-es="&lt;strong&gt;Áreas de servicio.&lt;/strong&gt; Pon las ciudades y los condados que de verdad cubres."><strong>Service areas.</strong> List the real cities and counties you cover.</li>
+<li data-en="&lt;strong&gt;One post.&lt;/strong&gt; Share one update: a tip, an offer or a recent job, with a photo." data-es="&lt;strong&gt;Una publicación.&lt;/strong&gt; Comparte una novedad: un consejo, una oferta o un trabajo reciente, con foto."><strong>One post.</strong> Share one update: a tip, an offer or a recent job, with a photo.</li>
+<li data-en="&lt;strong&gt;Match everywhere.&lt;/strong&gt; Copy the same name, hours and areas to Bing Places, Apple Business Connect and your website." data-es="&lt;strong&gt;Que todo coincida.&lt;/strong&gt; Copia el mismo nombre, horario y áreas en Bing Places, Apple Business Connect y tu sitio web."><strong>Match everywhere.</strong> Copy the same name, hours and areas to Bing Places, Apple Business Connect and your website.</li>
+</ul>
+
+        <p data-en="The last step is the one most people skip. AI trusts a business more when every listing says the same thing." data-es="El último paso es el que casi todos se saltan. La IA confía más en un negocio cuando todas sus fichas dicen lo mismo.">The last step is the one most people skip. AI trusts a business more when every listing says the same thing.</p>
+
+        <h3 data-en="How often should you post?" data-es="¿Cada cuánto deberías publicar?">How often should you post?</h3>
+
+        <p data-en="Google doesn&#x27;t give a number. What it does say: &lt;a href=&quot;https://support.google.com/business/answer/7662907?hl=en-AU&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;posts older than six months are archived&lt;/a&gt; unless they have a date range. So a profile that hasn&#x27;t posted since spring looks quiet to customers, and to AI." data-es="Google no da un número. Lo que sí dice es que &lt;a href=&quot;https://support.google.com/business/answer/7662907?hl=en-AU&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;las publicaciones de más de seis meses se archivan&lt;/a&gt;, a menos que tengan un rango de fechas. Así que un perfil que no publica nada desde la primavera se ve apagado para los clientes, y para la IA.">Google doesn't give a number. What it does say: <a href="https://support.google.com/business/answer/7662907?hl=en-AU" target="_blank" rel="noopener">posts older than six months are archived</a> unless they have a date range. So a profile that hasn't posted since spring looks quiet to customers, and to AI.</p>
+
+        <p data-en="My rule of thumb:" data-es="Mi regla práctica:">My rule of thumb:</p>
+
+        <ul>
+<li data-en="&lt;strong&gt;Weekly is ideal.&lt;/strong&gt; One short update: a tip, a recent job, a customer question answered." data-es="&lt;strong&gt;Lo ideal es una vez por semana.&lt;/strong&gt; Una novedad corta: un consejo, un trabajo reciente, la respuesta a la pregunta de un cliente."><strong>Weekly is ideal.</strong> One short update: a tip, a recent job, a customer question answered.</li>
+<li data-en="&lt;strong&gt;Monthly is the minimum.&lt;/strong&gt; Never let your profile go a month without something new." data-es="&lt;strong&gt;Lo mínimo es una vez al mes.&lt;/strong&gt; Nunca dejes pasar un mes sin algo nuevo en tu perfil."><strong>Monthly is the minimum.</strong> Never let your profile go a month without something new.</li>
+<li data-en="&lt;strong&gt;Use the scheduler.&lt;/strong&gt; Google lets you schedule posts and set them to repeat, so you can plan a month in one sitting." data-es="&lt;strong&gt;Usa la programación.&lt;/strong&gt; Google te deja programar publicaciones y hacer que se repitan, así que puedes planear todo un mes de una sentada."><strong>Use the scheduler.</strong> Google lets you schedule posts and set them to repeat, so you can plan a month in one sitting.</li>
+</ul>
+
+        <p data-en="One warning from Google&#x27;s own rules: posts with a phone number in the text can get rejected. Put your number on your profile, not in the post." data-es="Una advertencia que viene de las propias reglas de Google: las publicaciones con un número de teléfono en el texto pueden ser rechazadas. Pon tu número en tu perfil, no en la publicación.">One warning from Google's own rules: posts with a phone number in the text can get rejected. Put your number on your profile, not in the post.</p>
+
+        <h2 data-en="Tool I&#x27;m Using: Gemini&#x27;s business hub" data-es="La herramienta que estoy usando: el centro para negocios de Gemini">Tool I'm Using: Gemini's business hub</h2>
+
+        <p data-en="This week&#x27;s tool is the one in the news, and I hit its first limit right away. I opened &lt;a href=&quot;https://gemini.google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini&lt;/a&gt;, went to Connected Apps, and Google Business Profile wasn&#x27;t there. Our profile runs through a work account, and for now the connection only works with personal Google accounts." data-es="La herramienta de esta semana es la que está en las noticias, y me topé con su primer límite de inmediato. Abrí &lt;a href=&quot;https://gemini.google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini&lt;/a&gt;, fui a Apps conectadas (Connected Apps) y Google Business Profile no aparecía. Nuestro perfil se maneja desde una cuenta de trabajo, y por ahora la conexión solo funciona con cuentas personales de Google.">This week's tool is the one in the news, and I hit its first limit right away. I opened <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a>, went to Connected Apps, and Google Business Profile wasn't there. Our profile runs through a work account, and for now the connection only works with personal Google accounts.</p>
+
+        <p data-en="If you manage your profile from a personal Gmail, you can try it today. Connect your profile and ask:" data-es="Si manejas tu perfil desde un Gmail personal, puedes probarlo hoy. Conecta tu perfil y pídele:">If you manage your profile from a personal Gmail, you can try it today. Connect your profile and ask:</p>
+
+        <blockquote data-en="&amp;quot;Summarize my reviews from the last three months. List the top three things customers love and the top three complaints.&amp;quot;" data-es="&amp;quot;Resume mis reseñas de los últimos tres meses. Haz una lista de las tres cosas que más les gustan a los clientes y de las tres quejas principales.&amp;quot;">&quot;Summarize my reviews from the last three months. List the top three things customers love and the top three complaints.&quot;</blockquote>
+
+        <p data-en="It takes about five minutes, and it turns a pile of reviews into a to-do list. The complaints tell you what to fix. The praise tells you what to say more often in your posts and description." data-es="Toma unos cinco minutos, y convierte un montón de reseñas en una lista de pendientes. Las quejas te dicen qué arreglar. Los elogios te dicen qué deberías repetir más en tus publicaciones y en tu descripción.">It takes about five minutes, and it turns a pile of reviews into a to-do list. The complaints tell you what to fix. The praise tells you what to say more often in your posts and description.</p>
+
+        <p data-en="Two notes. The rollout is still in progress, so you may not see it yet. And it won&#x27;t connect if your login manages more than one verified profile. Agencies and multi-location owners will have to wait." data-es="Dos aclaraciones. El lanzamiento todavía está en curso, así que puede que aún no lo veas. Y no se conecta si tu usuario administra más de un perfil verificado. Las agencias y los dueños con varias ubicaciones van a tener que esperar.">Two notes. The rollout is still in progress, so you may not see it yet. And it won't connect if your login manages more than one verified profile. Agencies and multi-location owners will have to wait.</p>
+
+        <h2 data-en="The bottom line" data-es="En resumen">The bottom line</h2>
+
+        <p data-en="Your Google Business Profile used to be a listing. Now it&#x27;s the file AI reads before it recommends you, and soon the panel AI helps you run. Spend 15 minutes on it this week. It&#x27;s the cheapest AI visibility work there is." data-es="Tu Perfil de Empresa en Google antes era solo una ficha. Ahora es el expediente que la IA lee antes de recomendarte, y pronto será el panel que la IA te ayuda a manejar. Dedícale 15 minutos esta semana. Es el trabajo de visibilidad en IA más barato que existe.">Your Google Business Profile used to be a listing. Now it's the file AI reads before it recommends you, and soon the panel AI helps you run. Spend 15 minutes on it this week. It's the cheapest AI visibility work there is.</p>
+
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+
+        <ul>
+<li data-en="&lt;a href=&quot;https://www.digitalapplied.com/blog/gemini-small-business-hub-connected-apps-brand-style&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini small business hub: connected apps and brand style&lt;/a&gt;, Digital Applied, October 20, 2026 (Google&#x27;s announcement and help pages)" data-es="&lt;a href=&quot;https://www.digitalapplied.com/blog/gemini-small-business-hub-connected-apps-brand-style&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini small business hub: connected apps and brand style&lt;/a&gt;, Digital Applied, 20 de octubre de 2026 (anuncio y páginas de ayuda de Google)"><a href="https://www.digitalapplied.com/blog/gemini-small-business-hub-connected-apps-brand-style" target="_blank" rel="noopener">Gemini small business hub: connected apps and brand style</a>, Digital Applied, October 20, 2026 (Google's announcement and help pages)</li>
+<li data-en="&lt;a href=&quot;https://ppc.land/gemini-now-manages-your-google-business-profile-with-a-single-tap/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini now manages your Google Business Profile with a single tap&lt;/a&gt;, PPC Land" data-es="&lt;a href=&quot;https://ppc.land/gemini-now-manages-your-google-business-profile-with-a-single-tap/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gemini now manages your Google Business Profile with a single tap&lt;/a&gt;, PPC Land"><a href="https://ppc.land/gemini-now-manages-your-google-business-profile-with-a-single-tap/" target="_blank" rel="noopener">Gemini now manages your Google Business Profile with a single tap</a>, PPC Land</li>
+<li data-en="&lt;a href=&quot;https://www.brightlocal.com/resources/ai-directory-sources/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AI local citation sources&lt;/a&gt;, BrightLocal, August 2026 (1,355 locations; ChatGPT, AI Mode, AI Overviews)" data-es="&lt;a href=&quot;https://www.brightlocal.com/resources/ai-directory-sources/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AI local citation sources&lt;/a&gt;, BrightLocal, agosto de 2026 (1,355 ubicaciones; ChatGPT, AI Mode, AI Overviews)"><a href="https://www.brightlocal.com/resources/ai-directory-sources/" target="_blank" rel="noopener">AI local citation sources</a>, BrightLocal, August 2026 (1,355 locations; ChatGPT, AI Mode, AI Overviews)</li>
+<li data-en="&lt;a href=&quot;https://support.google.com/business/answer/7662907?hl=en-AU&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Manage posts on your Business Profile&lt;/a&gt;, Google Business Profile Help" data-es="&lt;a href=&quot;https://support.google.com/business/answer/7662907?hl=en-AU&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Manage posts on your Business Profile&lt;/a&gt;, Ayuda de Perfil de Empresa en Google"><a href="https://support.google.com/business/answer/7662907?hl=en-AU" target="_blank" rel="noopener">Manage posts on your Business Profile</a>, Google Business Profile Help</li>
+</ul>
+
+      </div>
+
+      <div class="faq-block">
+      <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+      <h3 data-en="What can Gemini do with my Google Business Profile?" data-es="¿Qué puede hacer Gemini con mi Perfil de Empresa en Google?">What can Gemini do with my Google Business Profile?</h3>
+      <p data-en="According to reports on Google&#x27;s announcement and help pages, Gemini can read your reviews, customer questions and performance, write posts and draft replies to reviews, and change your opening hours and publish posts. Review anything before it goes live." data-es="Según los reportes sobre el anuncio de Google y sus páginas de ayuda, Gemini puede leer tus reseñas, las preguntas de tus clientes y tu rendimiento, escribir publicaciones y borradores de respuestas a reseñas, y cambiar tu horario y publicar. Revisa todo antes de que salga en vivo.">According to reports on Google's announcement and help pages, Gemini can read your reviews, customer questions and performance, write posts and draft replies to reviews, and change your opening hours and publish posts. Review anything before it goes live.</p>
+      <h3 data-en="Why don&#x27;t I see the Google Business Profile connection in Gemini?" data-es="¿Por qué no veo la conexión con mi Perfil de Empresa en Gemini?">Why don't I see the Google Business Profile connection in Gemini?</h3>
+      <p data-en="The rollout is still in progress. The connection works only with a personal Google account, not a work or school one, and it isn&#x27;t available if your login manages more than one verified profile." data-es="El lanzamiento todavía está en curso. La conexión solo funciona con una cuenta personal de Google, no con una de trabajo o de escuela, y no está disponible si tu usuario administra más de un perfil verificado.">The rollout is still in progress. The connection works only with a personal Google account, not a work or school one, and it isn't available if your login manages more than one verified profile.</p>
+      <h3 data-en="How much does AI rely on my Google Business Profile for local answers?" data-es="¿Cuánto depende la IA de mi Perfil de Empresa en Google para respuestas locales?">How much does AI rely on my Google Business Profile for local answers?</h3>
+      <p data-en="It is the single biggest source. In a BrightLocal study of more than 1,300 business locations, it made up about 28.5% of all citations across ChatGPT, Google AI Mode and AI Overviews. The next biggest directory, Yelp, was under 10%." data-es="Es la fuente más grande. En un estudio de BrightLocal con más de 1,300 ubicaciones de negocios, representó cerca del 28.5% de todas las citas en ChatGPT, Google AI Mode y AI Overviews. El siguiente directorio más grande, Yelp, quedó por debajo del 10%.">It is the single biggest source. In a BrightLocal study of more than 1,300 business locations, it made up about 28.5% of all citations across ChatGPT, Google AI Mode and AI Overviews. The next biggest directory, Yelp, was under 10%.</p>
+      <h3 data-en="How often should I post on my Google Business Profile?" data-es="¿Cada cuánto debo publicar en mi Perfil de Empresa en Google?">How often should I post on my Google Business Profile?</h3>
+      <p data-en="Google doesn&#x27;t give a number, but posts older than six months are archived unless they have a date range. Our rule of thumb: weekly is ideal, and monthly is the minimum." data-es="Google no da un número, pero las publicaciones de más de seis meses se archivan, a menos que tengan un rango de fechas. Nuestra regla práctica: lo ideal es una vez por semana, y lo mínimo, una vez al mes.">Google doesn't give a number, but posts older than six months are archived unless they have a date range. Our rule of thumb: weekly is ideal, and monthly is the minimum.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3 data-en="Want to know what AI says about your business today?" data-es="¿Quieres saber qué dice hoy la IA sobre tu negocio?">Want to know what AI says about your business today?</h3>
+        <a href="../audit.html" class="btn btn-primary btn-lg" data-en="Run the free AI Visibility Check" data-es="Haz el diagnóstico gratis de visibilidad en IA">Run the free AI Visibility Check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="../services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="../portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="../contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
