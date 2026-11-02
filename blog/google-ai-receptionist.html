@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Google is rolling out a free AI agent that answers customer texts from your Business Profile. My agency doesn&#x27;t have it yet. Here&#x27;s what I fixed while I wait, and a 15-minute checklist for you.">
+  <meta property="og:title" content="I Tried to Turn On Google&#x27;s AI Receptionist">
+  <meta property="og:description" content="Google is rolling out a free AI agent that answers customer texts from your Business Profile. My agency doesn&#x27;t have it yet. Here&#x27;s what I fixed while I wait, and a 15-minute checklist for you.">
+  <meta property="og:url" content="https://audaz.agency/blog/google-ai-receptionist">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-02">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/google-ai-receptionist" />
+
+  <title>I Tried to Turn On Google's AI Receptionist | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+    .article-body h3 { margin-top: 2rem; margin-bottom: 0.6rem; font-size: 1.25rem; }
+    .article-body blockquote { border-left: 4px solid #EF9F27; margin: 0 0 1.25rem; padding: 0.75rem 1.25rem; background: #fff7e8; font-style: italic; line-height: 1.6; }
+    .article-body table.equal-cols td:first-child { font-weight: 400; }
+    .article-body table.score-table th, .article-body table.score-table td { text-align: right; }
+    .article-body table.score-table th:first-child, .article-body table.score-table td:first-child { text-align: left; }
+    .article-body table.score-table td:nth-child(2) { font-weight: 700; color: #B8730A; }
+  </style>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/google-ai-receptionist-hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1072">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/google-ai-receptionist#article",
+      "headline": "I Tried to Turn On Google's AI Receptionist",
+      "description": "Google is rolling out a free AI agent that answers customer texts from your Business Profile. My agency doesn't have it yet. Here's what I fixed while I wait, and a 15-minute checklist for you.",
+      "image": "https://audaz.agency/images/blog/google-ai-receptionist-hero.jpg",
+      "url": "https://audaz.agency/blog/google-ai-receptionist",
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/google-ai-receptionist",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "Google Business Profile",
+        "AI messaging",
+        "Local SEO",
+        "Answer Engine Optimization"
+      ],
+      "keywords": "Google Business Profile, AI receptionist, Google Business Profile messaging, service area, AI visibility, AEO, GEO, small business marketing"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/google-ai-receptionist#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Google's AI receptionist for Business Profiles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's a free AI agent that answers customer texts sent from Google Search and Maps. It answers routine questions from your Business Profile, hands off what it can't answer, and lets you take over any conversation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if I have access?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's in early access. If you have it, you'll see a red dot on Messages in your Business Profile; follow the welcome screen to turn it on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the AI answer every customer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It only answers customers whose phone and carrier support RCS. Other customers' texts go straight to the phone number on your profile, so that number must be able to receive texts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I list my whole state as my service area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google's guidelines say not to add states or countries as service areas. List up to 20 specific cities or ZIP codes, within about 2 hours' drive of your base."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google's AI receptionist",
+          "item": "https://audaz.agency/blog/google-ai-receptionist"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="../about.html" class="nav-link" id="nav-about">About</a>
+        <a href="../services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="../portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="../blog.html" class="nav-link" id="nav-blog">Blog</a>
+        <a href="../contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="../audit.html" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="../contact.html" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 11" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 11">THE AI VISIBILITY BRIEF · ISSUE 11</span>
+
+      <h1 data-en="I Tried to Turn On Google&#x27;s AI Receptionist" data-es="Intenté activar la recepcionista con IA de Google">I Tried to Turn On Google's AI Receptionist</h1>
+
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp;amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published November 2, 2026" data-es="Publicado el 2 de noviembre de 2026">Published November 2, 2026</span>
+        <span data-en="Updated November 2, 2026" data-es="Actualizado el 2 de noviembre de 2026">Updated November 2, 2026</span>
+      </div>
+
+      <div class="answer-block" data-en="Google is rolling out a free AI agent that answers customer texts from Search and Maps, using only what&#x27;s on your Business Profile. My agency doesn&#x27;t have it yet, and most businesses don&#x27;t. But checking my own profile turned up two fixes, and ChatGPT scored AUDAZ 32 out of 100 on HubSpot&#x27;s AI Search Grader. Here&#x27;s a 15-minute checklist to get ready before it arrives." data-es="Google está lanzando un agente de IA gratis que responde los mensajes de los clientes desde Search y Maps, usando solo lo que dice tu Perfil de Empresa. Mi agencia todavía no lo tiene, y la mayoría de los negocios tampoco. Pero revisar mi propio perfil me mostró dos cosas por arreglar, y ChatGPT le dio a AUDAZ 32 sobre 100 en el AI Search Grader de HubSpot. Aquí tienes una lista de 15 minutos para estar listo antes de que llegue.">Google is rolling out a free AI agent that answers customer texts from Search and Maps, using only what's on your Business Profile. My agency doesn't have it yet, and most businesses don't. But checking my own profile turned up two fixes, and ChatGPT scored AUDAZ 32 out of 100 on HubSpot's AI Search Grader. Here's a 15-minute checklist to get ready before it arrives.</div>
+
+      <img src="../images/blog/google-ai-receptionist-hero.jpg" alt="A glowing amber glass speech bubble with three dots, standing among dozens of dark grey tiles on a dark surface" width="1920" height="1072" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <p data-en="Last week Google started giving more businesses a free AI agent that answers customer texts from Search and Maps. I help businesses get found by AI for a living, so I opened my own agency&#x27;s Business Profile to turn it on first." data-es="La semana pasada Google empezó a darle a más negocios un agente de IA gratis que responde los mensajes de texto de los clientes desde Search y Maps. Yo me gano la vida ayudando a negocios a que la IA los encuentre, así que abrí el Perfil de Empresa de mi propia agencia para activarlo primero.">Last week Google started giving more businesses a free AI agent that answers customer texts from Search and Maps. I help businesses get found by AI for a living, so I opened my own agency's Business Profile to turn it on first.</p>
+        <p data-en="I checked the dashboard in Google Search. Then the menu. Then the Business tab in the Google Maps app on my phone. Edit profile, Reviews, Hours, Services, Offers, Events. No Messages." data-es="Revisé el panel en Google Search. Después el menú. Después la pestaña de Negocio en la app de Google Maps en mi teléfono. Editar perfil, Reseñas, Horario, Servicios, Ofertas, Eventos. Nada de Mensajes.">I checked the dashboard in Google Search. Then the menu. Then the Business tab in the Google Maps app on my phone. Edit profile, Reviews, Hours, Services, Offers, Events. No Messages.</p>
+        <p data-en="So I asked Gemini why. It said the feature is invite-only for now, which matches what I&#x27;d read. But it didn&#x27;t cite Google. It cited a small third-party blog. That&#x27;s this whole newsletter in one answer: AI picks its own sources, and they aren&#x27;t always the official ones." data-es="Así que le pregunté a Gemini por qué. Me dijo que por ahora la función es solo por invitación, lo que coincide con lo que yo había leído. Pero no citó a Google. Citó un pequeño blog de terceros. Ese es todo este newsletter en una sola respuesta: la IA elige sus propias fuentes, y no siempre son las oficiales.">So I asked Gemini why. It said the feature is invite-only for now, which matches what I'd read. But it didn't cite Google. It cited a small third-party blog. That's this whole newsletter in one answer: AI picks its own sources, and they aren't always the official ones.</p>
+        <p data-en="AUDAZ doesn&#x27;t have it yet. Odds are you don&#x27;t either. But checking my own profile showed me what I need to fix before it arrives, and that&#x27;s what this issue is about." data-es="AUDAZ todavía no lo tiene. Lo más probable es que tú tampoco. Pero revisar mi propio perfil me mostró lo que tengo que arreglar antes de que llegue, y de eso se trata esta edición.">AUDAZ doesn't have it yet. Odds are you don't either. But checking my own profile showed me what I need to fix before it arrives, and that's what this issue is about.</p>
+        <h2 data-en="What Google launched" data-es="Qué lanzó Google">What Google launched</h2>
+        <p data-en="A customer finds you on Google Search or Maps and taps to message you. The text goes through their phone&#x27;s normal messaging app. A Google AI agent answers routine questions for free, like today&#x27;s specials or open booking times. (&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Roundtable&lt;/a&gt;)" data-es="Un cliente te encuentra en Google Search o Maps y toca para enviarte un mensaje. El texto llega por la app de mensajes normal de su teléfono. Un agente de IA de Google responde gratis las preguntas de rutina, como los especiales del día o los horarios disponibles para reservar. (&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Roundtable&lt;/a&gt;)">A customer finds you on Google Search or Maps and taps to message you. The text goes through their phone's normal messaging app. A Google AI agent answers routine questions for free, like today's specials or open booking times. (<a href="https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html" target="_blank" rel="noopener">Search Engine Roundtable</a>)</p>
+        <ul>
+<li data-en="&lt;strong&gt;It hands off.&lt;/strong&gt; Questions the AI can&#x27;t answer go to you. You can take over any conversation, and every message shows up in your Business Profile." data-es="&lt;strong&gt;Te pasa la conversación.&lt;/strong&gt; Las preguntas que la IA no puede responder te llegan a ti. Puedes tomar el control de cualquier conversación, y todos los mensajes aparecen en tu Perfil de Empresa."><strong>It hands off.</strong> Questions the AI can't answer go to you. You can take over any conversation, and every message shows up in your Business Profile.</li>
+<li data-en="&lt;strong&gt;It doesn&#x27;t work on every phone.&lt;/strong&gt; The AI only answers customers whose phone and carrier support RCS (modern texting). Everyone else&#x27;s texts go straight to your phone, and normal text rates may apply." data-es="&lt;strong&gt;No funciona en todos los teléfonos.&lt;/strong&gt; La IA solo responde a clientes cuyo teléfono y compañía telefónica admiten RCS (la mensajería moderna). Los mensajes de los demás te llegan directo a tu teléfono, y se pueden aplicar las tarifas normales de mensajes."><strong>It doesn't work on every phone.</strong> The AI only answers customers whose phone and carrier support RCS (modern texting). Everyone else's texts go straight to your phone, and normal text rates may apply.</li>
+<li data-en="&lt;strong&gt;It&#x27;s early access.&lt;/strong&gt; Google is rolling it out slowly. If you have it, you&#x27;ll see a red dot on Messages in your profile." data-es="&lt;strong&gt;Es acceso anticipado.&lt;/strong&gt; Google lo está lanzando poco a poco. Si ya lo tienes, verás un punto rojo en Mensajes dentro de tu perfil."><strong>It's early access.</strong> Google is rolling it out slowly. If you have it, you'll see a red dot on Messages in your profile.</li>
+</ul>
+        <p data-en="One thing Google hasn&#x27;t said: whether the AI answers in Spanish. For a lot of South Florida businesses, that&#x27;s the whole question. It&#x27;s the first thing I&#x27;ll test when I get access." data-es="Hay algo que Google no ha dicho: si la IA responde en español. Para muchos negocios del sur de la Florida, esa es la pregunta más importante. Es lo primero que voy a probar cuando tenga acceso.">One thing Google hasn't said: whether the AI answers in Spanish. For a lot of South Florida businesses, that's the whole question. It's the first thing I'll test when I get access.</p>
+        <h2 data-en="Why it matters: the bot only knows what you tell Google" data-es="Por qué importa: el bot solo sabe lo que le dices a Google">Why it matters: the bot only knows what you tell Google</h2>
+        <p data-en="The AI answers from your Business Profile. If your hours are wrong, it gives the wrong hours. If your services are missing, it can&#x27;t say you offer them. It speaks for you, in your name." data-es="La IA responde con lo que dice tu Perfil de Empresa. Si tu horario está mal, da el horario equivocado. Si faltan tus servicios, no puede decir que los ofreces. Habla por ti, con tu nombre.">The AI answers from your Business Profile. If your hours are wrong, it gives the wrong hours. If your services are missing, it can't say you offer them. It speaks for you, in your name.</p>
+        <p data-en="And people are already asking AI who to hire. In a &lt;a href=&quot;https://www.brightlocal.com/research/lcrs-ai-trust/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BrightLocal survey&lt;/a&gt; of 1,002 US adults published earlier this year, 45% said they&#x27;d used AI tools for local business recommendations, up from 6% the year before." data-es="Y la gente ya le está preguntando a la IA a quién contratar. En una &lt;a href=&quot;https://www.brightlocal.com/research/lcrs-ai-trust/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;encuesta de BrightLocal&lt;/a&gt; a 1,002 adultos en EE. UU. publicada a principios de este año, el 45% dijo haber usado herramientas de IA para recibir recomendaciones de negocios locales, frente al 6% del año anterior.">And people are already asking AI who to hire. In a <a href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener">BrightLocal survey</a> of 1,002 US adults published earlier this year, 45% said they'd used AI tools for local business recommendations, up from 6% the year before.</p>
+        <p data-en="The same survey found 97% of those AI users sometimes double-check what AI tells them against real reviews. So the AI gets them to your door, and your profile and reviews close the deal." data-es="La misma encuesta encontró que el 97% de esos usuarios de IA a veces comparan lo que les dice la IA con reseñas reales. Así que la IA los trae hasta tu puerta, y tu perfil y tus reseñas cierran el trato.">The same survey found 97% of those AI users sometimes double-check what AI tells them against real reviews. So the AI gets them to your door, and your profile and reviews close the deal.</p>
+        <h2 data-en="What I found on my own profile" data-es="Lo que encontré en mi propio perfil">What I found on my own profile</h2>
+        <p data-en="Google says my profile looks good. But when I read it the way an AI would, I found two things I want to tighten up before a bot starts answering from it." data-es="Google dice que mi perfil se ve bien. Pero cuando lo leí como lo leería una IA, encontré dos cosas que quiero ajustar antes de que un bot empiece a responder con esa información.">Google says my profile looks good. But when I read it the way an AI would, I found two things I want to tighten up before a bot starts answering from it.</p>
+        <ol>
+<li data-en="&lt;strong&gt;I thought I&#x27;d already cleaned up my service area. I hadn&#x27;t.&lt;/strong&gt; It still said “Florida, USA, United States,” plus a postal code in Spain from a side project. Real work, wrong place. Your service area is where local customers can hire you, not every place you&#x27;ve ever worked. &lt;a href=&quot;https://support.google.com/business/answer/9157481&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google’s guidelines&lt;/a&gt; say not to list states or countries, and to stay within about 2 hours&#x27; drive of your base. So last week I replaced it with the specific cities I actually serve." data-es="&lt;strong&gt;Creía que ya había limpiado mi área de servicio. No era así.&lt;/strong&gt; Todavía decía “Florida, USA, United States”, más un código postal en España de un proyecto paralelo. Trabajo real, lugar equivocado. Tu área de servicio es donde los clientes locales te pueden contratar, no cada lugar donde alguna vez trabajaste. &lt;a href=&quot;https://support.google.com/business/answer/9157481&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Las reglas de Google&lt;/a&gt; dicen que no pongas estados ni países, y que te mantengas a unas 2 horas en carro de tu base. Así que la semana pasada lo cambié por las ciudades que de verdad atiendo."><strong>I thought I'd already cleaned up my service area. I hadn't.</strong> It still said “Florida, USA, United States,” plus a postal code in Spain from a side project. Real work, wrong place. Your service area is where local customers can hire you, not every place you've ever worked. <a href="https://support.google.com/business/answer/9157481" target="_blank" rel="noopener">Google’s guidelines</a> say not to list states or countries, and to stay within about 2 hours' drive of your base. So last week I replaced it with the specific cities I actually serve.</li>
+<li data-en="&lt;strong&gt;Reviews are an ongoing job.&lt;/strong&gt; AI tools lean on fresh, detailed reviews, and so do the 97% of people who double-check. I&#x27;m making the ask part of how every project wraps up." data-es="&lt;strong&gt;Las reseñas son un trabajo constante.&lt;/strong&gt; Las herramientas de IA se apoyan en reseñas recientes y detalladas, y también lo hace ese 97% de personas que verifican. Estoy haciendo que pedir una reseña sea parte del cierre de cada proyecto."><strong>Reviews are an ongoing job.</strong> AI tools lean on fresh, detailed reviews, and so do the 97% of people who double-check. I'm making the ask part of how every project wraps up.</li>
+</ol>
+        <p data-en="The lesson for me: “looks good” to Google isn&#x27;t the same as ready for AI." data-es="La lección para mí: que Google diga que “se ve bien” no es lo mismo que estar listo para la IA.">The lesson for me: “looks good” to Google isn't the same as ready for AI.</p>
+        <h2 data-en="Do this week: 15 minutes, before the AI starts talking for you" data-es="Para esta semana: 15 minutos, antes de que la IA empiece a hablar por ti">Do this week: 15 minutes, before the AI starts talking for you</h2>
+        <p data-en="Whether you have the feature or not, do this now. When it arrives, you&#x27;re ready." data-es="Tengas o no la función, hazlo ahora. Cuando llegue, ya vas a estar listo.">Whether you have the feature or not, do this now. When it arrives, you're ready.</p>
+        <ul class="checklist">
+<li data-en="&lt;strong&gt;Look for the red dot.&lt;/strong&gt; Open your Business Profile on Google Search, and the Business tab in the Google Maps app. If you see a red dot on Messages, follow the welcome screen to turn it on." data-es="&lt;strong&gt;Busca el punto rojo.&lt;/strong&gt; Abre tu Perfil de Empresa en Google Search y la pestaña de Negocio en la app de Google Maps. Si ves un punto rojo en Mensajes, sigue la pantalla de bienvenida para activarlo."><strong>Look for the red dot.</strong> Open your Business Profile on Google Search, and the Business tab in the Google Maps app. If you see a red dot on Messages, follow the welcome screen to turn it on.</li>
+<li data-en="&lt;strong&gt;Set your Thanksgiving hours.&lt;/strong&gt; Thanksgiving is Thursday, Nov 26. Add holiday hours now so no one shows up to a locked door." data-es="&lt;strong&gt;Pon tu horario de Thanksgiving.&lt;/strong&gt; El Día de Acción de Gracias es el jueves 26 de noviembre. Agrega el horario festivo desde ya para que nadie llegue a una puerta cerrada."><strong>Set your Thanksgiving hours.</strong> Thanksgiving is Thursday, Nov 26. Add holiday hours now so no one shows up to a locked door.</li>
+<li data-en="&lt;strong&gt;Fix your service area.&lt;/strong&gt; List the actual cities or ZIP codes you serve: up to 20, within about 2 hours&#x27; drive. Google&#x27;s rules say no states or countries. Changes can take up to 48 hours to show." data-es="&lt;strong&gt;Arregla tu área de servicio.&lt;/strong&gt; Pon las ciudades o códigos postales que de verdad atiendes: hasta 20, a unas 2 horas en carro como máximo. Las reglas de Google dicen que no se ponen estados ni países. Los cambios pueden tardar hasta 48 horas en aparecer."><strong>Fix your service area.</strong> List the actual cities or ZIP codes you serve: up to 20, within about 2 hours' drive. Google's rules say no states or countries. Changes can take up to 48 hours to show.</li>
+<li data-en="&lt;strong&gt;Write your services the way customers say them.&lt;/strong&gt; “AC repair,” not “HVAC solutions.” If you serve Spanish-speaking customers, add Spanish too: “reparación de aire acondicionado.”" data-es="&lt;strong&gt;Escribe tus servicios como los dicen tus clientes.&lt;/strong&gt; “Reparación de aire acondicionado”, no “soluciones HVAC”. Si atiendes clientes que hablan inglés y español, ponlos en los dos idiomas: “AC repair” también."><strong>Write your services the way customers say them.</strong> “AC repair,” not “HVAC solutions.” If you serve Spanish-speaking customers, add Spanish too: “reparación de aire acondicionado.”</li>
+<li data-en="&lt;strong&gt;Add your booking link&lt;/strong&gt; so the AI can send people somewhere." data-es="&lt;strong&gt;Agrega tu enlace para reservar&lt;/strong&gt; para que la IA pueda mandar a la gente a algún lugar."><strong>Add your booking link</strong> so the AI can send people somewhere.</li>
+<li data-en="&lt;strong&gt;Make sure your listed number can get texts.&lt;/strong&gt; Customers whose phones don&#x27;t support the AI&#x27;s texting system skip the bot, and their messages go straight to the number on your profile. If that&#x27;s a landline or office line, those texts silently go nowhere. List a number that can receive texts, or forward it to one." data-es="&lt;strong&gt;Asegúrate de que tu número reciba mensajes de texto.&lt;/strong&gt; Los clientes cuyos teléfonos no son compatibles con el sistema de mensajes de la IA se saltan el bot, y sus mensajes van directo al número de tu perfil. Si es un teléfono fijo o de oficina, esos mensajes se pierden sin que te enteres. Pon un número que reciba textos, o desvíalo a uno que sí."><strong>Make sure your listed number can get texts.</strong> Customers whose phones don't support the AI's texting system skip the bot, and their messages go straight to the number on your profile. If that's a landline or office line, those texts silently go nowhere. List a number that can receive texts, or forward it to one.</li>
+<li data-en="&lt;strong&gt;Ask 3 happy customers for a review.&lt;/strong&gt; Ask them to mention what you did and where: “Fixed our AC in Homestead the same day.”" data-es="&lt;strong&gt;Pídeles una reseña a 3 clientes contentos.&lt;/strong&gt; Pídeles que mencionen qué hiciste y dónde: “Nos arreglaron el aire en Homestead el mismo día”."><strong>Ask 3 happy customers for a review.</strong> Ask them to mention what you did and where: “Fixed our AC in Homestead the same day.”</li>
+<li data-en="&lt;strong&gt;If you have the feature, test it.&lt;/strong&gt; Text your business from a friend&#x27;s phone. Ask a simple question, a price question, and one in Spanish. See what it says." data-es="&lt;strong&gt;Si ya tienes la función, pruébala.&lt;/strong&gt; Mándale un mensaje a tu negocio desde el teléfono de un amigo. Haz una pregunta sencilla, una sobre precios y una en español. Mira qué responde."><strong>If you have the feature, test it.</strong> Text your business from a friend's phone. Ask a simple question, a price question, and one in Spanish. See what it says.</li>
+</ul>
+        <h2 data-en="Tool I&#x27;m Using: HubSpot&#x27;s AI Search Grader" data-es="La herramienta que estoy usando: AI Search Grader de HubSpot">Tool I'm Using: HubSpot's AI Search Grader</h2>
+        <p data-en="Want to know what AI says about you right now? &lt;a href=&quot;https://www.hubspot.com/aeo-grader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HubSpot’s AI Search Grader&lt;/a&gt; is free and takes under two minutes. So I ran it on AUDAZ." data-es="¿Quieres saber qué dice la IA de ti ahora mismo? El &lt;a href=&quot;https://www.hubspot.com/aeo-grader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AI Search Grader de HubSpot&lt;/a&gt; es gratis y toma menos de dos minutos. Así que lo usé con AUDAZ.">Want to know what AI says about you right now? <a href="https://www.hubspot.com/aeo-grader" target="_blank" rel="noopener">HubSpot’s AI Search Grader</a> is free and takes under two minutes. So I ran it on AUDAZ.</p>
+        <p data-en="Type in your business name, location, what you do (in your customers&#x27; words) and your industry. It checks how ChatGPT, Perplexity and Gemini describe you and gives you a score out of 100. You can run it on a competitor too." data-es="Escribes el nombre de tu negocio, dónde estás, qué haces (con las palabras de tus clientes) y tu industria. Revisa cómo te describen ChatGPT, Perplexity y Gemini y te da una calificación sobre 100. También lo puedes usar con un competidor.">Type in your business name, location, what you do (in your customers' words) and your industry. It checks how ChatGPT, Perplexity and Gemini describe you and gives you a score out of 100. You can run it on a competitor too.</p>
+        <p data-en="Here&#x27;s my starting line:" data-es="Este es mi punto de partida:">Here's my starting line:</p>
+        <div class="table-wrap"><table class="score-table">
+<thead><tr><th data-en="AI platform" data-es="Plataforma de IA">AI platform</th><th data-en="Overall (of 100)" data-es="Total (de 100)">Overall (of 100)</th><th data-en="Brand recognition (of 20)" data-es="Reconocimiento de marca (de 20)">Brand recognition (of 20)</th><th data-en="Presence quality (of 20)" data-es="Calidad de presencia (de 20)">Presence quality (of 20)</th><th data-en="Sentiment (of 40)" data-es="Sentimiento (de 40)">Sentiment (of 40)</th><th data-en="Share of voice (of 10)" data-es="Participación de voz (de 10)">Share of voice (of 10)</th><th data-en="Market (of 10)" data-es="Mercado (de 10)">Market (of 10)</th></tr></thead>
+<tbody>
+<tr><td>Perplexity</td><td>48</td><td>2</td><td>6</td><td>27</td><td>7</td><td>6</td></tr>
+<tr><td>Gemini</td><td>39</td><td>2</td><td>5</td><td>26</td><td>0</td><td>6</td></tr>
+<tr><td>ChatGPT</td><td>32</td><td>2</td><td>3</td><td>20</td><td>1</td><td>6</td></tr>
+</tbody></table></div>
+        <p class="author-note" data-en="Source: HubSpot AI Search Grader, run October 30, 2026." data-es="Fuente: AI Search Grader de HubSpot, usado el 30 de octubre de 2026.">Source: HubSpot AI Search Grader, run October 30, 2026.</p>
+        <p data-en="What it told me:" data-es="Lo que me dijo:">What it told me:</p>
+        <ul>
+<li data-en="&lt;strong&gt;AI doesn&#x27;t know us well yet.&lt;/strong&gt; Brand recognition was 2 out of 20 on all three. AUDAZ is a new business, so that&#x27;s expected. It&#x27;s also the same gap I help clients close." data-es="&lt;strong&gt;La IA todavía no nos conoce bien.&lt;/strong&gt; El reconocimiento de marca fue de 2 sobre 20 en las tres. AUDAZ es un negocio nuevo, así que es lo esperado. También es la misma brecha que ayudo a cerrar a mis clientes."><strong>AI doesn't know us well yet.</strong> Brand recognition was 2 out of 20 on all three. AUDAZ is a new business, so that's expected. It's also the same gap I help clients close.</li>
+<li data-en="&lt;strong&gt;When AI does talk about us, it&#x27;s positive.&lt;/strong&gt; Sentiment was our strongest score on every platform." data-es="&lt;strong&gt;Cuando la IA habla de nosotros, es positivo.&lt;/strong&gt; El sentimiento fue nuestra mejor calificación en todas las plataformas."><strong>When AI does talk about us, it's positive.</strong> Sentiment was our strongest score on every platform.</li>
+<li data-en="&lt;strong&gt;Perplexity found us most.&lt;/strong&gt; HubSpot labels it the “real-time” option. It scored us 48 and gave us 7 out of 10 for share of voice. ChatGPT and Gemini gave us 1 and 0." data-es="&lt;strong&gt;Perplexity fue la que más nos encontró.&lt;/strong&gt; HubSpot la identifica como la opción “en tiempo real”. Nos dio 48 y un 7 sobre 10 en participación de voz. ChatGPT y Gemini nos dieron 1 y 0."><strong>Perplexity found us most.</strong> HubSpot labels it the “real-time” option. It scored us 48 and gave us 7 out of 10 for share of voice. ChatGPT and Gemini gave us 1 and 0.</li>
+</ul>
+        <p data-en="I&#x27;ll run it again in 90 days, after the profile fixes, and share what changed." data-es="Lo voy a volver a usar en 90 días, después de los arreglos al perfil, y les cuento qué cambió.">I'll run it again in 90 days, after the profile fixes, and share what changed.</p>
+        <p data-en="One caution: it&#x27;s a snapshot of what these AI models already know, not a live search. Use it as a starting point, not a final grade." data-es="Una advertencia: es una foto de lo que esos modelos de IA ya saben, no una búsqueda en vivo. Úsalo como punto de partida, no como calificación final.">One caution: it's a snapshot of what these AI models already know, not a live search. Use it as a starting point, not a final grade.</p>
+        <h2 data-en="One more thing" data-es="Una cosa más">One more thing</h2>
+        <p data-en="When Google turns this on for AUDAZ, I&#x27;ll test it with real questions in English and Spanish and show you exactly what it got right and wrong. Tell me if you got the red dot. I want to know who has it." data-es="Cuando Google active esto para AUDAZ, lo voy a probar con preguntas reales en inglés y en español y les voy a mostrar exactamente qué hizo bien y qué hizo mal. Cuéntame si ya te apareció el punto rojo. Quiero saber quién lo tiene.">When Google turns this on for AUDAZ, I'll test it with real questions in English and Spanish and show you exactly what it got right and wrong. Tell me if you got the red dot. I want to know who has it.</p>
+        <p class="takeaway" data-en="We don&#x27;t do quiet." data-es="We don&#x27;t do quiet.">We don't do quiet.</p>
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+        <ul>
+<li data-en="&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Business Profiles AI-Powered Messaging Expands&lt;/a&gt;, Search Engine Roundtable, October 29, 2026" data-es="&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Business Profiles AI-Powered Messaging Expands&lt;/a&gt;, Search Engine Roundtable, 29 de octubre de 2026"><a href="https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html" target="_blank" rel="noopener">Google Business Profiles AI-Powered Messaging Expands</a>, Search Engine Roundtable, October 29, 2026</li>
+<li data-en="&lt;a href=&quot;https://www.brightlocal.com/research/lcrs-ai-trust/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Half of consumers are asking AI for business recommendations&lt;/a&gt;, BrightLocal, March 2026 (1,002 US adults)" data-es="&lt;a href=&quot;https://www.brightlocal.com/research/lcrs-ai-trust/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Half of consumers are asking AI for business recommendations&lt;/a&gt;, BrightLocal, marzo de 2026 (1,002 adultos en EE. UU.)"><a href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener">Half of consumers are asking AI for business recommendations</a>, BrightLocal, March 2026 (1,002 US adults)</li>
+<li data-en="&lt;a href=&quot;https://www.hubspot.com/aeo-grader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AI Search Grader&lt;/a&gt;, HubSpot" data-es="&lt;a href=&quot;https://www.hubspot.com/aeo-grader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AI Search Grader&lt;/a&gt;, HubSpot"><a href="https://www.hubspot.com/aeo-grader" target="_blank" rel="noopener">AI Search Grader</a>, HubSpot</li>
+<li data-en="&lt;a href=&quot;https://support.google.com/business/answer/9157481&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Manage your service areas&lt;/a&gt;, Google Business Profile Help" data-es="&lt;a href=&quot;https://support.google.com/business/answer/9157481&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Manage your service areas&lt;/a&gt;, Ayuda de Perfil de Empresa en Google"><a href="https://support.google.com/business/answer/9157481" target="_blank" rel="noopener">Manage your service areas</a>, Google Business Profile Help</li>
+</ul>
+
+      </div>
+
+      <div class="faq-block">
+      <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+      <h3 data-en="What is Google&#x27;s AI receptionist for Business Profiles?" data-es="¿Qué es la recepcionista con IA de Google para Perfiles de Empresa?">What is Google's AI receptionist for Business Profiles?</h3>
+      <p data-en="It&#x27;s a free AI agent that answers customer texts sent from Google Search and Maps. It answers routine questions from your Business Profile, hands off what it can&#x27;t answer, and lets you take over any conversation." data-es="Es un agente de IA gratis que responde los mensajes que los clientes envían desde Google Search y Maps. Responde preguntas de rutina con la información de tu Perfil de Empresa, te pasa lo que no puede responder y te deja tomar el control de cualquier conversación.">It's a free AI agent that answers customer texts sent from Google Search and Maps. It answers routine questions from your Business Profile, hands off what it can't answer, and lets you take over any conversation.</p>
+      <h3 data-en="How do I know if I have access?" data-es="¿Cómo sé si ya tengo acceso?">How do I know if I have access?</h3>
+      <p data-en="It&#x27;s in early access. If you have it, you&#x27;ll see a red dot on Messages in your Business Profile; follow the welcome screen to turn it on." data-es="Está en acceso anticipado. Si lo tienes, verás un punto rojo en Mensajes dentro de tu Perfil de Empresa; sigue la pantalla de bienvenida para activarlo.">It's in early access. If you have it, you'll see a red dot on Messages in your Business Profile; follow the welcome screen to turn it on.</p>
+      <h3 data-en="Does the AI answer every customer?" data-es="¿La IA le responde a todos los clientes?">Does the AI answer every customer?</h3>
+      <p data-en="No. It only answers customers whose phone and carrier support RCS. Other customers&#x27; texts go straight to the phone number on your profile, so that number must be able to receive texts." data-es="No. Solo responde a clientes cuyo teléfono y compañía admiten RCS. Los mensajes de los demás van directo al número de tu perfil, así que ese número tiene que poder recibir textos.">No. It only answers customers whose phone and carrier support RCS. Other customers' texts go straight to the phone number on your profile, so that number must be able to receive texts.</p>
+      <h3 data-en="Can I list my whole state as my service area?" data-es="¿Puedo poner todo mi estado como área de servicio?">Can I list my whole state as my service area?</h3>
+      <p data-en="No. Google&#x27;s guidelines say not to add states or countries as service areas. List up to 20 specific cities or ZIP codes, within about 2 hours&#x27; drive of your base." data-es="No. Las reglas de Google dicen que no se agregan estados ni países como áreas de servicio. Pon hasta 20 ciudades o códigos postales específicos, a unas 2 horas en carro de tu base.">No. Google's guidelines say not to add states or countries as service areas. List up to 20 specific cities or ZIP codes, within about 2 hours' drive of your base.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3 data-en="Want to know what AI says about your business today?" data-es="¿Quieres saber qué dice hoy la IA sobre tu negocio?">Want to know what AI says about your business today?</h3>
+        <a href="../audit.html" class="btn btn-primary btn-lg" data-en="Run the free AI Visibility Check" data-es="Haz el diagnóstico gratis de visibilidad en IA">Run the free AI Visibility Check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../about.html" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="../services.html" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="../portfolio.html" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="../contact.html" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
