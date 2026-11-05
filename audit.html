@@ -524,6 +524,15 @@
       return Math.round(ok.reduce((s, e) => s + (e.mentioned ? per * 0.8 : 0) + (e.cited ? per * 0.2 : 0), 0));
     }
 
+    // The verdict explains where the points were lost, not just the total.
+    function verdictFor(tech, aiPts, g) {
+      if (aiPts >= 40) return g.verdict;
+      if (tech >= 40 && aiPts < 15) return 'Your website is in great shape for AI, but ChatGPT and Gemini aren\'t naming you yet. That gap comes from what other sites say about you, and it\'s fixable.';
+      if (tech < 25 && aiPts < 15) return 'AI has trouble reading your website, and it isn\'t naming you yet. Fixing the website basics below is the first step.';
+      if (tech < 25) return 'AI already mentions you, but your website is holding you back. Fixing the basics below will make those recommendations stronger.';
+      return g.verdict;
+    }
+
     function renderResults() {
       hide('techReveal');
       show('scoreSection');
@@ -569,7 +578,7 @@
         $('scoreNum').textContent = waiting ? '...' : total;
         const g = GRADES.find(x => total >= x.min);
         $('scoreGrade').textContent = waiting ? 'Waiting on ChatGPT and Gemini...' : g.grade;
-        $('scoreVerdict').textContent = waiting ? 'This usually takes under a minute. Your website results are below.' : g.verdict;
+        $('scoreVerdict').textContent = waiting ? 'This usually takes under a minute. Your website results are below.' : verdictFor(tech, aiPts, g);
       }
 
       // Fix list: failed checks first (biggest first), then the off-site work AI weighs most.
