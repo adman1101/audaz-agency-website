@@ -533,7 +533,7 @@
       $('engineList').innerHTML = ['chatgpt', 'gemini'].map(key => {
         const e = ai && ai.engines ? ai.engines.find(x => x.engine === key) : null;
         let verdict = '<span class="engine-verdict waiting">Asking now...</span>', body = '';
-        if (ai && (ai.error || !e)) { verdict = '<span class="engine-verdict waiting">No answer yet</span>'; body = esc(ai.error || ''); }
+        if (ai && (ai.error || !e)) { verdict = '<span class="engine-verdict waiting">Not checked</span>'; body = key === 'chatgpt' ? esc(ai.error || '') : ''; }
         else if (e && e.error) { verdict = '<span class="engine-verdict waiting">Didn\'t answer</span>'; body = esc(e.error); }
         else if (e) {
           verdict = e.mentioned
@@ -555,10 +555,22 @@
       $('barTech').style.background = color(tech, 50); $('barTech').style.width = (tech / 50 * 100) + '%';
       $('breakdownAI').textContent = aiPts ?? '...'; $('breakdownAI').style.color = color(aiPts ?? 0, 50);
       $('barAI').style.background = color(aiPts ?? 0, 50); $('barAI').style.width = ((aiPts ?? 0) / 50 * 100) + '%';
-      $('scoreNum').textContent = aiPts === null && !(ai && ai.error) ? '...' : total;
-      const g = GRADES.find(x => total >= x.min);
-      $('scoreGrade').textContent = aiPts === null && !(ai && ai.error) ? 'Waiting on ChatGPT and Gemini...' : g.grade;
-      $('scoreVerdict').textContent = aiPts === null && !(ai && ai.error) ? 'This usually takes under a minute. Your website results are below.' : g.verdict;
+      const waiting = aiPts === null && !ai;
+      const aiFailed = aiPts === null && !!ai;
+      const outOf = document.querySelector('.score-of');
+      if (aiFailed) {
+        // The AI part didn't run (daily limit or engines down): never grade without it.
+        $('scoreNum').textContent = tech; outOf.textContent = '/ 50';
+        $('breakdownAI').textContent = '\u2014';
+        $('scoreGrade').textContent = 'Website checked. AI check didn\'t run.';
+        $('scoreVerdict').textContent = (ai.error || 'The AI engines didn\'t answer.') + ' Your website results are below.';
+      } else {
+        outOf.textContent = '/ 100';
+        $('scoreNum').textContent = waiting ? '...' : total;
+        const g = GRADES.find(x => total >= x.min);
+        $('scoreGrade').textContent = waiting ? 'Waiting on ChatGPT and Gemini...' : g.grade;
+        $('scoreVerdict').textContent = waiting ? 'This usually takes under a minute. Your website results are below.' : g.verdict;
+      }
 
       // Fix list: failed checks first (biggest first), then the off-site work AI weighs most.
       const fixes = scan ? scan.checks.filter(c => !c.pass).sort((a, b) => (b.points - b.earned) - (a.points - a.earned)).map(c => c.fix) : [];
