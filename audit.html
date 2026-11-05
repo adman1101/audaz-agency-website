@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free AI Visibility Audit | AUDAZ Agency</title>
-  <meta name="description" content="Is AI recommending your business? Get your free AI Visibility Audit from AUDAZ Agency. We check technical signals AND citation presence across ChatGPT, Gemini, and Claude." />
+  <meta name="description" content="Is AI recommending your business? Free AI visibility check from AUDAZ Agency: we scan your website the way AI crawlers see it and ask ChatGPT and Gemini, live, who they recommend." />
   <meta property="og:title" content="Free AI Visibility Audit | AUDAZ Agency" />
-  <meta property="og:description" content="Find out if ChatGPT, Gemini, and Claude know your business exists. Free. No strings." />
+  <meta property="og:description" content="Is AI recommending your business? Free AI visibility check from AUDAZ Agency: we scan your website the way AI crawlers see it and ask ChatGPT and Gemini, live, who they recommend." />
   <meta property="og:url" content="https://audaz.agency/audit" />
   <meta property="og:image" content="https://audaz.agency/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -169,6 +169,28 @@
     .footer-links a:hover { color: var(--white); }
     .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
 
+
+    /* REAL AUDIT ADDITIONS */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .form-grid .url-input { width: 100%; }
+    .run-btn-wide { width: 100%; margin-bottom: 1rem; }
+    .form-error { display: none; color: #F09595; font-size: 13px; margin-bottom: 1rem; text-align: center; }
+    .status-line { font-size: 13px; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 1.25rem; min-height: 1em; }
+    .check-detail { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 6px; line-height: 1.45; }
+    .engine-list { display: grid; gap: 10px; margin-bottom: 1.5rem; }
+    .engine-card { background: rgba(0,0,0,0.3); border-radius: var(--radius-md); padding: 1rem 1.1rem; }
+    .engine-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .engine-name { font-weight: 600; font-size: 14px; }
+    .engine-verdict { font-size: 13px; font-weight: 600; }
+    .engine-verdict.found { color: #5DCAA5; }
+    .engine-verdict.not-found { color: #F09595; }
+    .engine-verdict.waiting { color: rgba(255,255,255,0.4); }
+    .engine-named { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .fix-list { margin: 0 0 1.5rem 1.2rem; display: grid; gap: 8px; }
+    .fix-list li { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.55; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+    .powered-by { margin-top: 1rem; text-align: center; font-size: 11px; letter-spacing: 0.06em; color: rgba(255,255,255,0.3); }
     /* GATE MODAL */
     .gate-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
     .gate-overlay.active { opacity: 1; pointer-events: all; }
@@ -215,6 +237,10 @@
     <input name="email" />
     <input name="phone" />
     <input name="website-url" />
+    <input name="business-name" />
+    <input name="city" />
+    <input name="service" />
+    <input name="audit-summary" />
   </form>
 
   <!-- LEAD GATE MODAL -->
@@ -222,10 +248,10 @@
     <div class="gate-modal">
       <div class="gate-badge">
         <div class="gate-dot"></div>
-        Score Ready
+        Results Ready
       </div>
       <h2>Where should we send your results?</h2>
-      <p>Your AI Visibility Score is calculated. We'll show it instantly and email you a personalized action plan.</p>
+      <p>Your results are almost ready. We'll show them right here, and Rene will follow up personally with an action plan for your business.</p>
       <div class="gate-field">
         <label>First Name *</label>
         <input type="text" id="gateName" placeholder="Your first name" autocomplete="given-name" />
@@ -239,7 +265,7 @@
         <input type="tel" id="gatePhone" placeholder="(305) 555-0100" autocomplete="tel" />
       </div>
       <div class="gate-error" id="gateError">Please enter your name and a valid email address.</div>
-      <button class="gate-submit" id="gateSubmit" onclick="submitGate()">Reveal My Score &rarr;</button>
+      <button class="gate-submit" id="gateSubmit" onclick="submitGate()">Show My Results &rarr;</button>
       <p class="gate-privacy">No spam. No credit card. We don't do quiet — but we don't do annoying either. 🦞</p>
     </div>
   </div>
@@ -260,68 +286,38 @@
       Free AI Visibility Audit
     </div>
     <h1>Can AI find<br /><em>your business?</em></h1>
-    <p class="hero-sub">Enter your URL. We run a 50-point technical scan, then ask 5 questions to reveal your real AI visibility score.</p>
+    <p class="hero-sub">We scan your website the way AI crawlers see it, then ask ChatGPT and Gemini who they recommend for what you do, live. Real results, nothing estimated.</p>
   </section>
 
   <div class="audit-card">
-
-    <div class="input-row">
-      <input class="url-input" id="urlInput" type="url" placeholder="https://yourbusiness.com" autocomplete="off" />
-      <button class="run-btn" id="runBtn" onclick="startAudit()">Run free audit</button>
+    <div class="form-grid">
+      <input class="url-input" id="urlInput" type="url" placeholder="Your website, e.g. yourbusiness.com" autocomplete="url" />
+      <input class="url-input" id="nameInput" type="text" placeholder="Business name" autocomplete="organization" />
+      <input class="url-input" id="serviceInput" type="text" placeholder="What you do, e.g. plumber, dentist, roofing" />
+      <input class="url-input" id="cityInput" type="text" placeholder="City, e.g. Homestead, FL" />
     </div>
+    <button class="run-btn run-btn-wide" id="runBtn" onclick="startAudit()">Run my free AI visibility check</button>
+    <div class="form-error" id="formError"></div>
 
-    <div class="progress-wrap" id="progressWrap">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
+    <div class="progress-wrap" id="progressWrap"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="status-line" id="statusLine"></div>
 
-    <div class="checks-grid" id="checksGrid">
-      <div class="check-card" id="card-llms"><div class="check-icon">&#x1F916;</div><div class="check-label">llms.txt</div><div class="check-val" id="v-llms">Waiting</div></div>
-      <div class="check-card" id="card-schema"><div class="check-icon">&#x1F4CB;</div><div class="check-label">Schema markup</div><div class="check-val" id="v-schema">Waiting</div></div>
-      <div class="check-card" id="card-meta"><div class="check-icon">&#x1F50D;</div><div class="check-label">Meta / OG tags</div><div class="check-val" id="v-meta">Waiting</div></div>
-      <div class="check-card" id="card-robots"><div class="check-icon">&#x1F5FA;</div><div class="check-label">robots.txt</div><div class="check-val" id="v-robots">Waiting</div></div>
-      <div class="check-card" id="card-canonical"><div class="check-icon">&#x1F310;</div><div class="check-label">Canonical tag</div><div class="check-val" id="v-canonical">Waiting</div></div>
-      <div class="check-card" id="card-ogimage"><div class="check-icon">&#x1F5BC;</div><div class="check-label">OG image</div><div class="check-val" id="v-ogimage">Waiting</div></div>
-      <div class="check-card" id="card-local"><div class="check-icon">&#x1F4CD;</div><div class="check-label">Local business</div><div class="check-val" id="v-local">Waiting</div></div>
-      <div class="check-card" id="card-faq"><div class="check-icon">&#x1F4C4;</div><div class="check-label">FAQ schema</div><div class="check-val" id="v-faq">Waiting</div></div>
-    </div>
-
-    <div class="ai-section" id="aiSection">
-      <div class="section-label">AI engine awareness</div>
-      <div class="ai-grid">
-        <div class="ai-card"><div class="ai-name">ChatGPT</div><div class="ai-result" id="ai-chatgpt">—</div></div>
-        <div class="ai-card"><div class="ai-name">Gemini</div><div class="ai-result" id="ai-gemini">—</div></div>
-        <div class="ai-card"><div class="ai-name">Claude</div><div class="ai-result" id="ai-claude">—</div></div>
-      </div>
-    </div>
+    <div class="section-label" id="techLabel" style="display:none">Part 1 &middot; Can AI read your website?</div>
+    <div class="checks-grid" id="checksGrid"></div>
 
     <!-- TECH REVEAL -->
     <div class="tech-reveal" id="techReveal">
-      <div class="tech-reveal-label">Technical Foundation Score</div>
+      <div class="tech-reveal-label">Website Readiness Score</div>
       <div class="tech-reveal-score" id="techRevealNum">0</div>
       <div class="tech-reveal-of">out of 50 points</div>
       <div class="tech-reveal-hook">
-        <div class="tech-reveal-hook-title">But that's only half the story.</div>
-        <div class="tech-reveal-hook-text">Technical structure gets you <em>ready</em>. AI citation presence is what makes AI models actually <em>recommend</em> you — and most businesses score near zero on this layer.</div>
+        <div class="tech-reveal-hook-title">Part 2 &middot; Does AI recommend you?</div>
+        <div class="tech-reveal-hook-text">Right now we're asking ChatGPT and Gemini: <em id="questionText">who are the best in your area?</em> See whether they name you, and who they name instead.</div>
       </div>
-      <button class="reveal-btn" onclick="startCitationQuestions()">Check My Citation Score &rarr;</button>
+      <button class="reveal-btn" onclick="openGate()">See what AI says about me &rarr;</button>
     </div>
 
-    <!-- CITATION QUESTIONS -->
-    <div class="citation-section" id="citationSection">
-      <div class="citation-progress" id="citationProgress"></div>
-      <div class="citation-eyebrow" id="citationEyebrow">Question 1 of 5 — AI Citation Presence</div>
-      <div class="citation-card">
-        <div class="citation-question" id="citationQuestion">—</div>
-        <div class="citation-stat" id="citationStat">—</div>
-        <div class="citation-btns">
-          <button class="citation-btn yes" onclick="answerQuestion(true)">YES</button>
-          <button class="citation-btn no" onclick="answerQuestion(false)">NO</button>
-        </div>
-      </div>
-      <div class="citation-footer" id="citationFooter">Technical: — / Citation: building...</div>
-    </div>
-
-    <!-- FINAL SCORE -->
+    <!-- RESULTS -->
     <div class="score-section" id="scoreSection">
       <div class="score-row">
         <div class="score-circle">
@@ -329,32 +325,37 @@
           <span class="score-of">/ 100</span>
         </div>
         <div>
-          <div class="score-grade" id="scoreGrade">—</div>
-          <div class="score-verdict" id="scoreVerdict">—</div>
+          <div class="score-grade" id="scoreGrade">&mdash;</div>
+          <div class="score-verdict" id="scoreVerdict">&mdash;</div>
+        </div>
+      </div>
+      <div class="score-breakdown">
+        <div class="breakdown-card">
+          <div class="breakdown-label">Website readiness</div>
+          <div class="breakdown-score" id="breakdownTech">0</div>
+          <div class="breakdown-of">out of 50</div>
+          <div class="breakdown-bar"><div class="breakdown-fill" id="barTech"></div></div>
+        </div>
+        <div class="breakdown-card">
+          <div class="breakdown-label">AI recommendations</div>
+          <div class="breakdown-score" id="breakdownAI">0</div>
+          <div class="breakdown-of">out of 50</div>
+          <div class="breakdown-bar"><div class="breakdown-fill" id="barAI"></div></div>
         </div>
       </div>
 
-      <div class="score-breakdown">
-        <div class="breakdown-card">
-          <div class="breakdown-label">Technical Foundation</div>
-          <div class="breakdown-score" id="breakdownTech" style="color: #5DCAA5;">0</div>
-          <div class="breakdown-of">out of 50</div>
-          <div class="breakdown-bar"><div class="breakdown-fill" id="barTech" style="background:#5DCAA5; width:0%;"></div></div>
-        </div>
-        <div class="breakdown-card">
-          <div class="breakdown-label">AI Citation Presence</div>
-          <div class="breakdown-score" id="breakdownCitation" style="color: var(--amber);">0</div>
-          <div class="breakdown-of">out of 50</div>
-          <div class="breakdown-bar"><div class="breakdown-fill" id="barCitation" style="background: var(--amber); width:0%;"></div></div>
-        </div>
-      </div>
+      <div class="section-label">What AI said when we asked: <span id="questionAsked"></span></div>
+      <div class="engine-list" id="engineList"></div>
+
+      <div class="section-label" id="fixLabel">Your fix list</div>
+      <ol class="fix-list" id="fixList"></ol>
 
       <div class="cta-section">
         <span class="cta-text">Want AUDAZ to fix this for you?</span>
         <a class="cta-btn" href="https://meetings-na2.hubspot.com/rene-galan" target="_blank" rel="noopener noreferrer">Book a free 15-min call &rarr;</a>
       </div>
+      <div class="powered-by">Powered by RecommendAI&trade;</div>
     </div>
-
   </div>
 
   <div class="trust-bar">
@@ -363,7 +364,7 @@
     <div class="trust-item"><div class="trust-dot"></div>40+ years of marketing expertise</div>
   </div>
 
-  <p class="disclaimer">This tool checks publicly available technical signals and self-reported citation presence. AI engine visibility is estimated — actual AI recommendations require manual testing. Results are informational only. AUDAZ Agency LLC &mdash; audaz.agency</p>
+  <p class="disclaimer">We fetch your home page, robots.txt, llms.txt and sitemap the way AI crawlers do, without running JavaScript, and ask ChatGPT and Gemini one live question with web search turned on. AI answers change from day to day and person to person, so treat this as a snapshot, not a guarantee. AUDAZ Agency LLC &mdash; audaz.agency</p>
 
   <footer>
     <div class="footer-brand">AUDAZ<span>.</span> &mdash; We don't do quiet.</div>
@@ -377,267 +378,200 @@
   </footer>
 
   <script>
-    // ── CONFIGURATION ──────────────────────────────────────────────
-    const TECH_CHECKS = {
-      llms:      { points: 10 },
-      schema:    { points: 10 },
-      meta:      { points:  8 },
-      robots:    { points:  5 },
-      canonical: { points:  5 },
-      ogimage:   { points:  5 },
-      local:     { points:  5 },
-      faq:       { points:  2 }
-    };
-
-    const CITATION_QUESTIONS = [
-      { question: "Is your brand actively present on Reddit?",                         stat: "Reddit drives 40.1% of all AI citations" },
-      { question: "Do you post YouTube content at least monthly?",                     stat: "YouTube accounts for 23.5% of AI citations" },
-      { question: "Is your business listed on Yelp?",                                  stat: "Yelp drives 21% of AI citations" },
-      { question: "Do you post on Google Business Profile weekly?",                    stat: "Google Business drives 23.3% of AI citations" },
-      { question: "Has your brand appeared in 3+ third-party articles or directories?",stat: "Third-party mentions drive 26.3% of AI citations" }
-    ];
+    // Real AI visibility check. The scan and the AI questions run on AUDAZ's
+    // RecommendAI service; nothing on this page is simulated.
+    const API = 'https://recommendai-simulator.netlify.app/api/public';
+    const ENGINE_NAMES = { chatgpt: 'ChatGPT', gemini: 'Gemini' };
 
     const GRADES = [
-      { min: 90, grade: 'Grade A — AI-Ready',                   verdict: 'Strong AI visibility. Let\'s find the remaining gaps and lock in your position before competitors catch up.' },
-      { min: 75, grade: 'Grade B — Strong Foundation',          verdict: 'Good signals in place. Citation gaps are limiting your full AI visibility. A targeted build closes these fast.' },
-      { min: 60, grade: 'Grade C — Citation Gaps',              verdict: 'Technical foundation exists but AI models find you inconsistently. Citation presence is the missing layer.' },
-      { min: 45, grade: 'Grade D — Significant Work Needed',    verdict: 'AI engines are unlikely to recommend your business by name. This is fixable — but every day costs you.' },
-      { min:  0, grade: 'Grade F — Invisible to AI',            verdict: 'Critical signals are missing across the board. Your business is invisible to AI before competitors claim your category.' }
+      { min: 85, grade: 'Grade A: AI recommends you', verdict: 'AI engines can read your site and they already name you. Let\'s protect that position and widen it.' },
+      { min: 65, grade: 'Grade B: Close', verdict: 'Good foundations, but AI doesn\'t name you consistently yet. A few targeted fixes can change that.' },
+      { min: 45, grade: 'Grade C: Partly visible', verdict: 'AI can read parts of your site, but it\'s recommending other businesses instead of you.' },
+      { min: 25, grade: 'Grade D: Mostly invisible', verdict: 'AI engines are unlikely to recommend you by name today. The good news: this is fixable.' },
+      { min: 0,  grade: 'Grade F: Invisible to AI', verdict: 'Right now, when customers ask AI for what you do, your business doesn\'t come up. Let\'s change that.' }
     ];
 
-    // ── STATE ──────────────────────────────────────────────────────
-    let pendingDomain  = '';
-    let gateSubmitted  = false;
-    let techScore      = 0;
-    let citationScore  = 0;
-    let currentQ       = 0;
-    let citationAnswers = [];
+    let scan = null, aiJob = null, ai = null, gateSubmitted = false, input = {};
 
-    // ── HELPERS ────────────────────────────────────────────────────
-    function simulate(domain) {
-      const known = {
-        'audaz.agency':        { llms:true,  schema:true,  meta:true,  robots:true,  canonical:true,  ogimage:true,  local:true,  faq:true  },
-        
-        'ourbestforhim.com':    { llms:true,  schema:false, meta:true,  robots:false, canonical:true,  ogimage:true,  local:false, faq:true  }
+    const $ = id => document.getElementById(id);
+    const show = (id, d) => { $(id).style.display = d || 'block'; };
+    const hide = id => { $(id).style.display = 'none'; };
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    async function api(path, body) {
+      const res = await fetch(API + path, body
+        ? { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }
+        : {});
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
+      return data;
+    }
+
+    function formError(msg) { const e = $('formError'); e.textContent = msg; e.style.display = msg ? 'block' : 'none'; }
+
+    // ── STEP 1: START ──────────────────────────────────────────────
+    async function startAudit() {
+      input = {
+        url: $('urlInput').value.trim(),
+        name: $('nameInput').value.trim(),
+        service: $('serviceInput').value.trim(),
+        city: $('cityInput').value.trim()
       };
-      if (known[domain]) return known[domain];
-      const seed = domain.split('').reduce((a,c) => a + c.charCodeAt(0), 0);
-      const r = n => ((seed * n * 7919) % 100) > 45;
-      return { llms:r(1), schema:r(2), meta:r(3), robots:r(4), canonical:r(5), ogimage:r(6), local:r(7), faq:r(8) };
-    }
+      if (!input.url || !input.name || !input.service || !input.city) { formError('Please fill in all four boxes.'); return; }
+      formError('');
+      scan = null; ai = null; aiJob = null;
+      ['techReveal', 'scoreSection', 'techLabel'].forEach(hide);
+      $('checksGrid').innerHTML = '';
+      const btn = $('runBtn'); btn.disabled = true; btn.textContent = 'Checking...';
+      show('progressWrap'); $('progressFill').style.width = '10%';
+      $('statusLine').textContent = 'Reading your website the way AI crawlers do...';
 
-    function aiVis(results, domain) {
-      const n = Object.values(results).filter(Boolean).length;
-      return {
-        chatgpt: n >= 5 ? 'Found' : n >= 3 ? 'Partial' : 'Not found',
-        gemini:  n >= 4 ? 'Found' : n >= 2 ? 'Partial' : 'Not found',
-        claude:  n >= 4 ? 'Found' : 'Not found'
-      };
-    }
+      // Start the AI questions right away; they take 30-90 seconds.
+      api('/ai-start', input).then(r => { aiJob = r.id; pollAI(); }).catch(e => { ai = { error: e.message }; });
 
-    function setCheck(id, pass) {
-      document.getElementById('card-' + id).className = 'check-card ' + (pass ? 'pass' : 'fail');
-      const v = document.getElementById('v-' + id);
-      v.className = 'check-val ' + (pass ? 'pass' : 'fail');
-      v.textContent = pass ? 'Detected' : 'Missing';
-    }
-
-    function hide(id)   { document.getElementById(id).style.display = 'none'; }
-    function show(id, d){ document.getElementById(id).style.display = d || 'block'; }
-
-    // ── STEP 1: START AUDIT ────────────────────────────────────────
-    function startAudit() {
-      const raw = document.getElementById('urlInput').value.trim();
-      if (!raw) { document.getElementById('urlInput').focus(); return; }
       try {
-        pendingDomain = new URL(raw.startsWith('http') ? raw : 'https://' + raw).hostname.replace('www.','');
-      } catch(e) {
-        pendingDomain = raw.replace(/https?:\/\//,'').replace('www.','').split('/')[0];
+        $('progressFill').style.width = '35%';
+        scan = await api('/scan', { url: input.url });
+      } catch (e) {
+        formError(e.message);
+        hide('progressWrap'); $('statusLine').textContent = '';
+        btn.disabled = false; btn.textContent = 'Run my free AI visibility check';
+        return;
       }
-      if (!pendingDomain) { document.getElementById('urlInput').focus(); return; }
-
-      // Reset state
-      techScore = 0; citationScore = 0; currentQ = 0; citationAnswers = [];
-      hide('techReveal'); hide('citationSection'); hide('scoreSection'); hide('aiSection');
-      runAudit(pendingDomain);
-    }
-
-    // ── STEP 2: RUN TECHNICAL SCAN ─────────────────────────────────
-    async function runAudit(domain) {
-      const btn = document.getElementById('runBtn');
-      btn.disabled = true; btn.textContent = 'Checking...';
-
-      show('progressWrap'); hide('scoreSection'); hide('aiSection'); hide('techReveal');
-      document.getElementById('progressFill').style.width = '0%';
-
-      Object.keys(TECH_CHECKS).forEach(k => {
-        document.getElementById('card-' + k).className = 'check-card';
-        const v = document.getElementById('v-' + k);
-        v.className = 'check-val'; v.textContent = 'Checking...';
-      });
-
-      const results = simulate(domain);
-      const keys = Object.keys(TECH_CHECKS);
-      const fill = document.getElementById('progressFill');
-
-      for (let i = 0; i < keys.length; i++) {
-        await new Promise(r => setTimeout(r, 250 + Math.random() * 200));
-        setCheck(keys[i], results[keys[i]]);
-        fill.style.width = Math.round(((i+1)/keys.length)*80) + '%';
-      }
-
-      await new Promise(r => setTimeout(r, 300));
-      fill.style.width = '100%';
-
-      // Calculate tech score (out of 50)
-      techScore = Math.round(keys.filter(k => results[k]).reduce((s,k) => s + TECH_CHECKS[k].points, 0));
-
-      // Show AI awareness
-      const ai = aiVis(results, domain);
-      const aiMap = { 'Found':'found', 'Partial':'partial', 'Not found':'not-found' };
-      show('aiSection');
-      ['chatgpt','gemini','claude'].forEach(e => {
-        const el = document.getElementById('ai-' + e);
-        el.textContent = ai[e];
-        el.className = 'ai-result ' + aiMap[ai[e]];
-      });
-
-      await new Promise(r => setTimeout(r, 400));
-
-      // Show tech reveal
-      document.getElementById('techRevealNum').textContent = techScore;
+      $('progressFill').style.width = '100%';
+      setTimeout(() => hide('progressWrap'), 600);
+      $('statusLine').textContent = '';
+      renderChecks();
+      $('questionText').textContent = `"Who are the best ${input.service} in ${input.city}?"`;
+      $('techRevealNum').textContent = scan.score;
+      $('techRevealNum').style.color = scan.score >= 35 ? '#5DCAA5' : scan.score >= 20 ? '#EF9F27' : '#F09595';
       show('techReveal');
-
-      btn.disabled = false; btn.textContent = 'Run free audit';
+      btn.disabled = false; btn.textContent = 'Run another check';
     }
 
-    // ── STEP 3: CITATION QUESTIONS ─────────────────────────────────
-    function startCitationQuestions() {
-      hide('techReveal');
-      currentQ = 0;
-      citationAnswers = [];
-      buildProgressDots();
-      showQuestion(0);
-      show('citationSection');
+    function renderChecks() {
+      show('techLabel');
+      $('checksGrid').innerHTML = scan.checks.map(c => `
+        <div class="check-card ${c.pass ? 'pass' : 'fail'}">
+          <div class="check-label">${esc(c.label)}</div>
+          <div class="check-val ${c.pass ? 'pass' : 'fail'}">${c.pass ? 'Pass' : 'Needs work'} &middot; ${c.earned}/${c.points}</div>
+          <div class="check-detail">${esc(c.detail)}</div>
+        </div>`).join('');
     }
 
-    function buildProgressDots() {
-      const wrap = document.getElementById('citationProgress');
-      wrap.innerHTML = '';
-      CITATION_QUESTIONS.forEach((_, i) => {
-        const d = document.createElement('div');
-        d.className = 'citation-dot';
-        d.id = 'dot-' + i;
-        wrap.appendChild(d);
-      });
-    }
-
-    function updateDots() {
-      CITATION_QUESTIONS.forEach((_, i) => {
-        const d = document.getElementById('dot-' + i);
-        if (i < currentQ)       { d.className = 'citation-dot done'; }
-        else if (i === currentQ){ d.className = 'citation-dot active'; }
-        else                    { d.className = 'citation-dot'; }
-      });
-    }
-
-    function showQuestion(idx) {
-      const q = CITATION_QUESTIONS[idx];
-      document.getElementById('citationEyebrow').textContent  = `Question ${idx+1} of ${CITATION_QUESTIONS.length} — AI Citation Presence`;
-      document.getElementById('citationQuestion').textContent = q.question;
-      document.getElementById('citationStat').textContent     = q.stat;
-      document.getElementById('citationFooter').textContent   = `Technical: ${techScore}/50 captured · Citation: ${citationAnswers.filter(Boolean).length * 10}/50 in progress`;
-      updateDots();
-    }
-
-    function answerQuestion(answer) {
-      citationAnswers.push(answer);
-      currentQ++;
-      if (currentQ < CITATION_QUESTIONS.length) {
-        showQuestion(currentQ);
-      } else {
-        // All questions answered — show gate
-        citationScore = citationAnswers.filter(Boolean).length * 10;
-        hide('citationSection');
-        if (!gateSubmitted) {
-          document.getElementById('gateOverlay').classList.add('active');
-          document.getElementById('gateName').focus();
-        } else {
-          showFinalScore();
-        }
+    // ── STEP 2: AI ANSWERS (background) ────────────────────────────
+    async function pollAI() {
+      const started = Date.now();
+      while (!ai && Date.now() - started < 4 * 60 * 1000) {
+        await sleep(4000);
+        try {
+          const r = await api('/ai-result?id=' + encodeURIComponent(aiJob));
+          if (!r.pending) { ai = r; break; }
+        } catch (e) { /* keep waiting */ }
       }
+      if (!ai) ai = { error: 'The AI engines are slow right now. Rene will send you this part personally.' };
+      if (gateSubmitted) renderResults();
     }
 
-    // ── STEP 4: GATE SUBMISSION ────────────────────────────────────
+    // ── STEP 3: GATE ───────────────────────────────────────────────
+    function openGate() {
+      if (gateSubmitted) { renderResults(); return; }
+      $('gateOverlay').classList.add('active');
+      $('gateName').focus();
+    }
+
     async function submitGate() {
-      const name  = document.getElementById('gateName').value.trim();
-      const email = document.getElementById('gateEmail').value.trim();
-      const phone = document.getElementById('gatePhone').value.trim();
-      const error = document.getElementById('gateError');
-      const btn   = document.getElementById('gateSubmit');
-
-      if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        error.style.display = 'block'; return;
-      }
-      error.style.display = 'none';
-      btn.disabled = true; btn.textContent = 'Revealing your score...';
+      const name  = $('gateName').value.trim();
+      const email = $('gateEmail').value.trim();
+      const phone = $('gatePhone').value.trim();
+      const btn   = $('gateSubmit');
+      if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { $('gateError').style.display = 'block'; return; }
+      $('gateError').style.display = 'none';
+      btn.disabled = true; btn.textContent = 'One moment...';
 
       try {
         const fd = new FormData();
-        fd.append('form-name',   'audit-gate');
-        fd.append('first-name',  name);
-        fd.append('email',       email);
-        fd.append('phone',       phone);
-        fd.append('website-url', pendingDomain);
+        fd.append('form-name', 'audit-gate');
+        fd.append('first-name', name);
+        fd.append('email', email);
+        fd.append('phone', phone);
+        fd.append('website-url', scan ? scan.url : input.url);
+        fd.append('business-name', input.name);
+        fd.append('city', input.city);
+        fd.append('service', input.service);
+        fd.append('audit-summary', scan ? `Website readiness ${scan.score}/50. Needs work: ${scan.checks.filter(c => !c.pass).map(c => c.label).join(', ') || 'none'}` : '');
         await fetch('/', { method: 'POST', body: fd });
-      } catch(e) { console.log('Netlify form error:', e); }
-
+      } catch (e) { console.log('Form error:', e); }
       try {
-        var _hsq = window._hsq = window._hsq || [];
-        _hsq.push(['identify', { email, firstname: name, phone }]);
+        const _hsq = window._hsq = window._hsq || [];
+        _hsq.push(['identify', { email, firstname: name, phone, company: input.name, website: input.url }]);
         _hsq.push(['trackPageView']);
-      } catch(e) { console.log('HubSpot error:', e); }
+      } catch (e) { console.log('HubSpot error:', e); }
 
       gateSubmitted = true;
-      document.getElementById('gateOverlay').classList.remove('active');
-      btn.disabled = false; btn.textContent = 'Reveal My Score →';
-      showFinalScore();
+      $('gateOverlay').classList.remove('active');
+      btn.disabled = false; btn.textContent = 'Show My Results →';
+      renderResults();
     }
 
-    // ── STEP 5: FINAL SCORE ────────────────────────────────────────
-    function showFinalScore() {
-      const total = techScore + citationScore;
-      const g = GRADES.find(x => total >= x.min);
+    // ── STEP 4: RESULTS ────────────────────────────────────────────
+    function aiScore() {
+      if (!ai || ai.error || !ai.engines) return null;
+      const ok = ai.engines.filter(e => !e.error);
+      if (!ok.length) return null;
+      const per = 50 / ok.length;
+      return Math.round(ok.reduce((s, e) => s + (e.mentioned ? per * 0.8 : 0) + (e.cited ? per * 0.2 : 0), 0));
+    }
 
-      document.getElementById('scoreNum').textContent     = total;
-      document.getElementById('scoreGrade').textContent   = g.grade;
-      document.getElementById('scoreVerdict').textContent = g.verdict;
-
-      // Two-layer breakdown
-      const techColor = techScore >= 35 ? '#5DCAA5' : techScore >= 20 ? '#EF9F27' : '#F09595';
-      const citColor  = citationScore >= 30 ? '#5DCAA5' : citationScore >= 20 ? '#EF9F27' : '#F09595';
-
-      document.getElementById('breakdownTech').textContent     = techScore;
-      document.getElementById('breakdownTech').style.color     = techColor;
-      document.getElementById('barTech').style.background      = techColor;
-      document.getElementById('barTech').style.width           = (techScore / 50 * 100) + '%';
-
-      document.getElementById('breakdownCitation').textContent = citationScore;
-      document.getElementById('breakdownCitation').style.color = citColor;
-      document.getElementById('barCitation').style.background  = citColor;
-      document.getElementById('barCitation').style.width       = (citationScore / 50 * 100) + '%';
-
+    function renderResults() {
+      hide('techReveal');
       show('scoreSection');
+      $('questionAsked').textContent = `"Who are the best ${input.service} in ${input.city}?"`;
+
+      // Engines
+      $('engineList').innerHTML = ['chatgpt', 'gemini'].map(key => {
+        const e = ai && ai.engines ? ai.engines.find(x => x.engine === key) : null;
+        let verdict = '<span class="engine-verdict waiting">Asking now...</span>', body = '';
+        if (ai && (ai.error || !e)) { verdict = '<span class="engine-verdict waiting">No answer yet</span>'; body = esc(ai.error || ''); }
+        else if (e && e.error) { verdict = '<span class="engine-verdict waiting">Didn\'t answer</span>'; body = esc(e.error); }
+        else if (e) {
+          verdict = e.mentioned
+            ? `<span class="engine-verdict found">Named you${e.position ? ' (#' + e.position + ')' : ''}</span>`
+            : '<span class="engine-verdict not-found">Didn\'t name you</span>';
+          const others = (e.named || []).filter(n => !n.toLowerCase().includes(input.name.toLowerCase()));
+          body = others.length ? 'Named instead: ' + others.map(esc).join(', ') : (e.mentioned ? '' : 'It didn\'t name any specific business.');
+          if (e.cited) body += (body ? '<br>' : '') + 'It also cited your website as a source.';
+        }
+        return `<div class="engine-card"><div class="engine-head"><span class="engine-name">${ENGINE_NAMES[key]}</span>${verdict}</div><div class="engine-named">${body}</div></div>`;
+      }).join('');
+
+      // Scores
+      const aiPts = aiScore();
+      const tech = scan ? scan.score : 0;
+      const total = tech + (aiPts ?? 0);
+      const color = (v, max) => v >= max * 0.7 ? '#5DCAA5' : v >= max * 0.4 ? '#EF9F27' : '#F09595';
+      $('breakdownTech').textContent = tech; $('breakdownTech').style.color = color(tech, 50);
+      $('barTech').style.background = color(tech, 50); $('barTech').style.width = (tech / 50 * 100) + '%';
+      $('breakdownAI').textContent = aiPts ?? '...'; $('breakdownAI').style.color = color(aiPts ?? 0, 50);
+      $('barAI').style.background = color(aiPts ?? 0, 50); $('barAI').style.width = ((aiPts ?? 0) / 50 * 100) + '%';
+      $('scoreNum').textContent = aiPts === null && !(ai && ai.error) ? '...' : total;
+      const g = GRADES.find(x => total >= x.min);
+      $('scoreGrade').textContent = aiPts === null && !(ai && ai.error) ? 'Waiting on ChatGPT and Gemini...' : g.grade;
+      $('scoreVerdict').textContent = aiPts === null && !(ai && ai.error) ? 'This usually takes under a minute. Your website results are below.' : g.verdict;
+
+      // Fix list: failed checks first (biggest first), then the off-site work AI weighs most.
+      const fixes = scan ? scan.checks.filter(c => !c.pass).sort((a, b) => (b.points - b.earned) - (a.points - a.earned)).map(c => c.fix) : [];
+      if (ai && ai.engines && ai.engines.some(e => !e.error && !e.mentioned)) {
+        fixes.push('AI engines lean on what other sites say about you. Build mentions on the sources they trust most: your Google Business Profile, reviews, local directories, YouTube, LinkedIn and community sites like Reddit.');
+      }
+      $('fixList').innerHTML = fixes.length ? fixes.map(f => `<li>${esc(f)}</li>`).join('') : '<li>Your website basics are in great shape. The next step is building more mentions of your business across the web.</li>';
     }
 
-    // ── KEYBOARD SUPPORT ───────────────────────────────────────────
-    document.getElementById('urlInput').addEventListener('keydown', e => {
-      if (e.key === 'Enter') startAudit();
-    });
+    // ── KEYBOARD ───────────────────────────────────────────────────
+    ['urlInput', 'nameInput', 'serviceInput', 'cityInput'].forEach(id => $(id).addEventListener('keydown', e => { if (e.key === 'Enter') startAudit(); }));
     document.addEventListener('keydown', e => {
-      if (e.key === 'Enter' && document.getElementById('gateOverlay').classList.contains('active')) {
-        submitGate();
-      }
+      if (e.key === 'Enter' && $('gateOverlay').classList.contains('active')) submitGate();
     });
   </script>
 </body>
