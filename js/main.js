@@ -89,10 +89,12 @@ function initNav() {
 
 // --- Active Nav Highlight ---
 function highlightActiveNav() {
-  const page = window.location.pathname.split('/').pop() || 'index.html';
+  // Compare clean paths: "/about.html", "/about" and "/about/" all count as "/about".
+  const clean = (p) => (p || '/').replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/(.)\/$/, '$1');
+  const page = clean(window.location.pathname);
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === page || (page === 'index.html' && href === '/') || (page === '' && href === 'index.html')) {
+    if (href && clean(href) === page) {
       link.classList.add('active');
     }
   });

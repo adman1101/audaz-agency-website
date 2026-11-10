@@ -789,3 +789,7 @@ p { color: var(--text-secondary); line-height: 1.75; }
   .hero-btns { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
 }
+
+/* Inline links in the homepage AI visibility section */
+.ai-vis p a { color: #854F0B; text-decoration: underline; text-underline-offset: 3px; }
+.ai-vis p a:hover { color: #EF9F27; }
