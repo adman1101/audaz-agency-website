@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Google AI Mode now shows Book and Get a quote buttons for home-service searches. They go to Jobber, Housecall Pro, Angi or Thumbtack, not your website. Here&#x27;s who&#x27;s in, what it costs and an 8-step checklist.">
+  <meta property="og:title" content="Google&#x27;s AI Can Now Book the Plumber. Is It Booking You?">
+  <meta property="og:description" content="Google AI Mode now shows Book and Get a quote buttons for home-service searches. They go to Jobber, Housecall Pro, Angi or Thumbtack, not your website. Here&#x27;s who&#x27;s in, what it costs and an 8-step checklist.">
+  <meta property="og:url" content="https://audaz.agency/blog/google-ai-mode-booking">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-11">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/google-ai-mode-booking" />
+
+  <title>Google&#x27;s AI Can Now Book the Plumber. Is It Booking You? | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+    .article-body h3 { margin-top: 2rem; margin-bottom: 0.6rem; font-size: 1.25rem; }
+    .article-body blockquote { border-left: 4px solid #EF9F27; margin: 0 0 1.25rem; padding: 0.75rem 1.25rem; background: #fff7e8; font-style: italic; line-height: 1.6; }
+    .article-body table.equal-cols td:first-child { font-weight: 400; }
+    .article-body table.score-table th, .article-body table.score-table td { text-align: right; }
+    .article-body table.score-table th:first-child, .article-body table.score-table td:first-child { text-align: left; }
+    .article-body table.score-table td:nth-child(2) { font-weight: 700; color: #B8730A; }
+  </style>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/google-ai-mode-booking-hero.jpg">
+  <meta property="og:image:width" content="728">
+  <meta property="og:image:height" content="407">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/google-ai-mode-booking#article",
+      "headline": "Google's AI Can Now Book the Plumber. Is It Booking You?",
+      "description": "Google AI Mode now shows Book and Get a quote buttons for home-service searches. They go to Jobber, Housecall Pro, Angi or Thumbtack, not your website. Here's who's in, what it costs and an 8-step checklist.",
+      "image": "https://audaz.agency/images/blog/google-ai-mode-booking-hero.jpg",
+      "url": "https://audaz.agency/blog/google-ai-mode-booking",
+      "datePublished": "2026-11-11",
+      "dateModified": "2026-11-11",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/google-ai-mode-booking",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "Google AI Mode",
+        "Home services",
+        "Google Business Profile",
+        "Local SEO"
+      ],
+      "keywords": "Google AI Mode, AI Mode booking, home services, Jobber, Housecall Pro, Angi, Thumbtack, Google Business Profile, AI visibility, AEO, GEO, small business marketing"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/google-ai-mode-booking#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Google AI Mode's home-services booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Since November 4, 2026, Google AI Mode in the U.S. shows Book and Get a quote links for home-service searches. The links run through Jobber, Housecall Pro, Angi and Thumbtack, with ServiceTitan coming soon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need one of these platforms to show up in AI Mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can still appear in AI Mode, and the result can link to your own website. Only the book and quote buttons run through the partner platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the partners charge a lead fee for AI Mode bookings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jobber and Housecall Pro say they don't charge lead fees for these bookings. It's not yet clear whether Angi's usual fees apply to requests from AI Mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my website analytics see these bookings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. A booking made through a partner platform may never touch your website or call tracking. Check the source on new jobs in your booking tool, and ask every new customer how they found you."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google AI Mode booking",
+          "item": "https://audaz.agency/blog/google-ai-mode-booking"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/about" class="nav-link" id="nav-about">About</a>
+        <a href="/services" class="nav-link" id="nav-services">Services</a>
+        <a href="/portfolio" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="/blog" class="nav-link" id="nav-blog">Blog</a>
+        <a href="/contact" class="nav-link" id="nav-contact">Contact</a>
+        <a href="/audit" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="/contact" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 12" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 12">THE AI VISIBILITY BRIEF · ISSUE 12</span>
+
+      <h1 data-en="Google&#x27;s AI Can Now Book the Plumber. Is It Booking You?" data-es="La IA de Google ya puede reservar al plomero. ¿Te está reservando a ti?">Google's AI Can Now Book the Plumber. Is It Booking You?</h1>
+
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp;amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published November 11, 2026" data-es="Publicado el 11 de noviembre de 2026">Published November 11, 2026</span>
+        <span data-en="Updated November 11, 2026" data-es="Actualizado el 11 de noviembre de 2026">Updated November 11, 2026</span>
+      </div>
+
+      <div class="answer-block" data-en="Since November 4, Google AI Mode shows Book and Get a quote buttons for home-service searches in the U.S. Those buttons don&#x27;t go to your website. They go to Jobber, Housecall Pro, Angi or Thumbtack, with ServiceTitan coming soon. You can still show up without them, but you&#x27;ll want to check your booking tool, match your Google Business Profile address everywhere, and start asking customers how they found you." data-es="Desde el 4 de noviembre, Google AI Mode muestra botones de Reservar y Pedir cotización en búsquedas de servicios para el hogar en EE. UU. Esos botones no van a tu sitio web. Van a Jobber, Housecall Pro, Angi o Thumbtack, y ServiceTitan llega pronto. Igual puedes aparecer sin ellos, pero conviene revisar tu herramienta de reservas, usar la misma dirección de tu Perfil de Empresa en Google en todas partes y empezar a preguntarles a tus clientes cómo te encontraron.">Since November 4, Google AI Mode shows Book and Get a quote buttons for home-service searches in the U.S. Those buttons don't go to your website. They go to Jobber, Housecall Pro, Angi or Thumbtack, with ServiceTitan coming soon. You can still show up without them, but you'll want to check your booking tool, match your Google Business Profile address everywhere, and start asking customers how they found you.</div>
+
+      <img src="../images/blog/google-ai-mode-booking-hero.jpg" alt="A hand holding a phone in a bright South Florida kitchen, the screen showing a glowing orange BOOK button, with a plain white service van parked outside the window" width="728" height="407" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <p data-en="Picture a homeowner in Homestead with a leaking water heater. She doesn&#x27;t scroll through ten websites. She asks Google&#x27;s AI Mode who can fix it today. Google gives her a short list, and now, a button to book." data-es="Imagina a una dueña de casa en Homestead con el calentador de agua goteando. No se pone a revisar diez sitios web. Le pregunta al AI Mode de Google quién se lo puede arreglar hoy. Google le da una lista corta y, ahora, un botón para reservar.">Picture a homeowner in Homestead with a leaking water heater. She doesn't scroll through ten websites. She asks Google's AI Mode who can fix it today. Google gives her a short list, and now, a button to book.</p>
+        <p data-en="That button showed up on Nov 4. It doesn&#x27;t send her to your website. It sends her to a booking platform, if Google works with yours." data-es="Ese botón apareció el 4 de noviembre. No la manda a tu sitio web. La manda a una plataforma de reservas, si Google trabaja con la tuya.">That button showed up on Nov 4. It doesn't send her to your website. It sends her to a booking platform, if Google works with yours.</p>
+        <p data-en="Here&#x27;s who&#x27;s in, what it costs, and a checklist for this week." data-es="Aquí te cuento quién está, cuánto cuesta y una lista para esta semana.">Here's who's in, what it costs, and a checklist for this week.</p>
+        <h2 data-en="What changed" data-es="Qué cambió">What changed</h2>
+        <p data-en="Google added booking and quote links to AI Mode for home-service searches. Google Search VP Robby Stein said it&#x27;s &lt;a href=&quot;https://x.com/rmstein/status/2118027605018632408&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;available now in the U.S.&lt;/a&gt;." data-es="Google agregó enlaces para reservar y pedir cotización en AI Mode para búsquedas de servicios para el hogar. Robby Stein, vicepresidente de Google Search, dijo que &lt;a href=&quot;https://x.com/rmstein/status/2118027605018632408&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ya está disponible en EE. UU.&lt;/a&gt;.">Google added booking and quote links to AI Mode for home-service searches. Google Search VP Robby Stein said it's <a href="https://x.com/rmstein/status/2118027605018632408" target="_blank" rel="noopener">available now in the U.S.</a>.</p>
+        <p data-en="The links run through these partners (&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Journal&lt;/a&gt;):" data-es="Los enlaces pasan por estos socios (&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Journal&lt;/a&gt;):">The links run through these partners (<a href="https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/" target="_blank" rel="noopener">Search Engine Journal</a>):</p>
+        <ul>
+<li data-en="&lt;strong&gt;Jobber&lt;/strong&gt; (scheduling software): Needs an active paid plan (trials don&#x27;t count), a full address, and a Google Business Profile connected at the same location. Jobber says there are no lead fees." data-es="&lt;strong&gt;Jobber&lt;/strong&gt; (software de agenda): Necesitas un plan pagado activo (las pruebas gratis no cuentan), la dirección completa y un Perfil de Empresa en Google conectado en la misma dirección. Jobber dice que no cobra por cliente potencial."><strong>Jobber</strong> (scheduling software): Needs an active paid plan (trials don't count), a full address, and a Google Business Profile connected at the same location. Jobber says there are no lead fees.</li>
+<li data-en="&lt;strong&gt;Housecall Pro&lt;/strong&gt; (scheduling software): Says users are enrolled automatically at no extra charge, with no lead fees. Reports differ on whether it&#x27;s fully live for everyone, so check your account." data-es="&lt;strong&gt;Housecall Pro&lt;/strong&gt; (software de agenda): Dice que sus usuarios quedan inscritos automáticamente sin costo extra y sin cobro por cliente potencial. Los reportes no coinciden en si ya está activo para todos, así que revisa tu cuenta."><strong>Housecall Pro</strong> (scheduling software): Says users are enrolled automatically at no extra charge, with no lead fees. Reports differ on whether it's fully live for everyone, so check your account.</li>
+<li data-en="&lt;strong&gt;Angi&lt;/strong&gt; (marketplace): Homeowners land on your Angi profile. It&#x27;s not yet clear whether Angi&#x27;s usual fees apply." data-es="&lt;strong&gt;Angi&lt;/strong&gt; (marketplace): Los clientes llegan a tu perfil de Angi. Todavía no está claro si se aplican las tarifas normales de Angi."><strong>Angi</strong> (marketplace): Homeowners land on your Angi profile. It's not yet clear whether Angi's usual fees apply.</li>
+<li data-en="&lt;strong&gt;Thumbtack&lt;/strong&gt; (marketplace): Google lists it for quote requests. Thumbtack hadn&#x27;t made its own announcement as of Nov 4." data-es="&lt;strong&gt;Thumbtack&lt;/strong&gt; (marketplace): Google lo incluye para pedir cotizaciones. Thumbtack no había hecho su propio anuncio al 4 de noviembre."><strong>Thumbtack</strong> (marketplace): Google lists it for quote requests. Thumbtack hadn't made its own announcement as of Nov 4.</li>
+<li data-en="&lt;strong&gt;ServiceTitan&lt;/strong&gt; (scheduling software): “Coming soon.”" data-es="&lt;strong&gt;ServiceTitan&lt;/strong&gt; (software de agenda): “Muy pronto”."><strong>ServiceTitan</strong> (scheduling software): “Coming soon.”</li>
+</ul>
+        <p data-en="Not on any of these? You can still show up in AI Mode, and the result can link to your own website (&lt;a href=&quot;https://homepros.news/google-adds-home-services-booking-to-ai-mode/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Homepros&lt;/a&gt;, Nov 6). It&#x27;s the book and quote buttons that run through the partners." data-es="¿No usas ninguna de estas? Igual puedes aparecer en AI Mode, y el resultado puede enlazar a tu propio sitio web (&lt;a href=&quot;https://homepros.news/google-adds-home-services-booking-to-ai-mode/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Homepros&lt;/a&gt;, 6 de noviembre). Son los botones de reservar y cotizar los que pasan por los socios.">Not on any of these? You can still show up in AI Mode, and the result can link to your own website (<a href="https://homepros.news/google-adds-home-services-booking-to-ai-mode/" target="_blank" rel="noopener">Homepros</a>, Nov 6). It's the book and quote buttons that run through the partners.</p>
+        <img src="../images/blog/google-ai-mode-booking-paths.png" alt="Diagram: a homeowner asks Google AI Mode, AI Mode answers with local pros, and the customer can take one of three paths. The Book now button goes to Jobber or Housecall Pro and skips your website. The Get a quote button goes to Angi or Thumbtack and skips your website. A link to your website lands on your own site, where your tracking can see it." width="1344" height="622" loading="lazy">
+        <p class="author-note" data-en="Only the website link shows up in your own site&#x27;s analytics and forms. The other two land in the partner&#x27;s system." data-es="Solo el enlace a tu sitio web aparece en las analíticas y formularios de tu propio sitio. Los otros dos caen en el sistema del socio.">Only the website link shows up in your own site's analytics and forms. The other two land in the partner's system.</p>
+        <p data-en="One more catch, from Housecall Pro co-founder Roland Ligtenberg: AI agents tend to favor contractors they have more data on, and a contractor who&#x27;s booked out may not show up for same-day requests. That&#x27;s a partner&#x27;s view, not Google&#x27;s. Google says only that local results depend mainly on relevance, distance and popularity." data-es="Un detalle más, de Roland Ligtenberg, cofundador de Housecall Pro: los agentes de IA tienden a preferir a los contratistas de los que tienen más datos, y un contratista con la agenda llena puede no aparecer para pedidos del mismo día. Esa es la opinión de un socio, no de Google. Google solo dice que los resultados locales dependen sobre todo de la relevancia, la distancia y la popularidad.">One more catch, from Housecall Pro co-founder Roland Ligtenberg: AI agents tend to favor contractors they have more data on, and a contractor who's booked out may not show up for same-day requests. That's a partner's view, not Google's. Google says only that local results depend mainly on relevance, distance and popularity.</p>
+        <h2 data-en="Why it matters" data-es="Por qué importa">Why it matters</h2>
+        <p data-en="For plumbers, HVAC techs, roofers, cleaners and landscapers, the AI answer can now be the booking page. The customer may never see your website. If a competitor&#x27;s booking tool is connected and yours isn&#x27;t, they get the easy button." data-es="Para plomeros, técnicos de aire acondicionado, techeros, servicios de limpieza y jardineros, la respuesta de la IA ahora puede ser la página de reservas. Puede que el cliente nunca vea tu sitio web. Si la herramienta de reservas de tu competencia está conectada y la tuya no, el botón fácil es para ellos.">For plumbers, HVAC techs, roofers, cleaners and landscapers, the AI answer can now be the booking page. The customer may never see your website. If a competitor's booking tool is connected and yours isn't, they get the easy button.</p>
+        <p data-en="And your Google Business Profile matters more than ever. BrightLocal looked at about 1.9 million citations from 200,000 local searches in ChatGPT, AI Mode and AI Overviews. Google Business Profile was the single biggest source: 28.5% of all citations (&lt;a href=&quot;https://www.brightlocal.com/research/local-ai-visibility-study/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BrightLocal, Sep 2026&lt;/a&gt;)." data-es="Y tu Perfil de Empresa en Google importa más que nunca. BrightLocal analizó cerca de 1.9 millones de citas en 200,000 búsquedas locales en ChatGPT, AI Mode y AI Overviews. El Perfil de Empresa en Google fue la fuente más grande: el 28.5% de todas las citas (&lt;a href=&quot;https://www.brightlocal.com/research/local-ai-visibility-study/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BrightLocal, sept. 2026&lt;/a&gt;).">And your Google Business Profile matters more than ever. BrightLocal looked at about 1.9 million citations from 200,000 local searches in ChatGPT, AI Mode and AI Overviews. Google Business Profile was the single biggest source: 28.5% of all citations (<a href="https://www.brightlocal.com/research/local-ai-visibility-study/" target="_blank" rel="noopener">BrightLocal, Sep 2026</a>).</p>
+        <p data-en="Jobber&#x27;s own help page says reviews and a real booking form, not just a request form, may help AI Mode recommend you more often (&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;via SEJ&lt;/a&gt;). That&#x27;s a vendor&#x27;s advice, not a Google rule. But it&#x27;s cheap to follow." data-es="La propia página de ayuda de Jobber dice que las reseñas y un formulario de reserva real, no solo uno de solicitud, pueden ayudar a que AI Mode te recomiende más seguido (&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vía SEJ&lt;/a&gt;). Es un consejo de un proveedor, no una regla de Google. Pero seguirlo cuesta poco.">Jobber's own help page says reviews and a real booking form, not just a request form, may help AI Mode recommend you more often (<a href="https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/" target="_blank" rel="noopener">via SEJ</a>). That's a vendor's advice, not a Google rule. But it's cheap to follow.</p>
+        <p data-en="One honest note: this is brand new. Nobody has numbers yet on how many bookings it sends. We&#x27;ll watch it and report back." data-es="Una nota honesta: esto es nuevo. Nadie tiene todavía cifras de cuántas reservas genera. Lo vamos a seguir de cerca y les contamos.">One honest note: this is brand new. Nobody has numbers yet on how many bookings it sends. We'll watch it and report back.</p>
+        <h2 data-en="Do this week" data-es="Para esta semana">Do this week</h2>
+        <ul class="checklist">
+<li data-en="&lt;strong&gt;Find out what you use.&lt;/strong&gt; Write down your booking or scheduling tool, and any marketplace you&#x27;re on." data-es="&lt;strong&gt;Averigua qué usas.&lt;/strong&gt; Anota tu herramienta de reservas o de agenda, y cualquier marketplace donde estés."><strong>Find out what you use.</strong> Write down your booking or scheduling tool, and any marketplace you're on.</li>
+<li data-en="&lt;strong&gt;On Jobber?&lt;/strong&gt; Make sure you&#x27;re on a paid plan, your full address is filled in, and your Google Business Profile is connected at the same address." data-es="&lt;strong&gt;¿Usas Jobber?&lt;/strong&gt; Asegúrate de tener un plan pagado, la dirección completa y tu Perfil de Empresa en Google conectado en la misma dirección."><strong>On Jobber?</strong> Make sure you're on a paid plan, your full address is filled in, and your Google Business Profile is connected at the same address.</li>
+<li data-en="&lt;strong&gt;On Housecall Pro?&lt;/strong&gt; Log in and check whether Google booking shows as on. Don&#x27;t assume." data-es="&lt;strong&gt;¿Usas Housecall Pro?&lt;/strong&gt; Entra y revisa si las reservas de Google aparecen activadas. No lo des por hecho."><strong>On Housecall Pro?</strong> Log in and check whether Google booking shows as on. Don't assume.</li>
+<li data-en="&lt;strong&gt;On Angi?&lt;/strong&gt; Update your Angi profile. Ask Angi in writing whether AI Mode requests cost you a lead fee." data-es="&lt;strong&gt;¿Estás en Angi?&lt;/strong&gt; Actualiza tu perfil de Angi. Pregúntale a Angi por escrito si las solicitudes de AI Mode te cuestan una tarifa por cliente potencial."><strong>On Angi?</strong> Update your Angi profile. Ask Angi in writing whether AI Mode requests cost you a lead fee.</li>
+<li data-en="&lt;strong&gt;Match your address everywhere.&lt;/strong&gt; Same spelling on Google, your booking tool and your website. “St” vs. “Street” counts." data-es="&lt;strong&gt;Usa la misma dirección en todas partes.&lt;/strong&gt; Escrita igual en Google, en tu herramienta de reservas y en tu sitio web. “St” o “Street” hace diferencia."><strong>Match your address everywhere.</strong> Same spelling on Google, your booking tool and your website. “St” vs. “Street” counts.</li>
+<li data-en="&lt;strong&gt;Ask for two reviews.&lt;/strong&gt; Text two happy customers this week with your Google review link." data-es="&lt;strong&gt;Pide dos reseñas.&lt;/strong&gt; Mándales un mensaje esta semana a dos clientes contentos con tu enlace de reseñas de Google."><strong>Ask for two reviews.</strong> Text two happy customers this week with your Google review link.</li>
+<li data-en="&lt;strong&gt;Test it yourself.&lt;/strong&gt; Open Google AI Mode and ask: “Who can fix [your service] in [your town] today?” Screenshot what comes up. Do it again next month." data-es="&lt;strong&gt;Pruébalo tú mismo.&lt;/strong&gt; Abre Google AI Mode y pregunta: “¿Quién me puede arreglar [tu servicio] en [tu ciudad] hoy?” Toma una captura de lo que aparece. Repítelo el mes que viene."><strong>Test it yourself.</strong> Open Google AI Mode and ask: “Who can fix [your service] in [your town] today?” Screenshot what comes up. Do it again next month.</li>
+<li data-en="&lt;strong&gt;Track where bookings come from.&lt;/strong&gt; A booking made through Jobber, Housecall Pro or Angi may never touch your website or call tracking. Check the source on new jobs in those tools. And ask every new customer “How did you find us?” with “Google AI” as an option. Otherwise you&#x27;ll never know if this is working." data-es="&lt;strong&gt;Anota de dónde vienen las reservas.&lt;/strong&gt; Una reserva hecha por Jobber, Housecall Pro o Angi puede que nunca pase por tu sitio web ni por tu seguimiento de llamadas. Revisa el origen de los trabajos nuevos en esas herramientas. Y pregúntale a cada cliente nuevo “¿Cómo nos encontraste?”, con “IA de Google” como opción. Si no, nunca vas a saber si esto funciona."><strong>Track where bookings come from.</strong> A booking made through Jobber, Housecall Pro or Angi may never touch your website or call tracking. Check the source on new jobs in those tools. And ask every new customer “How did you find us?” with “Google AI” as an option. Otherwise you'll never know if this is working.</li>
+</ul>
+        <p data-en="Using none of these tools? You don&#x27;t need to switch tomorrow. But if you&#x27;re shopping for one anyway, put “works with Google AI Mode” on your list." data-es="¿No usas ninguna de estas herramientas? No tienes que cambiarte mañana. Pero si de todos modos estás buscando una, pon “funciona con Google AI Mode” en tu lista.">Using none of these tools? You don't need to switch tomorrow. But if you're shopping for one anyway, put “works with Google AI Mode” on your list.</p>
+        <h2 data-en="Tool I&#x27;m Using: Google Business Profile Messages" data-es="La herramienta que estoy usando: Mensajes del Perfil de Empresa en Google">Tool I'm Using: Google Business Profile Messages</h2>
+        <p data-en="Google is rolling out a free AI agent inside Business Profile messaging. Customers text you from Search and Maps through their phone&#x27;s regular messaging app. The AI answers routine questions and hands off anything it can&#x27;t answer. You can take over any chat, and every message shows up in your profile (&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Roundtable&lt;/a&gt;, Oct 29)." data-es="Google está lanzando un agente de IA gratis dentro de los mensajes del Perfil de Empresa. Los clientes te escriben desde Search y Maps con la app de mensajes normal de su teléfono. La IA responde las preguntas de rutina y te pasa lo que no puede responder. Puedes tomar el control de cualquier chat, y todos los mensajes aparecen en tu perfil (&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Search Engine Roundtable&lt;/a&gt;, 29 de octubre).">Google is rolling out a free AI agent inside Business Profile messaging. Customers text you from Search and Maps through their phone's regular messaging app. The AI answers routine questions and hands off anything it can't answer. You can take over any chat, and every message shows up in your profile (<a href="https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html" target="_blank" rel="noopener">Search Engine Roundtable</a>, Oct 29).</p>
+        <p data-en="Why it fits this week: if AI Mode sends a customer your way, the first reply they get may come from this agent. Make sure it gets things right." data-es="Por qué viene al caso esta semana: si AI Mode te manda un cliente, la primera respuesta que reciba puede venir de este agente. Asegúrate de que responda bien.">Why it fits this week: if AI Mode sends a customer your way, the first reply they get may come from this agent. Make sure it gets things right.</p>
+        <p data-en="&lt;strong&gt;Try it in 10 minutes:&lt;/strong&gt; open your Business Profile and look for “Messages” (it may have a red dot). Turn it on. Then text it two test questions, one in English and one in Spanish. If an answer is wrong, check your profile first: hours, services, service area." data-es="&lt;strong&gt;Pruébalo en 10 minutos:&lt;/strong&gt; abre tu Perfil de Empresa y busca “Mensajes” (puede tener un punto rojo). Actívalo. Después mándale dos preguntas de prueba, una en inglés y otra en español. Si una respuesta está mal, revisa primero tu perfil: horario, servicios y área de servicio."><strong>Try it in 10 minutes:</strong> open your Business Profile and look for “Messages” (it may have a red dot). Turn it on. Then text it two test questions, one in English and one in Spanish. If an answer is wrong, check your profile first: hours, services, service area.</p>
+        <p data-en="&lt;strong&gt;Heads-up:&lt;/strong&gt; it&#x27;s still rolling out, so you may not see it yet. The AI only answers customers whose phones support RCS. Everyone else&#x27;s texts go straight to your phone, and standard text rates may apply." data-es="&lt;strong&gt;Ojo:&lt;/strong&gt; todavía lo están lanzando, así que puede que aún no lo veas. La IA solo responde a clientes cuyos teléfonos admiten RCS. Los mensajes de los demás te llegan directo a tu teléfono, y se pueden aplicar las tarifas normales de mensajes."><strong>Heads-up:</strong> it's still rolling out, so you may not see it yet. The AI only answers customers whose phones support RCS. Everyone else's texts go straight to your phone, and standard text rates may apply.</p>
+        <h2 data-en="That&#x27;s it for this week" data-es="Eso es todo por esta semana">That's it for this week</h2>
+        <p data-en="AI isn&#x27;t just answering questions anymore. It&#x27;s starting to take the booking. Make sure it can take yours." data-es="La IA ya no solo responde preguntas. Está empezando a tomar las reservas. Asegúrate de que pueda tomar las tuyas.">AI isn't just answering questions anymore. It's starting to take the booking. Make sure it can take yours.</p>
+        <p data-en="Tell me what you found when you tested AI Mode." data-es="Cuéntame qué encontraste cuando probaste AI Mode.">Tell me what you found when you tested AI Mode.</p>
+        <p class="takeaway" data-en="We don&#x27;t do quiet." data-es="We don&#x27;t do quiet.">We don't do quiet.</p>
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+        <ul>
+<li data-en="&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Adds Home Service Booking &amp;amp; Quote Links To AI Mode&lt;/a&gt;, Search Engine Journal, November 4, 2026" data-es="&lt;a href=&quot;https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Adds Home Service Booking &amp;amp; Quote Links To AI Mode&lt;/a&gt;, Search Engine Journal, 4 de noviembre de 2026"><a href="https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/" target="_blank" rel="noopener">Google Adds Home Service Booking &amp; Quote Links To AI Mode</a>, Search Engine Journal, November 4, 2026</li>
+<li data-en="&lt;a href=&quot;https://x.com/rmstein/status/2118027605018632408&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Robby Stein&#x27;s announcement on X&lt;/a&gt;, Google Search VP" data-es="&lt;a href=&quot;https://x.com/rmstein/status/2118027605018632408&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Anuncio de Robby Stein en X&lt;/a&gt;, vicepresidente de Google Search"><a href="https://x.com/rmstein/status/2118027605018632408" target="_blank" rel="noopener">Robby Stein's announcement on X</a>, Google Search VP</li>
+<li data-en="&lt;a href=&quot;https://homepros.news/google-adds-home-services-booking-to-ai-mode/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google adds home services booking to AI Mode&lt;/a&gt;, Homepros, November 6, 2026" data-es="&lt;a href=&quot;https://homepros.news/google-adds-home-services-booking-to-ai-mode/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google adds home services booking to AI Mode&lt;/a&gt;, Homepros, 6 de noviembre de 2026"><a href="https://homepros.news/google-adds-home-services-booking-to-ai-mode/" target="_blank" rel="noopener">Google adds home services booking to AI Mode</a>, Homepros, November 6, 2026</li>
+<li data-en="&lt;a href=&quot;https://www.brightlocal.com/research/local-ai-visibility-study/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Local AI Visibility Study&lt;/a&gt;, BrightLocal, September 16, 2026" data-es="&lt;a href=&quot;https://www.brightlocal.com/research/local-ai-visibility-study/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Local AI Visibility Study&lt;/a&gt;, BrightLocal, 16 de septiembre de 2026"><a href="https://www.brightlocal.com/research/local-ai-visibility-study/" target="_blank" rel="noopener">Local AI Visibility Study</a>, BrightLocal, September 16, 2026</li>
+<li data-en="&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Business Profiles AI-Powered Messaging Expands&lt;/a&gt;, Search Engine Roundtable, October 29, 2026" data-es="&lt;a href=&quot;https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Business Profiles AI-Powered Messaging Expands&lt;/a&gt;, Search Engine Roundtable, 29 de octubre de 2026"><a href="https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html" target="_blank" rel="noopener">Google Business Profiles AI-Powered Messaging Expands</a>, Search Engine Roundtable, October 29, 2026</li>
+</ul>
+
+      </div>
+
+      <div class="faq-block">
+      <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+      <h3 data-en="What is Google AI Mode&#x27;s home-services booking?" data-es="¿Qué son las reservas de servicios para el hogar en Google AI Mode?">What is Google AI Mode's home-services booking?</h3>
+      <p data-en="Since November 4, 2026, Google AI Mode in the U.S. shows Book and Get a quote links for home-service searches. The links run through Jobber, Housecall Pro, Angi and Thumbtack, with ServiceTitan coming soon." data-es="Desde el 4 de noviembre de 2026, Google AI Mode en EE. UU. muestra enlaces para Reservar y Pedir cotización en búsquedas de servicios para el hogar. Los enlaces pasan por Jobber, Housecall Pro, Angi y Thumbtack, y ServiceTitan llega pronto.">Since November 4, 2026, Google AI Mode in the U.S. shows Book and Get a quote links for home-service searches. The links run through Jobber, Housecall Pro, Angi and Thumbtack, with ServiceTitan coming soon.</p>
+      <h3 data-en="Do I need one of these platforms to show up in AI Mode?" data-es="¿Necesito una de estas plataformas para aparecer en AI Mode?">Do I need one of these platforms to show up in AI Mode?</h3>
+      <p data-en="No. You can still appear in AI Mode, and the result can link to your own website. Only the book and quote buttons run through the partner platforms." data-es="No. Igual puedes aparecer en AI Mode, y el resultado puede enlazar a tu propio sitio web. Solo los botones de reservar y cotizar pasan por las plataformas socias.">No. You can still appear in AI Mode, and the result can link to your own website. Only the book and quote buttons run through the partner platforms.</p>
+      <h3 data-en="Do the partners charge a lead fee for AI Mode bookings?" data-es="¿Los socios cobran por cliente potencial en las reservas de AI Mode?">Do the partners charge a lead fee for AI Mode bookings?</h3>
+      <p data-en="Jobber and Housecall Pro say they don&#x27;t charge lead fees for these bookings. It&#x27;s not yet clear whether Angi&#x27;s usual fees apply to requests from AI Mode." data-es="Jobber y Housecall Pro dicen que no cobran por cliente potencial en estas reservas. Todavía no está claro si las tarifas normales de Angi se aplican a las solicitudes de AI Mode.">Jobber and Housecall Pro say they don't charge lead fees for these bookings. It's not yet clear whether Angi's usual fees apply to requests from AI Mode.</p>
+      <h3 data-en="Will my website analytics see these bookings?" data-es="¿Mis analíticas web van a ver estas reservas?">Will my website analytics see these bookings?</h3>
+      <p data-en="Not always. A booking made through a partner platform may never touch your website or call tracking. Check the source on new jobs in your booking tool, and ask every new customer how they found you." data-es="No siempre. Una reserva hecha por una plataforma socia puede que nunca pase por tu sitio web ni por tu seguimiento de llamadas. Revisa el origen de los trabajos nuevos en tu herramienta de reservas, y pregúntale a cada cliente nuevo cómo te encontró.">Not always. A booking made through a partner platform may never touch your website or call tracking. Check the source on new jobs in your booking tool, and ask every new customer how they found you.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3 data-en="Want to know what AI says about your business today?" data-es="¿Quieres saber qué dice hoy la IA sobre tu negocio?">Want to know what AI says about your business today?</h3>
+        <a href="/audit" class="btn btn-primary btn-lg" data-en="Run the free AI Visibility Check" data-es="Haz el diagnóstico gratis de visibilidad en IA">Run the free AI Visibility Check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/about" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="/services" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="/portfolio" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="/contact" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
