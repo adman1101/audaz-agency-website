@@ -16,7 +16,9 @@ const LANG = {
 };
 
 // --- State ---
-let currentLang = localStorage.getItem('audaz-lang') || 'en';
+// A page whose <html lang="es"> is a real Spanish page always shows Spanish.
+const PAGE_LANG = (document.documentElement.lang || 'en').slice(0, 2);
+let currentLang = PAGE_LANG === 'es' ? 'es' : (localStorage.getItem('audaz-lang') || 'en');
 
 // --- Init ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,8 +41,14 @@ function initLang() {
 }
 
 function setLang(lang) {
-  currentLang = lang;
   localStorage.setItem('audaz-lang', lang);
+  // If this page has a real version in the other language, go there (that's what Google indexes).
+  const alt = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+  if (alt && lang !== PAGE_LANG) {
+    const target = new URL(alt.href);
+    if (target.pathname !== location.pathname) { location.href = target.pathname + location.hash; return; }
+  }
+  currentLang = lang;
   applyLang(lang);
   // Dispatch event for page-specific handlers
   document.dispatchEvent(new CustomEvent('langChange', { detail: { lang } }));
