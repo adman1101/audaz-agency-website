@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A 60-city test found ChatGPT named the local expert in just 1 of 60 answers. It cited directories instead. Here are the five things ChatGPT checks before it recommends a local business, and a checklist for this week.">
+  <meta property="og:title" content="What ChatGPT Reads Before It Recommends You">
+  <meta property="og:description" content="A 60-city test found ChatGPT named the local expert in just 1 of 60 answers. It cited directories instead. Here are the five things ChatGPT checks before it recommends a local business, and a checklist for this week.">
+  <meta property="og:url" content="https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-21">
+  <meta property="article:author" content="Rene Galan">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends" />
+
+  <title>What ChatGPT Reads Before It Recommends You | AUDAZ Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246149326.js"></script>
+
+  <style>
+    .animate { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .animate.visible { opacity: 1; transform: translateY(0); }
+
+    /* Article-specific styles — scoped so they don't affect other pages */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .article-meta { font-size: 0.9rem; color: #6b6b66; margin: 0.75rem 0 2rem; }
+    .article-meta span + span::before { content: " · "; margin: 0 0.35rem; }
+    .answer-block { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.6; }
+    .article-body h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .article-body p { line-height: 1.7; margin-bottom: 1.25rem; }
+    .article-body a { color: inherit; text-decoration: underline; text-decoration-color: #EF9F27; text-underline-offset: 2px; }
+    .article-body ul, .article-body ol { line-height: 1.7; margin-bottom: 1.25rem; padding-left: 1.4rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body ul.checklist { list-style: none; padding-left: 0; }
+    .article-body ul.checklist li { padding-left: 1.8rem; position: relative; }
+    .article-body ul.checklist li::before { content: "☐"; position: absolute; left: 0; color: #EF9F27; }
+    .article-body img { width: 100%; height: auto; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .article-body .short-answer { background: #fff7e8; border-left: 4px solid #EF9F27; padding: 1rem 1.25rem; }
+    .article-body .takeaway { border-top: 2px solid #EF9F27; border-bottom: 2px solid #EF9F27; padding: 1rem 0; margin: 2rem 0; font-weight: 700; }
+    .article-body .author-note { color: #6b6b66; font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; -webkit-overflow-scrolling: touch; }
+    .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; min-width: 560px; }
+    .article-body th { text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b66; padding: 0 0.75rem 0.6rem 0; border-bottom: 1px solid #cfc9bc; font-weight: 600; vertical-align: bottom; }
+    .article-body td { padding: 0.75rem 0.75rem 0.75rem 0; border-bottom: 1px solid #e5e0d5; vertical-align: top; }
+    .article-body td:first-child { font-weight: 700; }
+    .article-body td .sub-note { display: block; font-weight: 400; font-size: 0.8rem; color: #6b6b66; margin-top: 0.2rem; }
+    .faq-block { margin-top: 3rem; border-top: 1px solid #e5e0d5; padding-top: 2rem; }
+    .faq-block h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+    .faq-block p { margin-bottom: 0; color: #4a4a46; }
+    .article-cta { background: #0A0A0A; color: #F6F3EC; border-radius: 16px; padding: 2.25rem 2rem; margin: 3rem 0 2rem; text-align: center; }
+    .article-cta h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .article-cta p { color: #bdb9b0; margin-bottom: 1.5rem; }
+    .article-body h3 { margin-top: 2rem; margin-bottom: 0.6rem; font-size: 1.25rem; }
+    .article-body blockquote { border-left: 4px solid #EF9F27; margin: 0 0 1.25rem; padding: 0.75rem 1.25rem; background: #fff7e8; font-style: italic; line-height: 1.6; }
+    .article-body table.equal-cols td:first-child { font-weight: 400; }
+    .article-body table.score-table th, .article-body table.score-table td { text-align: right; }
+    .article-body table.score-table th:first-child, .article-body table.score-table td:first-child { text-align: left; }
+    .article-body table.score-table td:nth-child(2) { font-weight: 700; color: #B8730A; }
+  </style>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:image" content="https://audaz.agency/images/blog/what-chatgpt-reads-hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1008">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends#article",
+      "headline": "What ChatGPT Reads Before It Recommends You",
+      "description": "A 60-city test found ChatGPT named the local expert in just 1 of 60 answers. It cited directories instead. Here are the five things ChatGPT checks before it recommends a local business, and a checklist for this week.",
+      "image": "https://audaz.agency/images/blog/what-chatgpt-reads-hero.jpg",
+      "url": "https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends",
+      "datePublished": "2026-11-21",
+      "dateModified": "2026-11-21",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://audaz.agency/#rene-galan",
+        "name": "Rene Galan",
+        "jobTitle": "Co-Founder & AI Consulting Director",
+        "url": "https://audaz.agency/about"
+      },
+      "publisher": {
+        "@id": "https://audaz.agency/#organization"
+      },
+      "mainEntityOfPage": "https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The AI Visibility Brief",
+        "url": "https://aivisibilitybrief.substack.com"
+      },
+      "about": [
+        "AI visibility",
+        "ChatGPT",
+        "Local SEO",
+        "Google Business Profile",
+        "Online directories"
+      ],
+      "keywords": "ChatGPT recommendations, AI visibility, local business, directories, Clutch, Google Business Profile, reviews, bilingual marketing, AEO, GEO, small business marketing"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does ChatGPT read before it recommends a local business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not just your website. In a 60-city test by SEO Sets, 44 of 60 ChatGPT answers cited at least one directory or listing site, and the local consultant was named in only 1 of 60. In our own Miami checks, the same five things kept coming up: a clear Google Business Profile, prices on the website, a page for the town, a local directory listing and reviews on other sites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which directories should my business be on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your industry. For agencies it might be Clutch, for restaurants Yelp or TripAdvisor, for contractors Angi or the BBB. The fastest way to find out is to ask ChatGPT for the best businesses like yours in your city and write down the sites it cites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does being bilingual help with AI recommendations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can, if you say it clearly. In our English and Spanish checks, ChatGPT went out of its way to mention businesses that clearly state they work in both languages. If your bilingual service only appears in a photo or a footnote, AI may never know."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://audaz.agency/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://audaz.agency/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What ChatGPT reads before it recommends you",
+          "item": "https://audaz.agency/blog/what-chatgpt-reads-before-it-recommends"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="14,2 6,14 11,14 10,22 18,10 13,10 14,2" fill="#EF9F27"/></svg>
+        <span class="nav-logo-text">AUDAZ</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/about" class="nav-link" id="nav-about">About</a>
+        <a href="/services" class="nav-link" id="nav-services">Services</a>
+        <a href="/portfolio" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="/blog" class="nav-link" id="nav-blog">Blog</a>
+        <a href="/contact" class="nav-link" id="nav-contact">Contact</a>
+        <a href="/audit" class="nav-link" id="nav-audit">Free Audit</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          <button class="lang-btn" data-lang="es" id="btn-es">ES</button>
+        </div>
+
+        <a href="/contact" class="btn btn-danger btn-sm" id="nav-book">Book a call</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Article -->
+  <article class="section">
+    <div class="article-wrap">
+
+      <span class="section-label" data-en="THE AI VISIBILITY BRIEF · ISSUE 14" data-es="THE AI VISIBILITY BRIEF · EDICIÓN 14">THE AI VISIBILITY BRIEF · ISSUE 14</span>
+
+      <h1 data-en="What ChatGPT Reads Before It Recommends You" data-es="Lo que ChatGPT lee antes de recomendarte">What ChatGPT Reads Before It Recommends You</h1>
+
+      <div class="article-meta">
+        <span data-en="By Rene Galan, Co-Founder &amp;amp; AI Consulting Director" data-es="Por Rene Galan, Cofundador y Director de Consultoría en IA">By Rene Galan, Co-Founder &amp; AI Consulting Director</span>
+        <span data-en="Published November 21, 2026" data-es="Publicado el 21 de noviembre de 2026">Published November 21, 2026</span>
+        <span data-en="Updated November 21, 2026" data-es="Actualizado el 21 de noviembre de 2026">Updated November 21, 2026</span>
+      </div>
+
+      <div class="answer-block" data-en="ChatGPT usually isn&#x27;t reading your website to decide who to recommend. In a 60-city test, it named the real local expert in just 1 of 60 answers, and 44 of 60 answers cited directory or listing sites instead. Five things keep coming up: a Google Business Profile that says exactly what you do, prices on your website, a page for your town, a local directory listing and reviews on sites you don&#x27;t own." data-es="ChatGPT normalmente no lee tu sitio web para decidir a quién recomendar. En una prueba en 60 ciudades, nombró al experto local real en solo 1 de 60 respuestas, y 44 de 60 respuestas citaron directorios o sitios de listados. Cinco cosas se repiten: un Perfil de Empresa en Google que diga exactamente lo que haces, precios en tu sitio web, una página para tu ciudad, un listado en un directorio local y reseñas en sitios que no son tuyos.">ChatGPT usually isn't reading your website to decide who to recommend. In a 60-city test, it named the real local expert in just 1 of 60 answers, and 44 of 60 answers cited directory or listing sites instead. Five things keep coming up: a Google Business Profile that says exactly what you do, prices on your website, a page for your town, a local directory listing and reviews on sites you don't own.</div>
+
+      <img src="../images/blog/what-chatgpt-reads-hero.jpg" alt="The AI Visibility Brief, Issue 14: What ChatGPT Reads Before It Recommends You. Five things: Google Business Profile, prices on your site, a page for your town, local directories, reviews." width="1920" height="1008" loading="eager" style="width:100%;height:auto;border-radius:12px;margin:0 0 2rem;">
+
+      <div class="article-body">
+
+        <p data-en="Last week I claimed AUDAZ&#x27;s profile in ChatGPT. Claiming a profile tells ChatGPT who you are. It doesn&#x27;t make ChatGPT pick you." data-es="La semana pasada reclamé el perfil de AUDAZ en ChatGPT. Reclamar un perfil le dice a ChatGPT quién eres. No hace que ChatGPT te escoja.">Last week I claimed AUDAZ's profile in ChatGPT. Claiming a profile tells ChatGPT who you are. It doesn't make ChatGPT pick you.</p>
+        <p data-en="So this week I looked at what ChatGPT actually reads before it recommends a local business. A new 60-city test says it&#x27;s usually not your website." data-es="Así que esta semana revisé lo que ChatGPT realmente lee antes de recomendar un negocio local. Una nueva prueba en 60 ciudades dice que casi nunca es tu sitio web.">So this week I looked at what ChatGPT actually reads before it recommends a local business. A new 60-city test says it's usually not your website.</p>
+        <h2 data-en="What a 60-city test found" data-es="Lo que encontró una prueba en 60 ciudades">What a 60-city test found</h2>
+        <p data-en="On Nov 18, a company called &lt;a href=&quot;https://seosets.com/research/chatgpt-local-seo-recommendations&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SEO Sets&lt;/a&gt; asked ChatGPT to name the best small SEO firms in 60 cities across six countries. Web search was on. In each city, there was a real local consultant to look for." data-es="El 18 de noviembre, una empresa llamada &lt;a href=&quot;https://seosets.com/research/chatgpt-local-seo-recommendations&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SEO Sets&lt;/a&gt; le pidió a ChatGPT que nombrara las mejores firmas pequeñas de SEO en 60 ciudades de seis países. La búsqueda web estaba activada. En cada ciudad había un consultor local real que buscar.">On Nov 18, a company called <a href="https://seosets.com/research/chatgpt-local-seo-recommendations" target="_blank" rel="noopener">SEO Sets</a> asked ChatGPT to name the best small SEO firms in 60 cities across six countries. Web search was on. In each city, there was a real local consultant to look for.</p>
+        <ul>
+<li data-en="ChatGPT named the local consultant in &lt;strong&gt;1 of 60&lt;/strong&gt; answers." data-es="ChatGPT nombró al consultor local en &lt;strong&gt;1 de 60&lt;/strong&gt; respuestas.">ChatGPT named the local consultant in <strong>1 of 60</strong> answers.</li>
+<li data-en="&lt;strong&gt;44 of 60&lt;/strong&gt; answers cited at least one directory or listing site." data-es="&lt;strong&gt;44 de 60&lt;/strong&gt; respuestas citaron al menos un directorio o sitio de listados."><strong>44 of 60</strong> answers cited at least one directory or listing site.</li>
+<li data-en="Each answer cited &lt;strong&gt;3.4&lt;/strong&gt; sites on average." data-es="Cada respuesta citó &lt;strong&gt;3.4&lt;/strong&gt; sitios en promedio.">Each answer cited <strong>3.4</strong> sites on average.</li>
+</ul>
+        <img src="../images/blog/what-chatgpt-reads-sites-chart.png" alt="Bar chart: the sites ChatGPT cited most in a 60-city test. clutch.co in 28 of 60 answers, themanifest.com in 16, expertise.com, agencies.semrush.com and designrush.com in 7 each, reviews.birdeye.com in 5, reddit.com in 2. Source: SEO Sets, run Nov 18, 2026." width="1500" height="950" loading="lazy">
+        <p data-en="A fair warning: this is a small test. It used one AI tool, one run per city and a sample the company picked itself. SEO Sets also sells AI-visibility tools. In its own words, it&#x27;s “our result, not a rule.” But the pattern is hard to ignore. As they put it: “the consultant&#x27;s own site was almost never what ChatGPT reached for.”" data-es="Una advertencia justa: es una prueba pequeña. Usó una sola herramienta de IA, una sola búsqueda por ciudad y una muestra que la empresa escogió. SEO Sets también vende herramientas de visibilidad en IA. En sus propias palabras, es “nuestro resultado, no una regla”. Pero el patrón es difícil de ignorar: el sitio propio del consultor casi nunca fue lo que ChatGPT buscó.">A fair warning: this is a small test. It used one AI tool, one run per city and a sample the company picked itself. SEO Sets also sells AI-visibility tools. In its own words, it's “our result, not a rule.” But the pattern is hard to ignore. As they put it: “the consultant's own site was almost never what ChatGPT reached for.”</p>
+        <h2 data-en="What ChatGPT reads instead" data-es="Lo que ChatGPT lee en su lugar">What ChatGPT reads instead</h2>
+        <p data-en="This month I went through the sources ChatGPT cited when asked to recommend local businesses in Miami, in English and in Spanish. The same five things kept coming up:" data-es="Este mes revisé las fuentes que citó ChatGPT cuando le pedí recomendar negocios locales en Miami, en inglés y en español. Las mismas cinco cosas aparecían una y otra vez:">This month I went through the sources ChatGPT cited when asked to recommend local businesses in Miami, in English and in Spanish. The same five things kept coming up:</p>
+        <ol>
+<li data-en="&lt;strong&gt;A Google Business Profile that says exactly what you do.&lt;/strong&gt; ChatGPT cited Google listings again and again, often as “local business listing.”" data-es="&lt;strong&gt;Un Perfil de Empresa en Google que diga exactamente lo que haces.&lt;/strong&gt; ChatGPT citó los perfiles de Google una y otra vez, muchas veces como “listado de negocio local”."><strong>A Google Business Profile that says exactly what you do.</strong> ChatGPT cited Google listings again and again, often as “local business listing.”</li>
+<li data-en="&lt;strong&gt;Prices on your website.&lt;/strong&gt; Even a “starting at” number. ChatGPT repeated the prices in its answers." data-es="&lt;strong&gt;Precios en tu sitio web.&lt;/strong&gt; Aunque sea un “desde”. ChatGPT repitió los precios en sus respuestas."><strong>Prices on your website.</strong> Even a “starting at” number. ChatGPT repeated the prices in its answers.</li>
+<li data-en="&lt;strong&gt;A page for the town.&lt;/strong&gt; When a business had a page just for one town, ChatGPT used it for questions about that town." data-es="&lt;strong&gt;Una página para tu ciudad.&lt;/strong&gt; Cuando un negocio tenía una página solo para una ciudad, ChatGPT la usó para preguntas sobre esa ciudad."><strong>A page for the town.</strong> When a business had a page just for one town, ChatGPT used it for questions about that town.</li>
+<li data-en="&lt;strong&gt;A listing in a local directory.&lt;/strong&gt; A single page listing local firms in one category showed up again and again." data-es="&lt;strong&gt;Un listado en un directorio local.&lt;/strong&gt; Una sola página con firmas locales de una categoría apareció una y otra vez."><strong>A listing in a local directory.</strong> A single page listing local firms in one category showed up again and again.</li>
+<li data-en="&lt;strong&gt;Reviews on a site you don&#x27;t own.&lt;/strong&gt; ChatGPT repeated star ratings and review counts." data-es="&lt;strong&gt;Reseñas en un sitio que no es tuyo.&lt;/strong&gt; ChatGPT repitió las estrellas y la cantidad de reseñas."><strong>Reviews on a site you don't own.</strong> ChatGPT repeated star ratings and review counts.</li>
+</ol>
+        <p data-en="Notice what&#x27;s missing: a beautiful homepage. ChatGPT doesn&#x27;t care how your site looks. It cares whether the facts it needs are written down, in plain words, in places it trusts." data-es="Fíjate en lo que falta: una página de inicio bonita. A ChatGPT no le importa cómo se ve tu sitio. Le importa que los datos que necesita estén escritos, en palabras simples, en lugares en los que confía.">Notice what's missing: a beautiful homepage. ChatGPT doesn't care how your site looks. It cares whether the facts it needs are written down, in plain words, in places it trusts.</p>
+        <h2 data-en="Why this matters for your business" data-es="Por qué esto importa para tu negocio">Why this matters for your business</h2>
+        <p data-en="When ChatGPT recommends a business, it often trusts other sites more than the business&#x27;s own website. That&#x27;s good news. Most of the five things above take an afternoon, not a redesign." data-es="Cuando ChatGPT recomienda un negocio, muchas veces confía más en otros sitios que en el sitio web del propio negocio. Eso es una buena noticia. La mayoría de las cinco cosas de arriba toman una tarde, no un rediseño.">When ChatGPT recommends a business, it often trusts other sites more than the business's own website. That's good news. Most of the five things above take an afternoon, not a redesign.</p>
+        <p data-en="It also explains a common frustration. You fix your website, and AI still doesn&#x27;t recommend you. &lt;a href=&quot;/blog/ai-doesnt-recommend-you-after-website-fix&quot;&gt;We learned that the hard way&lt;/a&gt;. Your site might be fine. ChatGPT may just be reading somewhere else." data-es="También explica una frustración común. Arreglas tu sitio web y la IA sigue sin recomendarte. &lt;a href=&quot;/blog/ai-doesnt-recommend-you-after-website-fix&quot;&gt;Lo aprendimos por las malas&lt;/a&gt;. Puede que tu sitio esté bien. Es que ChatGPT está leyendo en otra parte.">It also explains a common frustration. You fix your website, and AI still doesn't recommend you. <a href="/blog/ai-doesnt-recommend-you-after-website-fix">We learned that the hard way</a>. Your site might be fine. ChatGPT may just be reading somewhere else.</p>
+        <p data-en="The directories change by industry. For a restaurant, it might be Yelp or TripAdvisor. For a contractor, Angi or the BBB. For agencies, Clutch. The only way to know is to ask ChatGPT and look at what it cites." data-es="Los directorios cambian según la industria. Para un restaurante, puede ser Yelp o TripAdvisor. Para un contratista, Angi o el BBB. Para agencias, Clutch. La única forma de saberlo es preguntarle a ChatGPT y ver qué cita.">The directories change by industry. For a restaurant, it might be Yelp or TripAdvisor. For a contractor, Angi or the BBB. For agencies, Clutch. The only way to know is to ask ChatGPT and look at what it cites.</p>
+        <p data-en="&lt;strong&gt;For bilingual businesses:&lt;/strong&gt; say it plainly. In both English and Spanish answers, ChatGPT went out of its way to praise businesses that clearly state they work in English and Spanish. If you serve customers in both languages but only say so in a photo or a footnote, ChatGPT may never know." data-es="&lt;strong&gt;Para negocios bilingües:&lt;/strong&gt; dilo claramente. Tanto en las respuestas en inglés como en español, ChatGPT destacó a los negocios que dicen claramente que trabajan en inglés y en español. Si atiendes en los dos idiomas pero solo lo dices en una foto o en letra pequeña, puede que ChatGPT nunca se entere."><strong>For bilingual businesses:</strong> say it plainly. In both English and Spanish answers, ChatGPT went out of its way to praise businesses that clearly state they work in English and Spanish. If you serve customers in both languages but only say so in a photo or a footnote, ChatGPT may never know.</p>
+        <h2 data-en="Do this week: make it easy for ChatGPT to pick you" data-es="Para esta semana: hazle fácil a ChatGPT escogerte">Do this week: make it easy for ChatGPT to pick you</h2>
+        <ul class="checklist">
+<li data-en="&lt;strong&gt;Ask ChatGPT the customer&#x27;s question.&lt;/strong&gt; “Who are the best [your service] in [your city]? Name specific businesses, with sources.” Use a private window or a Temporary Chat, so your own history doesn&#x27;t tilt the answer." data-es="&lt;strong&gt;Hazle a ChatGPT la pregunta de tu cliente.&lt;/strong&gt; “¿Cuáles son los mejores [tu servicio] en [tu ciudad]? Nombra negocios específicos, con fuentes.” Usa una ventana privada o un Chat temporal, para que tu propio historial no incline la respuesta."><strong>Ask ChatGPT the customer's question.</strong> “Who are the best [your service] in [your city]? Name specific businesses, with sources.” Use a private window or a Temporary Chat, so your own history doesn't tilt the answer.</li>
+<li data-en="&lt;strong&gt;Ask again in Spanish.&lt;/strong&gt; Same question, same city." data-es="&lt;strong&gt;Pregunta otra vez en español.&lt;/strong&gt; La misma pregunta, la misma ciudad."><strong>Ask again in Spanish.</strong> Same question, same city.</li>
+<li data-en="&lt;strong&gt;Write down every site it cites.&lt;/strong&gt;" data-es="&lt;strong&gt;Anota cada sitio que cite.&lt;/strong&gt;"><strong>Write down every site it cites.</strong></li>
+<li data-en="&lt;strong&gt;Fix your Google Business Profile.&lt;/strong&gt; Describe what you do in your customers&#x27; words, in English and Spanish if you serve both." data-es="&lt;strong&gt;Arregla tu Perfil de Empresa en Google.&lt;/strong&gt; Describe lo que haces con las palabras de tus clientes, en inglés y en español si atiendes en los dos."><strong>Fix your Google Business Profile.</strong> Describe what you do in your customers' words, in English and Spanish if you serve both.</li>
+<li data-en="&lt;strong&gt;Put a starting price on your website,&lt;/strong&gt; and add a page for the town you serve most." data-es="&lt;strong&gt;Pon un precio “desde” en tu sitio web,&lt;/strong&gt; y agrega una página para la ciudad que más atiendes."><strong>Put a starting price on your website,</strong> and add a page for the town you serve most.</li>
+<li data-en="&lt;strong&gt;Claim or fix your listing on the top two directories it cited.&lt;/strong&gt; Use the same name, address and phone everywhere." data-es="&lt;strong&gt;Reclama o corrige tu listado en los dos directorios principales que citó.&lt;/strong&gt; Usa el mismo nombre, dirección y teléfono en todas partes."><strong>Claim or fix your listing on the top two directories it cited.</strong> Use the same name, address and phone everywhere.</li>
+<li data-en="&lt;strong&gt;Ask three happy customers for a review&lt;/strong&gt; on one of those sites." data-es="&lt;strong&gt;Pídeles una reseña a tres clientes contentos&lt;/strong&gt; en uno de esos sitios."><strong>Ask three happy customers for a review</strong> on one of those sites.</li>
+<li data-en="&lt;strong&gt;Set a reminder for 30 days out.&lt;/strong&gt; Ask the same questions again and see what changed." data-es="&lt;strong&gt;Ponte un recordatorio para dentro de 30 días.&lt;/strong&gt; Haz las mismas preguntas otra vez y mira qué cambió."><strong>Set a reminder for 30 days out.</strong> Ask the same questions again and see what changed.</li>
+</ul>
+        <h2 data-en="Tool I&#x27;m Using: Google Search Console&#x27;s AI report" data-es="La herramienta que estoy usando: el reporte de IA de Google Search Console">Tool I'm Using: Google Search Console's AI report</h2>
+        <p data-en="ChatGPT now shows businesses some of its numbers. Google does too, if you know where to look." data-es="ChatGPT ya les muestra a los negocios algunos de sus números. Google también, si sabes dónde buscar.">ChatGPT now shows businesses some of its numbers. Google does too, if you know where to look.</p>
+        <p data-en="Search Console has a free &lt;a href=&quot;https://support.google.com/webmasters/answer/16984139&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Generative AI performance report&lt;/a&gt;. It shows how many times links to your site appeared in Google&#x27;s AI Overviews and AI Mode. You can break it down by page, country, date and device. Google says it has been open to all websites since Aug 31, 2026." data-es="Search Console tiene un &lt;a href=&quot;https://support.google.com/webmasters/answer/16984139&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;reporte gratis de rendimiento en IA generativa&lt;/a&gt;. Muestra cuántas veces aparecieron enlaces a tu sitio en los AI Overviews y en AI Mode de Google. Puedes verlo por página, país, fecha y dispositivo. Google dice que está disponible para todos los sitios desde el 31 de agosto de 2026.">Search Console has a free <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener">Generative AI performance report</a>. It shows how many times links to your site appeared in Google's AI Overviews and AI Mode. You can break it down by page, country, date and device. Google says it has been open to all websites since Aug 31, 2026.</p>
+        <p data-en="Two things to know. It counts appearances, not clicks. And it may not show up yet if your site gets very few AI appearances." data-es="Dos cosas que debes saber. Cuenta apariciones, no clics. Y puede que todavía no aparezca si tu sitio sale muy pocas veces en la IA.">Two things to know. It counts appearances, not clicks. And it may not show up yet if your site gets very few AI appearances.</p>
+        <p data-en="&lt;strong&gt;Try it in under 30 minutes:&lt;/strong&gt; Open Search Console, find the Generative AI report and write down the number. If you claimed your ChatGPT profile after last week&#x27;s issue, write your ChatGPT mentions next to it (&lt;a href=&quot;https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;how to claim it&lt;/a&gt;). That&#x27;s your AI visibility starting point. Check both again in 30 days, after you work through the checklist." data-es="&lt;strong&gt;Pruébalo en menos de 30 minutos:&lt;/strong&gt; Abre Search Console, busca el reporte de IA generativa y anota el número. Si reclamaste tu perfil en ChatGPT después de la edición de la semana pasada, anota al lado tus menciones en ChatGPT (&lt;a href=&quot;https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cómo reclamarlo&lt;/a&gt;). Ese es tu punto de partida de visibilidad en IA. Revisa los dos otra vez en 30 días, después de completar la lista."><strong>Try it in under 30 minutes:</strong> Open Search Console, find the Generative AI report and write down the number. If you claimed your ChatGPT profile after last week's issue, write your ChatGPT mentions next to it (<a href="https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt" target="_blank" rel="noopener">how to claim it</a>). That's your AI visibility starting point. Check both again in 30 days, after you work through the checklist.</p>
+        <p class="takeaway" data-en="We don&#x27;t do quiet." data-es="We don&#x27;t do quiet.">We don't do quiet.</p>
+        <h2 data-en="Sources" data-es="Fuentes">Sources</h2>
+        <ul>
+<li data-en="&lt;a href=&quot;https://seosets.com/research/chatgpt-local-seo-recommendations&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ChatGPT local SEO recommendations: a 60-city test&lt;/a&gt;, SEO Sets, run November 18, 2026" data-es="&lt;a href=&quot;https://seosets.com/research/chatgpt-local-seo-recommendations&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ChatGPT local SEO recommendations: a 60-city test&lt;/a&gt;, SEO Sets, realizada el 18 de noviembre de 2026"><a href="https://seosets.com/research/chatgpt-local-seo-recommendations" target="_blank" rel="noopener">ChatGPT local SEO recommendations: a 60-city test</a>, SEO Sets, run November 18, 2026</li>
+<li data-en="&lt;a href=&quot;https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Setting up your business on ChatGPT&lt;/a&gt;, OpenAI Help Center" data-es="&lt;a href=&quot;https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Setting up your business on ChatGPT&lt;/a&gt;, Centro de ayuda de OpenAI"><a href="https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt" target="_blank" rel="noopener">Setting up your business on ChatGPT</a>, OpenAI Help Center</li>
+<li data-en="&lt;a href=&quot;https://support.google.com/webmasters/answer/16984139&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Generative AI performance report&lt;/a&gt;, Google Search Console Help" data-es="&lt;a href=&quot;https://support.google.com/webmasters/answer/16984139&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Generative AI performance report&lt;/a&gt;, Ayuda de Google Search Console"><a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener">Generative AI performance report</a>, Google Search Console Help</li>
+</ul>
+
+      </div>
+
+      <div class="faq-block">
+      <h2 data-en="Frequently asked questions" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+      <h3 data-en="What does ChatGPT read before it recommends a local business?" data-es="¿Qué lee ChatGPT antes de recomendar un negocio local?">What does ChatGPT read before it recommends a local business?</h3>
+      <p data-en="Usually not just your website. In a 60-city test by SEO Sets, 44 of 60 ChatGPT answers cited at least one directory or listing site, and the local consultant was named in only 1 of 60. In our own Miami checks, the same five things kept coming up: a clear Google Business Profile, prices on the website, a page for the town, a local directory listing and reviews on other sites." data-es="Normalmente no solo tu sitio web. En una prueba de SEO Sets en 60 ciudades, 44 de 60 respuestas de ChatGPT citaron al menos un directorio o sitio de listados, y el consultor local apareció en solo 1 de 60. En nuestras propias pruebas en Miami se repitieron las mismas cinco cosas: un Perfil de Empresa en Google claro, precios en el sitio web, una página para la ciudad, un listado en un directorio local y reseñas en otros sitios.">Usually not just your website. In a 60-city test by SEO Sets, 44 of 60 ChatGPT answers cited at least one directory or listing site, and the local consultant was named in only 1 of 60. In our own Miami checks, the same five things kept coming up: a clear Google Business Profile, prices on the website, a page for the town, a local directory listing and reviews on other sites.</p>
+      <h3 data-en="Which directories should my business be on?" data-es="¿En qué directorios debería estar mi negocio?">Which directories should my business be on?</h3>
+      <p data-en="It depends on your industry. For agencies it might be Clutch, for restaurants Yelp or TripAdvisor, for contractors Angi or the BBB. The fastest way to find out is to ask ChatGPT for the best businesses like yours in your city and write down the sites it cites." data-es="Depende de tu industria. Para agencias puede ser Clutch, para restaurantes Yelp o TripAdvisor, para contratistas Angi o el BBB. La forma más rápida de saberlo es preguntarle a ChatGPT por los mejores negocios como el tuyo en tu ciudad y anotar los sitios que cita.">It depends on your industry. For agencies it might be Clutch, for restaurants Yelp or TripAdvisor, for contractors Angi or the BBB. The fastest way to find out is to ask ChatGPT for the best businesses like yours in your city and write down the sites it cites.</p>
+      <h3 data-en="Does being bilingual help with AI recommendations?" data-es="¿Ser bilingüe ayuda con las recomendaciones de la IA?">Does being bilingual help with AI recommendations?</h3>
+      <p data-en="It can, if you say it clearly. In our English and Spanish checks, ChatGPT went out of its way to mention businesses that clearly state they work in both languages. If your bilingual service only appears in a photo or a footnote, AI may never know." data-es="Puede ayudar, si lo dices claramente. En nuestras pruebas en inglés y en español, ChatGPT destacó a los negocios que dicen claramente que trabajan en los dos idiomas. Si tu servicio bilingüe solo aparece en una foto o en letra pequeña, puede que la IA nunca se entere.">It can, if you say it clearly. In our English and Spanish checks, ChatGPT went out of its way to mention businesses that clearly state they work in both languages. If your bilingual service only appears in a photo or a footnote, AI may never know.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3 data-en="Want to know what AI says about your business today?" data-es="¿Quieres saber qué dice hoy la IA sobre tu negocio?">Want to know what AI says about your business today?</h3>
+        <a href="/audit" class="btn btn-primary btn-lg" data-en="Run the free AI Visibility Check" data-es="Haz el diagnóstico gratis de visibilidad en IA">Run the free AI Visibility Check</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy" id="footer-copy">© 2026 AUDAZ Agency LLC. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/about" class="footer-link" data-en="About" data-es="Nosotros">About</a>
+        <a href="/services" class="footer-link" data-en="Services" data-es="Servicios">Services</a>
+        <a href="/portfolio" class="footer-link" data-en="Portfolio" data-es="Portafolio">Portfolio</a>
+        <a href="/contact" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+      <span class="footer-tagline" id="footer-tagline">We don't do quiet.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="#" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
