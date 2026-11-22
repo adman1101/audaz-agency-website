@@ -793,3 +793,4 @@ p { color: var(--text-secondary); line-height: 1.75; }
 /* Inline links in the homepage AI visibility section */
 .ai-vis p a { color: #854F0B; text-decoration: underline; text-underline-offset: 3px; }
 .ai-vis p a:hover { color: #EF9F27; }
+.nav-logo-img{display:block;height:24px;width:auto}
